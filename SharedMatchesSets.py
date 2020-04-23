@@ -98,7 +98,7 @@ def main():
     kit3_places = 'places_in_trees'
     kit6 = 'Glyn_Common2'
     kit4_file_list = ["Helen", "Helen_B"]
-    kit5_file_list = ["Sally", "Sally_10cM", "Sally_9cM","Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_6cM_A" ]
+    kit5_file_list = ["Sally", "Sally_10cM", "Sally_9cM","Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_6cM_A", "Sally_L" ]
     duplicate_check_flag = False
     dict_of_places = []
 
@@ -258,7 +258,7 @@ def main():
                             kit1_cM = kit1_dict_of_lists[kit1_index]["cM"]
                             kit1_seg = kit1_dict_of_lists[kit1_index]["segments"]
                             #print( kit1_index, kit1_cM + "cM", kit1_seg + " seg",cousin4, "*" + str(no_of_shared_matches) + "*",match_kit2, match_kit4 , match_kit5, trail_string)
-                            print_flag = False
+                            print_flag = True
                             if print_flag:
                               print('{0:40} {1:3}cM {2:2}seg   {3:11} {4:11} {5:11}    {6:4} *{7:1}* {8:30}' \
                                   .format( cousin4, kit1_cM, kit1_seg,

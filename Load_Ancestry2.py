@@ -101,6 +101,7 @@ def get_cousin_dict(kit, index_offset,kit_who_list, duplicate_check_flag):
         line = line.replace(',', '')
         word_list = line.split()
         kit_word_dict = get_data(word_list, index_offset)
+        #print(kit_word_dict)
         search_duplicate_string = kit_word_dict["who"] + "_" + kit_word_dict["cM"] + "_" + kit_word_dict["segments"]  # allow for recent tree changes
         #print(kit_word_dict["who"])
         #no_in_tree = kit_word_dict["Tree"]
@@ -132,9 +133,11 @@ def load_matches(file_list, duplicate_check_flag):
 
 def main():
 
-    kit1_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM","Dad_6cM", "Dad_B"]
-    #kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM","Wayne_A"]
-    kit2_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_6cM_A","Sally_L"]
+
+    kit1_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_7cM_B", "Dad_6cM","Dad_6cM_F" ,"Dad_B"]
+    kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM","Wayne_A"]
+
+    #kit2_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_6cM_A","Sally_L"]
     #kit2_file_list = ["Helen", "Helen_B"]
     duplicate_check_flag = True
 

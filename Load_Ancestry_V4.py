@@ -115,7 +115,7 @@ def get_data(word_list,index_offset , line_no, kit):
     return new_word_dict, test_result, kit_duplicate_check
 
 
-def get_cousin_dict(kit, index_offset, duplicate_check_flag, kit_who_list,kit_who_dict, dna_list, dna_list_index, duplicate_dict):
+def get_cousin_dict(kit, index_offset,  kit_key_list,duplicate_key_list, kit_who_list,kit_who_dict, dna_list, dna_list_index, duplicate_dict):
 
 
     dict_of_lists = {}
@@ -132,8 +132,13 @@ def get_cousin_dict(kit, index_offset, duplicate_check_flag, kit_who_list,kit_wh
         search_duplicate_string = kit_duplicate_check
         #print(kit_word_dict["who"], search_duplicate_string)
         #no_in_tree = kit_word_dict["Tree"]
-        if duplicate_check_flag:
-          if search_duplicate_string in kit_who_list:
+
+        if kit_word_dict["key_string"] not in kit_key_list:
+              kit_key_list.append(kit_word_dict["key_string"])
+        else:
+            error_string = kit + " " + str(line_no) + " " + kit_word_dict["key_string"]
+            duplicate_key_list.append(error_string)
+        if search_duplicate_string in kit_who_list:
             old_index = kit_who_dict[search_duplicate_string]
             old_index2 = dna_list_index.index(old_index)
             old_test = dna_list[old_index2]
@@ -142,7 +147,7 @@ def get_cousin_dict(kit, index_offset, duplicate_check_flag, kit_who_list,kit_wh
                 duplicate_dict[search_duplicate_string].append(test_result.mega_index)
             else:
                 duplicate_dict[search_duplicate_string] = [old_test.mega_index, test_result.mega_index]
-          else:
+        else:
             kit_who_list.append(search_duplicate_string)
             kit_who_dict[search_duplicate_string] = line_no + index_offset
         kit_word_dict["index"] = line_no + index_offset
@@ -154,10 +159,12 @@ def get_cousin_dict(kit, index_offset, duplicate_check_flag, kit_who_list,kit_wh
     return dict_of_lists
 
 
-def load_matches(file_list, duplicate_check_flag):
+def load_matches(file_list):
     dict_of_lists = {}
     kit_offset_index = 0
     kit_who_list = []
+    kit_key_list = []
+    duplicate_key_list=[]
     kit_who_dict = {}
     dna_list = []
     dna_list_index = []
@@ -168,10 +175,14 @@ def load_matches(file_list, duplicate_check_flag):
         kit_person = file_list[0]
         temp_dict_of_lists = {}
         #print (text_file, 10000* kit_offset_index)
-        temp_dict_of_lists = get_cousin_dict(text_file, kit_offset_index * 20000, duplicate_check_flag, kit_who_list,
+        temp_dict_of_lists = get_cousin_dict(text_file, kit_offset_index * 20000, kit_key_list, duplicate_key_list, kit_who_list,
                                              kit_who_dict, dna_list, dna_list_index, duplicate_dict)
         dict_of_lists.update(temp_dict_of_lists)
         kit_offset_index += 1
+    duplicate_index = 1
+    for error in duplicate_key_list:
+        print(duplicate_index, "duplicate key >>>>>", error)
+        duplicate_index += 1
     duplicate_index = 1
     for duplo in duplicate_dict:
         new_index = 0
@@ -190,13 +201,12 @@ def load_matches(file_list, duplicate_check_flag):
 
 def main():
 
-    kit1_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM","Dad_6cM","Dad_6cM_F" ,"Dad_B"]
-    kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM","Wayne_A"]
+    kit1_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_7cM_B", "Dad_6cM","Dad_6cM_F" ,"Dad_B"]
+    #kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM","Wayne_A"]
     #kit2_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_6cm_A","Sally_L"]
-    #kit2_file_list = ["Helen", "Helen_B"]
-    duplicate_check_flag = True
+    kit2_file_list = ["Helen", "Helen_B"]
 
-    kit1_dict_of_lists = load_matches(kit1_file_list, duplicate_check_flag)
+    kit1_dict_of_lists = load_matches(kit1_file_list)
     kit1_index_list = []
     kit1_index_dict = {}
     kit1_cM_dict = {}
@@ -212,7 +222,7 @@ def main():
 
 
 
-    kit2_dict_of_lists = load_matches(kit2_file_list, duplicate_check_flag)
+    kit2_dict_of_lists = load_matches(kit2_file_list)
     kit2_index_dict = {}
     kit2_index_list = []
     kit2_keystring_list = []

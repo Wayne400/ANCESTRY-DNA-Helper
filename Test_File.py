@@ -136,7 +136,7 @@ def get_cousin_dict(kit1, index_offset):
         line = line.replace(',', '')
         word_list = line.split()
         kit_word_dict = get_data(word_list, index_offset)
-        print(kit_word_dict["index"], line_no, word_list)
+        print(kit_word_dict["index"], line_no, kit_word_dict["segments"],kit_word_dict["cM"], word_list)
         dna_kit = kit_word_dict["who"]
         kit_word_dict["index"] = line_no + index_offset
         dict_of_lists[dna_kit] = kit_word_dict
@@ -146,12 +146,15 @@ def get_cousin_dict(kit1, index_offset):
 
 
 def main():
-    #kit1 = 'Helen'
-    kit1 = 'Glyn'
+    #kit1 = 'Glyn'
     #kit1 = 'Wayne'
+    kit1 = 'Helen'
+    #kit1 = 'Sally'
     kit1_index_offset = 0
-    #kit1a = 'Sally_6cM_B'
-    kit1a = 'Dad_6cM_F'
+    kit1a = 'Helen_B'
+    #kit1a = 'Sally_L'
+    #kit1a = 'Dad_B'
+    #kit1a = 'Wayne_A'
     kit1a_index_offset = 10000
 
     #kit1 = 'Wayne_5000'
