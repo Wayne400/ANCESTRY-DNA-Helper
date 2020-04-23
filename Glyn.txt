@@ -3552,7 +3552,7 @@
 3552 Gemma Powell 5th–8th Cousin Shared DNA: 11 cM across 1 segments 15 People
 3553 Unknown 5th–8th Cousin Shared DNA: 11 cM across 1 segments No Trees
 3554 Daniel Bray 5th–8th Cousin Shared DNA: 11 cM across 1 segments No Trees
-3555 David williams 5th–8th Cousin Shared DNA: 11 cM across 3 segments 358 People
+3555 David williams 5th–8th Cousin Shared DNA: 11 cM across 3 segments 477 People
 3556 Randy Kyllo 5th–8th Cousin Shared DNA: 11 cM across 1 segments 759 People
 3557 Diana Wilson 5th–8th Cousin Shared DNA: 11 cM across 1 segments No Trees
 3558 Julie McGuigan 5th–8th Cousin Shared DNA: 11 cM across 3 segments 129 People
@@ -6373,7 +6373,7 @@
 6373 Violet Williams 5th–8th Cousin Shared DNA: 13 cM across 2 segments No Trees
 6374 Glyn Parry 4th–6th Cousin Shared DNA: 36 cM across 5 segments No Trees
 6375 Alwena James 4th–6th Cousin Shared DNA: 22 cM across 3 segments Unlinked Tree
-6376 jackie Harrison 4th–6th Cousin Shared DNA: 29 cM across 1 segments No Trees
+6376 Jackie Harrison 4th–6th Cousin Shared DNA: 29 cM across 1 segments 191 People
 6377 Betty Wortley 5th–8th Cousin Shared DNA: 9 cM across 2 segments No Trees GEDMATCH M967444 CHROMOSOMES (3-7)
 6378 CRYSTAL BAKER 5th–8th Cousin Shared DNA: 9 cM across 1 segments No Trees GEDMATCH M968182 CHROMOSOMES (12)
 6379 W.O.Managed by staridaho 5th–8th Cousin Shared DNA: 8 cM across 1 segments 59 People GEDMATCH JT4855629 CHROMOSOMES (15)
@@ -6423,13 +6423,13 @@
 6423 Malcolm McLeod 5th–8th Cousin Shared DNA: 7 cM across 1 segments 1,215 People
 6424 berylcope01 Managed by anthony_cope 5th–8th Cousin Shared DNA: 8 cM across 1 segments 1,969 People
 6425 DSMITH018 5th–8th Cousin Shared DNA: 7 cM across 1 segments 58 People
-6426 David williams 5th–8th Cousin Shared DNA: 7 cM across 2 segments 358 People
+6426 duplicate6426 5th–8th Cousin Shared DNA: 7 cM across 2 segments 358 People
 6427 Cate Benford 5th–8th Cousin Shared DNA: 7 cM across 1 segments 270 People
 6428 evediamond 5th–8th Cousin Shared DNA: 10 cM across 1 segments 11 People
 6429 Ian Kirkham 5th–8th Cousin Shared DNA: 10 cM across 1 segments 7 People
 6430 mwatkinswilhite 5th–8th Cousin Shared DNA: 9 cM across 1 segments 11 People
 6431 Francis Wilson 5th–8th Cousin Shared DNA: 7 cM across 1 segments 8 People
-6432 Debbie Willis Saxe 5th–8th Cousin Shared DNA: 6 cM across 1 segments 134 People
+6432 Debbie Willis Saxe 5th–8th Cousin Shared DNA: 6 cM across 1 segments 546 People
 6433 gwenda humphries 5th–8th Cousin Shared DNA: 12 cM across 1 segments 6 People
 6434 Brenda Larmer 5th–8th Cousin Shared DNA: 8 cM across 1 segments 4 People
 6435 Gavinwilkins 5th–8th Cousin Shared DNA: 9 cM across 1 segments 69 People
@@ -6454,3 +6454,14 @@
 6454 sthomas643 5th–8th Cousin Shared DNA: 7 cM across 1 segments 534 People
 6455 Paul Cotter 5th–8th Cousin Shared DNA: 11 cM across 2 segments 8 People
 6456 cathjwhite 5th–8th Cousin Shared DNA: 11 cM across 1 segments 57 People
+6457 Sean1970 4th–6th Cousin Shared DNA: 21 cM across 1 segments 158 People
+6458 Dave Morgans 5th–8th Cousin Shared DNA: 6 cM across 1 segments 2,784 People
+6459 Michael Williams 5th–8th Cousin Shared DNA: 8 cM across 1 segments 1,586 People
+6460 ebendikov 5th–8th Cousin Shared DNA: 9 cM across 1 segments Unlinked Tree
+6461 judy robinson 4th–6th Cousin Shared DNA: 39 cM across 3 segments No Trees
+6462 Leann Teig 5th–8th Cousin Shared DNA: 8 cM across 1 segments No Trees
+6463 D.V. Managed by mcgillvickery 5th–8th Cousin Shared DNA: 8 cM across 1 segments 12,019 People
+6464 Samantha Marcroft 5th–8th Cousin Shared DNA: 7 cM across 1 segments No Trees
+6465 Manon Davies 5th–8th Cousin Shared DNA: 16 cM across 3 segments 7 People
+6466 ChrisVickey Managed by margaretjackson5 5th–8th Cousin Shared DNA: 6 cM across 1 segments 12,004 People GEDMATCH A974823 CHROMOSOMES (14)
+6467 JudithAdair 4th–6th Cousin Shared DNA: 21 cM across 2 segments Unlinked Tree

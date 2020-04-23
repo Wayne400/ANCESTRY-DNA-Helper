@@ -126,7 +126,7 @@
 79 tammykiehn JohnnyMartin MarissaSadleir KimBLACKBURN MaryConnell SarahCase JudyTumlin LareneHollingsworth joedminster 
 80 NancyHawk
 81 JefferyDoyen rp_robertsManagedbyDarcieFrisch jennacblu
-82 kfmacdonald
+82 kfmacdonald judyrobinson
 83 sevensisterssheepcentreManagedbyterenceWigmore LindaHayesManagedbyPeterHayes YojNitsua
 84 danacavan H.H.ManagedbyReesDinbych
 85 JosephDawson MaribethCulver-Lammas WilliamCarney
@@ -271,7 +271,7 @@
 201 blue815l
 202 Melekika46
 203 GillianandGlynEvans
-204 K.K.ManagedbyKelleyKloberdance jackieHarrison
+204 K.K.ManagedbyKelleyKloberdance JackieHarrison
 205 dsberger120
 206 downtonbill
 207 ToniaSandovalMickey bobcollins chris_rosebankManagedbyjjstree1 CharlesClements DorothySandoval carvinara
@@ -555,6 +555,7 @@
 3436 N.L.Managedbynatasharhea
 3342 BrandonClark
 3461 ronhowell98
+3555 Davidwilliams
 3665 brenda_sg
 3693 A.S.Managedbyptsymington
 3850 PhilWilliams
@@ -599,7 +600,7 @@
 6374 GlynParry eviewyn AlwenaJames JulieThompson
 6375 AlwenaJames aberlas gethngethn BarbaraParryManagedbyGwendaParfitt llapgoch1 ElenLewis InaBlancheParry ElwynDavies
 6375 AlwenaJames rdjones7314 GlynParry ajones296 TecwynRawson BarbaraKayJohnson G.M.ManagedbySueHamberg K.F.ManagedbyHeatherFirth
-6376 jackieHarrison K.K.ManagedbyKelleyKloberdance
+6376 JackieHarrison K.K.ManagedbyKelleyKloberdance Sean1970
 6377 BettyWortley aberlas
 6378 CRYSTALBAKER
 6379 W.O.Managedbystaridaho
@@ -653,7 +654,6 @@
 6423 MalcolmMcLeod JudithBuckle JanetBarnes LenArlow
 6424 berylcope01Managedbyanthony_cope MattWensel
 6425 DSMITH018 aberlas KeithMartinWilliams ArthurBrisbane PhilipHaldane
-6426 Davidwilliams
 6427 CateBenford ColleenToy
 6428 evediamond CandaceMaryNelson-Brantigan
 6429 IanKirkham KeithMartinWilliams ArthurBrisbane PhilipHaldane
@@ -685,3 +685,14 @@
 6454 sthomas643
 6455 PaulCotter
 6456 cathjwhite
+6457 Sean1970 JackieHarrison
+6458 DaveMorgans AdelynEllis WilliamCarney
+6459 MichaelWilliams EloRuss
+6460 ebendikov ElwynDavies EirianRoberts H.D.Managedbyprenjo thesmiths122 AlwenaJames
+6461 judyrobinson kfmacdonald
+6462 LeannTeig kathleenjex
+6463 D.V.Managedbymcgillvickery JudyTumlin
+6464 SamanthaMarcroft eviewyn
+6465 ManonDavies gethngethn IanHuxley ElwynDavies JuneMcLachlinManagedbyoschean H.D.Managedbyprenjo
+6466 ChrisVickeyManagedbymargaretjackson5 JudithAdair
+6467 JudithAdair ElenLewis
