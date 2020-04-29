@@ -261,7 +261,7 @@
 261 Philip Crowder 5th–8th Cousin Shared DNA: 17 cM across 2 segments 2,451 People
 262 Linda Mawer 5th–8th Cousin Shared DNA: 17 cM across 2 segments Unlinked Tree
 263 Richard Roberts 5th–8th Cousin Shared DNA: 17 cM across 1 segments No Trees
-264 John Gallantry 5th–8th Cousin Shared DNA: 17 cM across 2 segments 5 People
+264 John Gallantry 5th–8th Cousin Shared DNA: 17 cM across 2 segments 7 People
 265 Laura Cusack 5th–8th Cousin Shared DNA: 17 cM across 2 segments No Trees
 266 jerbear2002 5th–8th Cousin Shared DNA: 17 cM across 1 segments Unlinked Tree
 267 T.J. Managed by ejones1025 5th–8th Cousin Shared DNA: 17 cM across 2 segments 2,955 People
@@ -819,7 +819,7 @@
 819 JohnMyddleton 5th–8th Cousin Shared DNA: 10 cM across 4 segments 190 People
 820 D.B. Managed by franbrewin 5th–8th Cousin Shared DNA: 10 cM across 3 segments 867 People
 821 erob01 5th–8th Cousin Shared DNA: 10 cM across 2 segments 253 People
-822 Jazmine Pitchford 5th–8th Cousin Shared DNA: 10 cM across 1 segments 977 People
+822 Jazmine Pitchford 5th–8th Cousin Shared DNA: 10 cM across 1 segments 1,398 People
 823 gwynpendry 5th–8th Cousin Shared DNA: 10 cM across 2 segments Unlinked Tree
 824 jean hewitt 5th–8th Cousin Shared DNA: 10 cM across 1 segments 16 People
 825 gapperly 5th–8th Cousin Shared DNA: 10 cM across 1 segments 5,080 People GEDMATCH A633825
@@ -1053,7 +1053,7 @@
 1053 D.B. Managed by littlecowtown 5th–8th Cousin Shared DNA: 9 cM across 1 segments 17,392 People GEDMATCH A780182
 1054 tracyn1970 5th–8th Cousin Shared DNA: 9 cM across 2 segments 182 People
 1055 james jones 5th–8th Cousin Shared DNA: 9 cM across 1 segments Unlinked Tree
-1056 M.H. Managed by Carl Reisinger 5th–8th Cousin Shared DNA: 9 cM across 3 segments 2,410 People GEDMATCH A508629
+1056 M.H. Managed by Carl Reisinger 5th–8th Cousin Shared DNA: 9 cM across 3 segments 2,464 People GEDMATCH A508629
 1057 jesther124 5th–8th Cousin Shared DNA: 9 cM across 1 segments 15 People
 1058 Raymond Harris Managed by Lindsay Pulsipher 5th–8th Cousin Shared DNA: 9 cM across 1 segments 3,659 People
 1059 debbiegines 5th–8th Cousin Shared DNA: 9 cM across 2 segments 13 People
@@ -1068,7 +1068,7 @@
 1068 Stacy Haggard 5th–8th Cousin Shared DNA: 9 cM across 1 segments Tree unavailable
 1069 J.P. Managed by Parrydise 5th–8th Cousin Shared DNA: 9 cM across 1 segments 3,106 People
 1070 Patricia Lintern-Mole 5th–8th Cousin Shared DNA: 9 cM across 1 segments 110 People
-1071 P.F. Managed by geoffflood37 5th–8th Cousin Shared DNA: 9 cM across 1 segments 3,103 People
+1071 P.F. Managed by geoffflood37 5th–8th Cousin Shared DNA: 9 cM across 1 segments 3,106 People
 1072 Jeanine Elizalde 5th–8th Cousin Shared DNA: 9 cM across 1 segments 6,680 People GEDMATCH A517351
 1073 Tyler Gentry Managed by heathermgentry24 5th–8th Cousin Shared DNA: 9 cM across 1 segments 9,188 People
 1074 Barbara Tillman 5th–8th Cousin Shared DNA: 9 cM across 1 segments 95 People
@@ -1630,7 +1630,7 @@
 1630 Alice Harvey 5th–8th Cousin Shared DNA: 6 cM across 1 segments Unlinked Tree
 1631 N.R. Managed by Nikki Coombs 5th–8th Cousin Shared DNA: 6 cM across 1 segments 3,858 People GEDMATCH A657535
 6132 rhianowenjones 5th–8th Cousin Shared DNA: 6 cM across 1 segments 1,573 People
-1633 1_sophie67 5th–8th Cousin Shared DNA: 6 cM across 1 segments 10,678 People
+1633 1_sophie67 5th–8th Cousin Shared DNA: 6 cM across 1 segments 11,405 People
 1634 jano1946 5th–8th Cousin Shared DNA: 6 cM across 1 segments 1,915 People
 1635 D.W. Managed by Wendy McKenna 5th–8th Cousin Shared DNA: 6 cM across 1 segments 516 People
 1636 Ivor Wynn Tunnah Managed by Dylan Jones 5th–8th Cousin Shared DNA: 6 cM across 1 segments 359 People
@@ -1778,7 +1778,7 @@
 1778 Jane Hogg 5th–8th Cousin Shared DNA: 10 cM across 1 segments 1,907 People
 1779 Gaultier Mp 5th–8th Cousin Shared DNA: 15 cM across 1 segments No Trees
 1780 Jeffery Doyen 5th–8th Cousin Shared DNA: 13 cM across 1 segments No Trees
-1781 garydawn165 5th–8th Cousin Shared DNA: 18 cM across 3 segments 924 People
-1782 Barbara Parry Managed by Gwenda Parfitt 5th–8th Cousin Shared DNA: 9 cM across 2 segments 2,071 People
+1781 garydawn165 5th–8th Cousin Shared DNA: 18 cM across 3 segments 1199 People
+1782 Barbara Parry Managed by Gwenda Parfitt 5th–8th Cousin Shared DNA: 9 cM across 2 segments 2,304 People
 1783 Ina Blanche Parry 5th–8th Cousin Shared DNA: 7 cM across 1 segments Unlinked Tree
 1784 D.H. Managed by SEAN ALLEN 4th–6th Cousin Shared DNA: 21 cM across 4 segments No Trees

@@ -74,7 +74,7 @@
 74 ajones296 4th–6th Cousin Shared DNA: 30 cM across 2 segments 291 People 
 75 Len Arlow 4th–6th Cousin Shared DNA: 30 cM across 2 segments 724 People 
 76 Tamara Haver 4th–6th Cousin Shared DNA: 30 cM across 2 segments No Trees 
-77 Rodney Simmons 4th–6th Cousin Shared DNA: 30 cM across 2 segments 700 People 
+77 Rodney Simmons 4th–6th Cousin Shared DNA: 30 cM across 2 segments 708 People FTDNA CHROMOSOMES (9-19)
 78 Natalie Heppell 4th–6th Cousin Shared DNA: 30 cM across 2 segments Unlinked Tree 
 79 tammykiehn 4th–6th Cousin Shared DNA: 30 cM across 2 segments 9 People 
 80 Nancy Hawk 4th–6th Cousin Shared DNA: 30 cM across 1 segments Unlinked Tree 
@@ -6465,3 +6465,9 @@
 6465 Manon Davies 5th–8th Cousin Shared DNA: 16 cM across 3 segments 7 People
 6466 ChrisVickey Managed by margaretjackson5 5th–8th Cousin Shared DNA: 6 cM across 1 segments 12,004 People GEDMATCH A974823 CHROMOSOMES (14)
 6467 JudithAdair 4th–6th Cousin Shared DNA: 21 cM across 2 segments Unlinked Tree
+6468 P.F. Managed by geoffflood37 5th–8th Cousin Shared DNA: 7 cM across 1 segments 3,106 People
+6469 M.H. Managed by Carl Reisinger 5th–8th Cousin Shared DNA: 7 cM across 1 segments 2,464 People GEDMATCH A508629 CHROMOSOMES (10)
+6470 Annwen Hughes 5th–8th Cousin Shared DNA: 7 cM across 1 segments Unlinked Tree
+6471 Andrew Lewis 5th–8th Cousin Shared DNA: 8 cM across 1 segments 161 People
+6472 robert flint 5th–8th Cousin Shared DNA: 19 cM across 1 segments No Trees GEDMATCH MU6624388 CHROMOSOMES (20)
+6473 R.H. Managed by 1_jacquihamer 5th–8th Cousin Shared DNA: 9 cM across 2 segments 257 People GEDMATCH A164202 CHROMOSOMES (3)
