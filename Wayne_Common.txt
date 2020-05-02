@@ -1,51 +1,52 @@
 1 aberlas CAJ-SOR
-4 sheilaroberts
-5 nogoodboyoManagedbyRhiannon Williams
-4314 MichaelEvans
-7 H.H.ManagedbyReesDinbych
-8 DawnaTonksMillgate
-9 S.D.Managedbydearden_family
-4313 BarbaraParryManagedbyGwendaParfitt
+4 sheilaroberts SMR-JTR-JTR-JR
+5 nogoodboyoManagedbyRhiannonWilliams SMR-MSJS-ES-ES
+7 H.H.ManagedbyReesDinbych CGW-CAJ-SOR-SR
+8 DawnaTonksMillgate X
+9 S.D.Managedbydearden_family X
 51 SallyAnneGale CAJ-IJ-AH
-66 thesmiths122
-75 ColinReid
-TianaBettinson
-MartinMerz
-peter3829ManagedbyHelenReid
-hannahbaby262626
-JerroleenSorensen
-ElleenDeardenManagedbyJerroleenSorensen
-opj142
-ArthurMarkGaleManagedbySteamerpoint
-PhilipDavies
-RoyOlson
-KayHewitt
-JoyceHousley
-GillianandGlynEvans
-BronEdwards
-ChrisHughes
-huwponthir
-gnj07
-JonathanRichards
-loxton01
-RonaldEnnion
-DewiRoberts
-dbutter103
-I.G.Managedbywillbsmom
-R.D.Managedbyradavies1
-PaulRogers
-M.D.ManagedbyAmberDawson
-GlynnWarwick
-MeganBenbow
-kimberlypalmer5
-CalebCornaby
-DebraRichmond-Johnson
-bmorris1187
-brenallan
-BarryJonesManagedbyHelenJones
-PAULWOGEL
-barbaranev
-OlwenDoig
-CarysDuggan-Rees
-CandaceMaryNelson-Brantigan
-J.P.Managedbysunseeker57
+66 thesmiths122 CAJ-SOR-SR-WilliamRoberts
+75 ColinReid SMR-MSJS-LJW-EW-EW
+88 TianaBettinson X
+94 MartinMerz X
+96 peter3829ManagedbyHelenReid SMR-MSJS-LJW-EW-EW
+119 hannahbaby262626 X
+164 JerroleenSorensen X
+172 ElleenDeardenManagedbyJerroleenSorensen  X
+239 opj142 CAJ-IJ-PJ-ME-PE-MaryJones
+363 ArthurMarkGaleManagedbySteamerpoint CAJ-IJ-AH
+499 PhilipDavies X
+831 RoyOlson X
+935 KayHewitt X
+1316 JoyceHousley X
+1496 GillianandGlynEvans CAJ-IJ-PJ-ME-PeterEvans
+1974 BronEdwards X
+4329 ChrisHughes X
+3042 huwponthir X
+3706 gnj07 CAJ-IJ-PJ-ME-ElinorWynne
+4313 BarbaraParryManagedbyGwendaParfitt CAJ-IJ-PJ-ME-ElinorWynne
+4314 MichaelEvans SMR-MSJS-LJW-EW
+4335 gwendahumphries X
+4330 JonathanRichards X
+4331 loxton01 CAJ-SOR-SR-WR-WR-RobertsIsaac
+4332 RonaldEnnion  X
+4333 DewiRoberts X
+4334 dbutter103 X
+4336 shellyboo_1 X
+4337 R.D.Managedbyradavies1 X
+4338 PaulRogers X
+4339 M.D.ManagedbyAmberDawson X
+4340 GlynnWarwick X
+4341 MeganBenbow X
+4342 kimberlypalmer5 X
+4343 CalebCornaby X
+4344 brenallan X
+4345 BarryJonesManagedbyHelenJones CAJ-IJ-PJ-RJ-OJ
+4346 PAULWOGEL X
+4347 VioletWilliams X
+4348 ahumphreys20 X
+4349 OlwenDoig X
+4350 CarysDuggan-Rees X
+4351 CandaceMaryNelson-Brantigan X
+4352 J.P.Managedbysunseeker57 X
+4354 susanwhiskin SMR-MSJS-LJW-EW
