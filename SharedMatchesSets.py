@@ -62,7 +62,7 @@ def get_common_ancestor(kit6, kit1_index_keystring_dict):
         orig_word_list = line.split()
         this_cousin = orig_word_list[1]
         key_string = kit1_index_keystring_dict[int(orig_word_list[0])]
-        # print(orig_word_list[0], orig_word_list[1], key_string)
+        #print(orig_word_list[0], orig_word_list[1], key_string)
         new_dict[key_string] = orig_word_list[2]
         #cousin_list.append(key_string)
     return new_dict
@@ -83,20 +83,34 @@ def get_places(kit3_places, kit1_who_dict):
 
 
 def main():
-
+    person = "Wayne"
     print_filter = True
+    match_filter_list = [""]
+    match_filter_list2 = [""]
     #match_filter_list = ["aberlas", "SallyAnneGale", "H.H.ManagedbyReesDinbych","gethngethn", \
     #                     "ArthurMarkGaleManagedbySteamerpoint", "BarbaraParryManagedbyGwendaParfitt", "D.W.ManagedbyWendyMcKenna",\
     #                     "G.R.Managedbygemmaroberts50", "ElizabethPritchard", "sheree8","ajones296","AlwenaJames"]
     #match_filter_list = ["SimonGray", "JudithBuckle" ,"MalcolmSlade", "EricEngelhard"]
-    match_filter_list = [ "EricEngelhard"]
-    #match_filter_list = []
-    kit1_file_list = ["Glyn"] # , "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM", "Dad_B"]
-    kit2_file_list = ["Wayne","Wayne_10cM", "Wayne_9cM", "Wayne_8cM","Wayne_7cM","Wayne_6cM", "Wayne_A"]
-    #kit3 = 'Top60_ag3754'
-    kit3 = 'Top60_Dad_X_Bee_Bridle'
-    kit3_places = 'places_in_trees'
-    kit6 = 'Glyn_Common2'
+
+
+    if person == "Glyn":
+        kit1_file_list = ["Glyn"]  # , "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM", "Dad_B"]
+        kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM", "Wayne_8cM", "Wayne_7cM", "Wayne_6cM", "Wayne_A"]
+        match_filter_list = ["EricEngelhard"]
+        kit3 = 'Top60_Dad_X_Bee_Bridle'
+        kit3_places = 'places_in_trees'
+        kit6 = 'Glyn_Common2'
+    elif person == "Wayne":
+        kit2_file_list = ["Glyn" , "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_7cM_B","Dad_6cM","Dad_6cM_F", "Dad_B"]
+        kit1_file_list = ["Wayne"]
+        match_filter_list = ["SandraDavis","DavidLarsen","PaulineWilliams","LindaEvans","sheilaroberts","susanwhiskin"]
+        #match_filter_list = ["SandraDavis","DavidLarsen","PaulineWilliams","LindaEvans","sheilaroberts","susanwhiskin"]
+        match_filter_list2 = ["nogoodboyoManagedbyRhiannonWilliams"]
+        match_filter_list.extend(match_filter_list2)
+        kit3 = 'Top60_ag3754'
+        kit3_places = 'Top60_ag3754'
+        kit6 = 'Wayne_Common'
+
     kit4_file_list = ["Helen", "Helen_B"]
     kit5_file_list = ["Sally", "Sally_10cM", "Sally_9cM","Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_6cM_A", "Sally_L" ]
     duplicate_check_flag = False

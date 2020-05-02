@@ -147,8 +147,8 @@ def get_cousin_dict(kit1, index_offset):
 
 def main():
     #kit1 = 'Glyn'
-    #kit1 = 'Wayne'
-    kit1 = 'Helen'
+    kit1 = 'Wayne'
+    #kit1 = 'Helen'
     #kit1 = 'Sally'
     kit1_index_offset = 0
     kit1a = 'Helen_B'
