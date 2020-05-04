@@ -253,7 +253,6 @@ Rachael Ryder 5th–8th Cousin Shared DNA: 10 cM across 1 segments 772 People
 Diana Smith 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
 Roni007 5th–8th Cousin Shared DNA: 10 cM across 1 segments 767 People
 German Dillon 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
-Ronald Ennion 5th–8th Cousin Shared DNA: 10 cM across 2 segments 281 People
 Geraint Foster 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
 lolly_fullerton 5th–8th Cousin Shared DNA: 10 cM across 1 segments 7,122 People
 grupe1 5th–8th Cousin Shared DNA: 10 cM across 1 segments 3,273 People
@@ -484,7 +483,6 @@ Kaitlin McGowen 5th–8th Cousin Shared DNA: 10 cM across 1 segments 7 People
 David Wech 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
 Diana Harness 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
 Morgan Reilly 5th–8th Cousin Shared DNA: 10 cM across 1 segments 175 People
-Dewi Roberts 5th–8th Cousin Shared DNA: 10 cM across 2 segments 608 People
 Jennifer Glidewell 5th–8th Cousin Shared DNA: 10 cM across 1 segments Unlinked Tree
 Clifford Sherlock Managed by Martine Sherlock 5th–8th Cousin Shared DNA: 10 cM across 1 segments 613 People
 Elaine Overend Managed by markov55 5th–8th Cousin Shared DNA: 10 cM across 2 segments 2,830 People
@@ -1889,7 +1887,7 @@ Sharon Strange 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
 Kendall Haines 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
 Stephanie Hiscox 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
 Douglas John Wilkins 5th–8th Cousin Shared DNA: 10 cM across 1 segments 4 People
-jrodery 5th–8th Cousin Shared DNA: 10 cM across 1 segments 533 People
+jrodery 5th–8th Cousin Shared DNA: 10 cM across 1 segments 535 People
 djgyertson 5th–8th Cousin Shared DNA: 10 cM across 1 segments 430 People
 antony cowan-martin 5th–8th Cousin Shared DNA: 10 cM across 1 segments 7,233 People
 Suzanne Hubbard 5th–8th Cousin Shared DNA: 10 cM across 2 segments 1,692 People
