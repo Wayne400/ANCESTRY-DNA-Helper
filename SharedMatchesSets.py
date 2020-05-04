@@ -83,7 +83,7 @@ def get_places(kit3_places, kit1_who_dict):
 
 
 def main():
-    person = "Wayne"
+    person = "Glyn"
     print_filter = True
     match_filter_list = [""]
     match_filter_list2 = [""]
@@ -95,7 +95,7 @@ def main():
 
     if person == "Glyn":
         kit1_file_list = ["Glyn"]  # , "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM", "Dad_B"]
-        kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM", "Wayne_8cM", "Wayne_7cM", "Wayne_6cM", "Wayne_A"]
+        kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM", "Wayne_8cM", "Wayne_7cM","Wayne_7cM_B", "Wayne_6cM", "Wayne_A"]
         match_filter_list = ["EricEngelhard"]
         kit3 = 'Top60_Dad_X_Bee_Bridle'
         kit3_places = 'places_in_trees'
