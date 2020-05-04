@@ -6383,7 +6383,7 @@
 6383 Carl Preece Managed by AUDREY SKEEN 5th–8th Cousin Shared DNA: 9 cM across 2 segments 52 People GEDMATCH A894115 CHROMOSOMES (18)
 6384 Philip Fenna 4th–6th Cousin Shared DNA: 21 cM across 1 segments No Trees
 6385 Amara Fox 5th–8th Cousin Shared DNA: 9 cM across 1 segments Unlinked Tree GEDMATCH M117863 CHROMOSOMES (1-8-17)
-6386 garydawn165 5th–8th Cousin Shared DNA: 7 cM across 1 segments 924 People
+6386 garydawn165 5th–8th Cousin Shared DNA: 7 cM across 1 segments 1199 People
 6387 nancycollins3555 5th–8th Cousin Shared DNA: 9 cM across 2 segments 4,325 People GEDMATCH M706400 CHROMOSOMES (1-16)
 6388 Andrea Burman 5th–8th Cousin Shared DNA: 7 cM across 1 segments 458 People GEDMATCH HQ4048191 CHROMOSOMES (18)
 6389 Alta Godwin 5th–8th Cousin Shared DNA: 7 cM across 1 segments 13,047 People GEDMATCH A214154 CHROMOSOMES (11)
@@ -6408,7 +6408,7 @@
 6408 Ricky Doran 5th–8th Cousin Shared DNA: 8 cM across 1 segments No Trees
 6409 E.M. Managed by plourdedoran 5th–8th Cousin Shared DNA: 8 cM across 1 segments 2,435 People
 6410 rupparti2 Managed by rupparti 5th–8th Cousin Shared DNA: 9 cM across 1 segments 2,162 People GEDMATCH CY6625151 CHROMOSOMES (9)
-6411 Carole Steers 5th–8th Cousin Shared DNA: 7 cM across 1 segments 638 People GEDMATCH T233539 CHROMOSOMES (18)
+6411 Carole Steers 5th–8th Cousin Shared DNA: 7 cM across 1 segments 695 People GEDMATCH T233539 CHROMOSOMES (18)
 6412 edwinroberts52 5th–8th Cousin Shared DNA: 9 cM across 1 segments 956 People
 6413 BARRY PATERSON 4th–6th Cousin Shared DNA: 22 cM across 1 segments 7 People
 6414 Kenny Casados 4th–6th Cousin Shared DNA: 24 cM across 2 segments No Trees
@@ -6474,3 +6474,5 @@
 6474 Kenneth Goode 5th–8th Cousin Shared DNA: 7 cM across 1 segments No Trees
 6475 Dewi Roberts 5th–8th Cousin Shared DNA: 8 cM across 1 segments 608 People
 6476 Alan Hughes Managed by Damien Tobin 5th–8th Cousin Shared DNA: 16 cM across 1 segments 97 People
+6477 Daniel Jubera 5th–8th Cousin Shared DNA: 16 cM across 1 segments 10 People
+6478 Claire Kay 5th–8th Cousin Shared DNA: 13 cM across 1 segments 18 People
