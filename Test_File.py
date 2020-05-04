@@ -73,7 +73,7 @@ def get_data(word_list,index_offset):
         if column == "People":
             #print(new_word_dict["index"])
             new_word_dict[column] = word_list[i-1]
-            new_word_dict["who"] = new_word_dict["who"] + "_" + word_list[i-1]
+            #new_word_dict["who"] = new_word_dict["who"] + "_" + word_list[i-1]
             new_word_dict["key_string"] = new_word_dict["who"] + "_" + word_list[i - 1]
         if column == "Unlinked":
             #print(new_word_dict["index"])
@@ -151,10 +151,10 @@ def main():
     #kit1 = 'Helen'
     #kit1 = 'Sally'
     kit1_index_offset = 0
-    kit1a = 'Helen_B'
+    #kit1a = 'Helen_B'
     #kit1a = 'Sally_L'
     #kit1a = 'Dad_B'
-    #kit1a = 'Wayne_A'
+    kit1a = 'Wayne_7cM'
     kit1a_index_offset = 10000
 
     #kit1 = 'Wayne_5000'
