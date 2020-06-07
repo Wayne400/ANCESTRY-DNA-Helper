@@ -30,7 +30,9 @@ def get_shared_match2(kit3, match_filter_list, kit1_primary_index,kit1_index_key
         this_cousin = kit1_primary_index[primary_index]
         homonym_to_primarykey_dict[homonym] = this_cousin  # will go homonym >> primarykey >> matchstring_245
         primarykey_to_keystring[this_cousin] = keystring
-        if (this_cousin != last_cousin) and (this_cousin not in match_filter_list) :
+        #print(match_filter_list)
+        #print(this_cousin, homonym)
+        if (this_cousin != last_cousin) and (homonym not in match_filter_list) :
             if orig_word_list[1] in cousin_list:
                 print("ouch", orig_word_list[1])
             else:
@@ -38,7 +40,7 @@ def get_shared_match2(kit3, match_filter_list, kit1_primary_index,kit1_index_key
                 list_of_lists.append(orig_word_list)
                 cousin_list.append(orig_word_list[0])
                 last_cousin = this_cousin
-        elif (this_cousin == last_cousin) and (this_cousin not in match_filter_list):
+        elif (this_cousin == last_cousin) and (homonym not in match_filter_list):
             del orig_word_list[0]  # dont add  cousin name again
             del orig_word_list[0]
             list_of_lists[-1].extend(orig_word_list)
@@ -95,15 +97,15 @@ def main():
 
     if person == "Glyn":
         kit1_file_list = ["Glyn"]  # , "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM", "Dad_B"]
-        kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM", "Wayne_8cM", "Wayne_7cM","Wayne_7cM_B", "Wayne_6cM", "Wayne_A"]
+        kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM", "Wayne_8cM", "Wayne_7cM", "Wayne_6cM", "Wayne_A"]
         match_filter_list = ["EricEngelhard"]
         kit3 = 'Top60_Dad_X_Bee_Bridle'
         kit3_places = 'places_in_trees'
         kit6 = 'Glyn_Common2'
     elif person == "Wayne":
-        kit2_file_list = ["Glyn" , "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_7cM_B","Dad_6cM","Dad_6cM_F", "Dad_B"]
+        kit2_file_list = ["Glyn" , "Dad_9cM", "Dad_8cM", "Dad_7cM","Dad_6cM", "Dad_B"]
         kit1_file_list = ["Wayne"]
-        match_filter_list = ["SandraDavis","DavidLarsen","PaulineWilliams","LindaEvans","sheilaroberts","susanwhiskin"]
+        match_filter_list = ["SandraDavis","DavidLarsen","PaulineWilliams","LindaEvans","sheilaroberts","susanwhiskin","BarbaraParryManagedbyGwendaParfitt"]
         #match_filter_list = ["SandraDavis","DavidLarsen","PaulineWilliams","LindaEvans","sheilaroberts","susanwhiskin"]
         match_filter_list2 = ["nogoodboyoManagedbyRhiannonWilliams"]
         match_filter_list.extend(match_filter_list2)

@@ -452,6 +452,8 @@
 412 P.H.Managedbycelticouple BarbaraParryManagedbyGwendaParfitt
 498 RoisinBanahan KateSmith
 524 kerryflint
+532 StephenHughes bobcollins
+553 wilayfield MichaelaPorter MattWensel
 557 NubiaBrede-Solis KenLawless KerriRobinson CandaceMaryNelson-Brantigan
 561 NicolaMcdonald ElenLewis GlynParry legin197
 564 TraceyCrofts thesmiths122
@@ -465,6 +467,7 @@
 658 CatrinWalters H.H.ManagedbyReesDinbych
 661 CaiStoddard-Jones gethngethn BarbaraParryManagedbyGwendaParfitt LKevinKelly11 thesmiths122
 708 JannaLusk
+762 CaroleSharp JudyJones
 773 ThomasPayne SheilaMorken
 789 WendyLeeFord tammykiehn NancyHawk L.G.ManagedbyLARRYJEANETTE_1 CarmaOlsen LizBlackburn DirkBranagan EmilyHamson AlanaDanielleBlue
 790 PenelopeHankinsManagedbySALBET TeresaMather KristiCobert
@@ -509,6 +512,7 @@
 1149 yoursanmin D.H.ManagedbySEANALLEN
 1154 DwayneCarrollMcDanielManagedbyDougMcDaniel AlisonCampbell WhitneyFrost RobertPark WyattMcDaniel bee_233 StevenGlennPark
 1155 JohnHeap TecwynRawson EricEngelhard
+1212 H.B.ManagedbyEvaBrown SheilaMorken
 1329 Maggie_Hummel BarbaraKayJohnson
 1349 A.R.ManagedbyBeverlyShuffett
 1383 PAULWOGEL
@@ -707,3 +711,6 @@
 6476 AlanHughesManagedbyDamienTobin BarbaraParryManagedbyGwendaParfitt
 6477 DanielJubera JamesChilders
 6478 ClaireKay EirianRoberts AdelynEllis WilliamCarney usersam2772
+6479 EllenWilliams
+6480 MichaelaPorter MattWensel AlwenaJames
+6481 JenniferKline-Ray  JudyJones JudithAdair
