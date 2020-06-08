@@ -6363,7 +6363,7 @@
 6363 Tina Moore 5th–8th Cousin Shared DNA: 10 cM across 2 segments No Trees
 6364 Mvon60 5th–8th Cousin Shared DNA: 10 cM across 1 segments 943 People
 6365 I.S. Managed by jacquelineroberts14 5th–8th Cousin Shared DNA: 10 cM across 1 segments 1,272 People
-6366 Barbara Parry Managed by Gwenda Parfitt 3rd–4th Cousin Shared DNA: 100 cM across 5 segments 2,304 People
+6366 Barbara Parry Managed by Gwenda Parfitt 3rd–4th Cousin Shared DNA: 100 cM across 5 segments 2,572 People
 6367 Chris Hughes 5th–8th Cousin Shared DNA: 18 cM across 3 segments 639 People
 6368 arwelwjones51 4th–6th Cousin Shared DNA: 35 cM across 4 segments 208 People
 6369 Julianne Vandermeer 4th–6th Cousin Shared DNA: 21 cM across 2 segments  18 People
@@ -6419,7 +6419,7 @@
 6419 Daniel Duty 5th–8th Cousin Shared DNA: 14 cM across 1 segments 67 People
 6420 Ben Kreger 4th–6th Cousin Shared DNA: 27 cM across 1 segments No Trees
 6421 Kirsten Gruver 5th–8th Cousin Shared DNA: 19 cM across 1 segments No Trees
-6422 Gwendoline Brenda Stacey 5th–8th Cousin Shared DNA: 14 cM across 1 segments 3,555 People
+6422 Gwendoline Brenda Stacey 5th–8th Cousin Shared DNA: 14 cM across 1 segments 3,868 People
 6423 Malcolm McLeod 5th–8th Cousin Shared DNA: 7 cM across 1 segments 1,215 People
 6424 berylcope01 Managed by anthony_cope 5th–8th Cousin Shared DNA: 8 cM across 1 segments 1,969 People
 6425 DSMITH018 5th–8th Cousin Shared DNA: 7 cM across 1 segments 58 People
@@ -6430,7 +6430,7 @@
 6430 mwatkinswilhite 5th–8th Cousin Shared DNA: 9 cM across 1 segments 11 People
 6431 Francis Wilson 5th–8th Cousin Shared DNA: 7 cM across 1 segments 8 People
 6432 Debbie Willis Saxe 5th–8th Cousin Shared DNA: 6 cM across 1 segments 546 People
-6433 gwenda humphries 5th–8th Cousin Shared DNA: 12 cM across 1 segments 6 People
+6433 gwenda humphries 5th–8th Cousin Shared DNA: 12 cM across 1 segments 43 People
 6434 Brenda Larmer 5th–8th Cousin Shared DNA: 8 cM across 1 segments 4 People
 6435 Gavinwilkins 5th–8th Cousin Shared DNA: 9 cM across 1 segments 69 People
 6436 Elizabeth Parry_ 5th–8th Cousin Shared DNA: 6 cM across 1 segments Unlinked Tree

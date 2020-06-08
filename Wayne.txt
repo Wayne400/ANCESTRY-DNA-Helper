@@ -4310,7 +4310,7 @@
 4310 seafirth 5th–8th Cousin Shared DNA: 11 cM across 1 segments 6 People
 4311 Tracey Taylor 5th–8th Cousin Shared DNA: 11 cM across 1 segments No Trees
 4312 x5150cop 5th–8th Cousin Shared DNA: 11 cM across 1 segments Unlinked Tree
-4313 BarbaraParry Managed by Gwenda Parfitt 4th–6th Cousin Shared DNA: 53 cM across 6 segments 2,071 People
+4313 Barbara Parry Managed by Gwenda Parfitt 4th–6th Cousin Shared DNA: 53 cM across 6 segments 2,572 People
 4314 Michael Evans 3rd–4th Cousin Shared DNA: 92 cM across 6 segments 1,274 People
 4315 julieswift168 4th–6th Cousin Shared DNA: 29 cM across 2 segments 21 People
 4316 brenda_sg 5th–8th Cousin Shared DNA: 10 cM across 1 segments 242 People GEDMATCH A788166 CHROMOSOMES (13)
@@ -4324,7 +4324,7 @@
 4324 Julianne Vandermeer 5th–8th Cousin Shared DNA: 19 cM across 2 segments 18 People
 4325 Graham Ellis Managed by abstarkholmes 5th–8th Cousin Shared DNA: 16 cM across 1 segments 124 People
 4326 Glyn Parry 4th–6th Cousin Shared DNA: 28 cM across 2 segments No Trees
-4327 Gwendoline Brenda Stacey 5th–8th Cousin Shared DNA: 13 cM across 1 segments 3,678 People
+4327 Gwendoline Brenda Stacey 5th–8th Cousin Shared DNA: 13 cM across 1 segments 3,868 People
 4328 U Jones Managed by Steamerpoint 4th–6th Cousin Shared DNA: 45 cM across 5 segments 5,622 People
 4329 Chris Hughes 5th–8th Cousin Shared DNA: 12 cM across 2 segments 667 People
 4330 Jonathan Richards 5th–8th Cousin Shared DNA: 11 cM across 2 segments 1,303 People
@@ -4332,7 +4332,7 @@
 4332 Ronald Ennion 5th–8th Cousin Shared DNA: 10 cM across 2 segments 281 People
 4333 Dewi Roberts 5th–8th Cousin Shared DNA: 10 cM across 2 segments 608 People
 4334 dbutter103 5th–8th Cousin Shared DNA: 9 cM across 1 segments 49 People
-4335 gwenda humphries 5th–8th Cousin Shared DNA: 11 cM across 1 segments 27 People
+4335 gwenda humphries 5th–8th Cousin Shared DNA: 11 cM across 1 segments 43 People
 4336 shellyboo_1 5th–8th Cousin Shared DNA: 10 cM across 1 segments 1,090 People
 4337 R.D. Managed by radavies1 5th–8th Cousin Shared DNA: 9 cM across 2 segments 661 People
 4338 Paul Rogers 5th–8th Cousin Shared DNA: 9 cM across 1 segments 561 People

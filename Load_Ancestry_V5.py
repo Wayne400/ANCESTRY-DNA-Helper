@@ -1,9 +1,6 @@
 
 import re
 
-#  DNA_Result(int(line_no), index_offset, new_word_dict["who"], new_word_dict["cM"],
-#                         new_word_dict["segments"], new_word_dict["People"], new_word_dict["key_string"],
-#                         new_word_dict["Tree"], kit_duplicate_check, kit, kit_number)
 
 class DNA_Result(object):
 
@@ -223,12 +220,12 @@ def main():
     total_dna_list = []
     kit1_index_list = []
     kit2_index_list = []
-    #kit1_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM","Dad_B"]
-    kit1_file_list = ["Glyn"]
+    kit1_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM","Dad_B"]
+    #kit1_file_list = ["Glyn"]
     kit1_number = 1
 
-    #kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM","Wayne_A"]
-    kit2_file_list = ["Wayne"]
+    kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM","Wayne_A"]
+    #kit2_file_list = ["Wayne"]
     kit2_number = 2
     #kit2_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_6cm_A","Sally_L"]
     #kit2_file_list = ["Helen", "Helen_B"]
@@ -237,26 +234,9 @@ def main():
 
     kit2_Test_Result_Dict, kit2_index_list = load_matches(kit2_file_list, kit2_number, total_dna_list)
 
-    #print(len(kit1_index_list))
-    #print(len(kit2_index_list))
-
-
     intersection_list = list(set(kit1_index_list).intersection(set(kit2_index_list)))
 
-    #print(len(intersection_list))
-    intersection_dict = {}
-    intersection_index = 1
-    for cousin in intersection_list:
-        #print(intersection_index, cousin, int(kit1_index_dict[cousin]) )
-
-        #print(intersection_index, kit1_Test_Result_Dict[cousin].who,kit1_Test_Result_Dict[cousin].centimorgans)
-        #print(intersection_index,  kit2_Test_Result_Dict[cousin].who, kit2_Test_Result_Dict[cousin].centimorgans)
-        #intersection_dict[cousin] = int(kit1_index_dict[cousin])
-        #intersection_dict[cousin] = int(kit1_index_dict[cousin])
-        intersection_index += 1
-
     intersectcount = 1
-    #for cousin_key in sorted(intersection_dict.items(), key=lambda x: x[1], reverse=False):
     for cousin_key in intersection_list:
         key_string = cousin_key
         kit1_index = kit1_Test_Result_Dict[key_string].index
@@ -280,6 +260,30 @@ def main():
         print('{0:4} | {1:36}  {2:4} | {3:4}cM | {4:2}seg | {5:13}|***| {6:4}cM | {7:2}seg | {8:13}| {9:4} |'\
                    .format(intersectcount, kit1_cousin, kit1_index, kit1_cousin_cM, kit1_cousin_seg, kit1_people, kit2_cousin_cM, kit2_cousin_seg, kit2_people,kit2_index))
         intersectcount += 1
+
+    difference_list = list(set(kit1_index_list).symmetric_difference(set(kit2_index_list)))
+    difference_count = 1
+    cousin1_list = []
+    cousin2_list = []
+
+    for cousin_key in difference_list:
+        if cousin_key in kit1_index_list:
+            cousin = kit1_Test_Result_Dict[cousin_key].who
+            if kit1_Test_Result_Dict[cousin_key].people != 'zero':
+                cousin1_list.append(cousin)
+        else:
+            cousin = kit2_Test_Result_Dict[cousin_key].who
+            if kit2_Test_Result_Dict[cousin_key].people != 'zero':
+                cousin2_list.append(cousin)
+        #print (difference_count, cousin)
+        difference_count += 1
+
+    mismatch_list = []
+    mismatch_list = list(set(cousin1_list).intersection(set(cousin2_list)))
+    print(len(mismatch_list), len(cousin1_list), len(cousin2_list))
+    for cousin_who in mismatch_list:
+        print(cousin_who)
+
 
  #   for everbody in total_dna_list:
   #      print (everbody.who, everbody.kit, everbody.keystring)
