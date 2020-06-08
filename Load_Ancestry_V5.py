@@ -231,7 +231,6 @@ def main():
     #kit2_file_list = ["Helen", "Helen_B"]
 
     kit1_Test_Result_Dict, kit1_index_list = load_matches(kit1_file_list, kit1_number, total_dna_list)
-
     kit2_Test_Result_Dict, kit2_index_list = load_matches(kit2_file_list, kit2_number, total_dna_list)
 
     intersection_list = list(set(kit1_index_list).intersection(set(kit2_index_list)))
@@ -265,24 +264,40 @@ def main():
     difference_count = 1
     cousin1_list = []
     cousin2_list = []
+    cousin1_shadow_list = []
+    cousin2_shadow_list = []
 
     for cousin_key in difference_list:
         if cousin_key in kit1_index_list:
             cousin = kit1_Test_Result_Dict[cousin_key].who
             if kit1_Test_Result_Dict[cousin_key].people != 'zero':
                 cousin1_list.append(cousin)
+                cousin1_shadow_list.append(kit1_Test_Result_Dict[cousin_key].keystring)
         else:
             cousin = kit2_Test_Result_Dict[cousin_key].who
             if kit2_Test_Result_Dict[cousin_key].people != 'zero':
                 cousin2_list.append(cousin)
+                cousin2_shadow_list.append(kit2_Test_Result_Dict[cousin_key].keystring)
         #print (difference_count, cousin)
         difference_count += 1
 
     mismatch_list = []
+    mismatch_index = 1
     mismatch_list = list(set(cousin1_list).intersection(set(cousin2_list)))
-    print(len(mismatch_list), len(cousin1_list), len(cousin2_list))
     for cousin_who in mismatch_list:
-        print(cousin_who)
+        index1 = cousin1_list.index(cousin_who)
+        index2 = cousin2_list.index(cousin_who)
+        key1 = cousin1_shadow_list[index1]
+        key2 = cousin2_shadow_list[index2]
+        cm1 = kit1_Test_Result_Dict[key1].centimorgans
+        cm2 = kit2_Test_Result_Dict[key2].centimorgans
+        #print(mismatch_index, cousin_who, key1, key2)
+        print('{0:4} | {1:36} | {2:36} {3:3} | {4:36} {5:3} '\
+                   .format(mismatch_index, cousin_who, key1, cm1, key2, cm2))
+
+        mismatch_index += 1
+
+
 
 
  #   for everbody in total_dna_list:

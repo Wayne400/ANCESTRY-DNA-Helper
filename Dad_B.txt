@@ -33,7 +33,6 @@ Mariah Queen 5th–8th Cousin Shared DNA: 9 cM across 1 segments 11 People
 Brooklyn Lindsey 5th–8th Cousin Shared DNA: 7 cM across 2 segments Unlinked Tree
 Charles Keaton 5th–8th Cousin Shared DNA: 7 cM across 1 segments No Trees
 Lori Gosline 5th–8th Cousin Shared DNA: 6 cM across 1 segments Unlinked Tree
-Megan Smith 5th–8th Cousin Shared DNA: 7 cM across 1 segments 7 People
 Misty Shemenski 5th–8th Cousin Shared DNA: 9 cM across 1 segments Unlinked Tree
 Daleena Crockett 5th–8th Cousin Shared DNA: 11 cM across 1 segments Unlinked Tree
 Judith Volle 5th–8th Cousin Shared DNA: 8 cM across 1 segments Unlinked Tree
@@ -401,7 +400,6 @@ Joanne Huey 5th–8th Cousin Shared DNA: 11 cM across 1 segments 24 People
 Jim Fulton 5th–8th Cousin Shared DNA: 8 cM across 1 segments No Trees
 Stacey Overstreet 5th–8th Cousin Shared DNA: 9 cM across 1 segments Unlinked Tree
 Davina Kilroy 5th–8th Cousin Shared DNA: 18 cM across 2 segments No Trees
-susankrolfe 4th–6th Cousin Shared DNA: 23 cM across 2 segments Unlinked Tree
 Peter Thomas 5th–8th Cousin Shared DNA: 8 cM across 1 segments No Trees
 jessica may 5th–8th Cousin Shared DNA: 9 cM across 1 segments No Trees
 Bettie Barrett 5th–8th Cousin Shared DNA: 6 cM across 1 segments No Trees
@@ -894,7 +892,7 @@ Elizabeth Howser 5th–8th Cousin Shared DNA: 6 cM across 1 segments Unlinked Tree
 barrie_price1 5th–8th Cousin Shared DNA: 6 cM across 1 segments  192 People
 Barb Forbes 5th–8th Cousin Shared DNA: 6 cM across 1 segments No Trees
 Hornee13 5th–8th Cousin Shared DNA: 7 cM across 1 segments 55 People
-Anthony Sanderson 5th–8th Cousin Shared DNA: 18 cM across 1 segments 10 People
+Anthony Sanderson 5th–8th Cousin Shared DNA: 18 cM across 1 segments 115 People
 Susan Scott 5th–8th Cousin Shared DNA: 8 cM across 1 segments No Trees
 Jamberphine 5th–8th Cousin Shared DNA: 6 cM across 1 segments Unlinked Tree
 Andrea Branham 5th–8th Cousin Shared DNA: 8 cM across 1 segments No Trees
