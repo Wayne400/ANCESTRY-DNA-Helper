@@ -5155,7 +5155,7 @@
 5155 dw820 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
 5156 Richard Switzer 5th–8th Cousin Shared DNA: 10 cM across 1 segments Unlinked Tree
 5157 Ericka Jarman 5th–8th Cousin Shared DNA: 10 cM across 1 segments Unlinked Tree
-5158 Monicalei 5th–8th Cousin Shared DNA: 10 cM across 2 segments 2,398 People
+5158 Monicalei 5th–8th Cousin Shared DNA: 10 cM across 2 segments 2,412 People
 5159 karenlg1399 5th–8th Cousin Shared DNA: 10 cM across 1 segments 1,364 People
 5160 deb_uwc 5th–8th Cousin Shared DNA: 10 cM across 1 segments Unlinked Tree
 5161 Robert Merritt 5th–8th Cousin Shared DNA: 10 cM across 2 segments Unlinked Tree
@@ -6107,7 +6107,7 @@
 6107 gmCSue 5th–8th Cousin Shared DNA: 10 cM across 2 segments Unlinked Tree
 6108 charley cooper 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
 6109 JT Lloyd 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
-6110 Erin HOLDEN 5th–8th Cousin Shared DNA: 10 cM across 2 segments 2,082 People
+6110 Erin HOLDEN 5th–8th Cousin Shared DNA: 10 cM across 2 segments 2,094 People
 6111 Carolyn Billings 5th–8th Cousin Shared DNA: 10 cM across 1 segments Unlinked Tree
 6112 esteenew 5th–8th Cousin Shared DNA: 10 cM across 1 segments 5 People
 6113 b_allard63 5th–8th Cousin Shared DNA: 10 cM across 1 segments 6,738 People
@@ -6128,7 +6128,7 @@
 6128 mychelle1972 5th–8th Cousin Shared DNA: 10 cM across 1 segments 96 People
 6129 E.B. Managed by Susan Benson 5th–8th Cousin Shared DNA: 10 cM across 1 segments 125 People
 6130 mel5529 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
-6131 Robert Carruthers 5th–8th Cousin Shared DNA: 10 cM across 1 segments 955 People
+6131 Robert Carruthers 5th–8th Cousin Shared DNA: 10 cM across 1 segments 960 People
 6132 Brian Miller 5th–8th Cousin Shared DNA: 10 cM across 1 segments 54 People
 6133 D.T. Managed by JacqueTaylor2011 5th–8th Cousin Shared DNA: 10 cM across 1 segments 3,075 People
 6134 Joan Jeffery 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
@@ -6398,7 +6398,7 @@
 6398 pierstephen1 5th–8th Cousin Shared DNA: 7 cM across 1 segments 415 People
 6399 James R 5th–8th Cousin Shared DNA: 7 cM across 1 segments 1,345 People
 6400 Kim Kallmeyer 5th–8th Cousin Shared DNA: 7 cM across 1 segments 23 People
-6401 barbaranev 5th–8th Cousin Shared DNA: 6 cM across 1 segments 121 People
+6401 barbaranev 5th–8th Cousin Shared DNA: 6 cM across 1 segments 170 People
 6402 SuzanneSaltmarsh 5th–8th Cousin Shared DNA: 6 cM across 1 segments 58 People
 6403 Eileen Pye 5th–8th Cousin Shared DNA: 6 cM across 1 segments 875 People
 6404 Robert justman 5th–8th Cousin Shared DNA: 13 cM across 1 segments Unlinked Tree
@@ -6481,3 +6481,31 @@
 6481 Jennifer Kline-Ray 5th–8th Cousin Shared DNA: 14 cM across 1 segments No Trees
 6482 susankrolfe 4th–6th Cousin Shared DNA: 23 cM across 2 segments Unlinked Tree
 6483 Megan Smith 5th–8th Cousin Shared DNA: 7 cM across 1 segments 7 People
+6484 Madeline Wall 5th–8th Cousin Shared DNA: 7 cM across 1 segments No Trees
+6485 Chris Adams 4th–6th Cousin Shared DNA: 27 cM across 1 segments No Trees
+6486 Marty Kiehn 4th–6th Cousin Shared DNA: 27 cM across 1 segments 6 People
+6487 paul davies 5th–8th Cousin Shared DNA: 6 cM across 1 segments 143 People
+6488 Jeffrey Smrz 4th–6th Cousin Shared DNA: 21 cM across 2 segments No Trees
+6489 Neil Evans 4th–6th Cousin Shared DNA: 21 cM across 2 segments Unlinked Tree
+6490 Dewi Pugh 5th–8th Cousin Shared DNA: 9 cM across 2 segments Unlinked Tree
+6491 rj_wetherall 5th–8th Cousin Shared DNA: 6 cM across 1 segments Unlinked Tree
+6492 shelby loshaw 5th–8th Cousin Shared DNA: 6 cM across 1 segments Unlinked Tree
+6493 Anna Serrano 5th–8th Cousin Shared DNA: 8 cM across 1 segments No Trees
+6494 Robert Kocis 5th–8th Cousin Shared DNA: 7 cM across 1 segments Unlinked Tree
+6495 Richard Whiting 5th–8th Cousin Shared DNA: 8 cM across 1 segments No Trees
+6496 Eric Maddox 5th–8th Cousin Shared DNA: 8 cM across 1 segments No Trees
+6497 Angel Redd 5th–8th Cousin Shared DNA: 10 cM across 1 segments 28 People
+6498 Ann Jones-Evans 5th–8th Cousin Shared DNA: 7 cM across 1 segments No Trees
+6499 I.D. Managed by Sara Dick 5th–8th Cousin Shared DNA: 7 cM across 1 segments Unlinked Tree
+6500 Andrew Cooke Managed by Claire Paczko 4th–6th Cousin Shared DNA: 25 cM across 3 segments 92 People
+6501 margaret stanley 5th–8th Cousin Shared DNA: 14 cM across 1 segments No Trees
+6502 Patricia Phillips 5th–8th Cousin Shared DNA: 7 cM across 1 segments Unlinked Tree
+6503 Nola Rushing 5th–8th Cousin Shared DNA: 13 cM across 1 segments No Trees
+6504 Thomas Michalak 5th–8th Cousin Shared DNA: 9 cM across 1 segments No Trees
+6505 spikepitt 5th–8th Cousin Shared DNA: 19 cM across 1 segments 17,099 People
+6506 Fleur Long 5th–8th Cousin Shared DNA: 6 cM across 1 segments 594 People
+6507 Jo Ibbotson 4th–6th Cousin Shared DNA: 22 cM across 2 segments 1,076 People
+6508 dawnbrough 5th–8th Cousin Shared DNA: 7 cM across 1 segments 6,263 People
+6509 Claire Latham 5th–8th Cousin Shared DNA: 13 cM across 2 segments 22 People
+6510 Eric Ziv 5th–8th Cousin Shared DNA: 19 cM across 1 segments No Trees
+6511 Tevin Rutledge 5th–8th Cousin Shared DNA: 12 cM across 1 segments 1 People

@@ -208,7 +208,6 @@ def main():
     kit1_supergroup = {}
     #print(super_list)
     #print(new_cousin_list)
-    dad_string = "help"
     chromo_dict = {}
     for cousin in new_cousin_list:
             punter = 0

@@ -134,10 +134,11 @@ def load_matches(file_list, duplicate_check_flag):
 def main():
 
 
-    kit1_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_7cM_B", "Dad_6cM","Dad_6cM_F" ,"Dad_B"]
-    kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM","Wayne_A"]
+    kit1_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM","Dad_B"]
+    #kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM","Wayne_A"]
 
-    #kit2_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_6cM_A","Sally_L"]
+    
+    kit2_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_6cM_A","Sally_L"]
     #kit2_file_list = ["Helen", "Helen_B"]
     duplicate_check_flag = True
 
@@ -201,8 +202,8 @@ def main():
              kit2_people = kit2_dict_of_lists[kit2_cousin_index]["Tree"]
 
         if kit1_people == kit2_people:   # check its the same person not a homonym
-             #print('{0:4} | {1:36}  {2:4} | {3:4}cM | {4:2}seg | {5:13}|***| {6:4}cM | {7:2}seg | {8:13}| {9:4} |'\
-             #      .format(intersectcount, kit1_cousin, kit1_cousin_index, kit1_cousin_cM, kit1_cousin_seg, kit1_people, kit2_cousin_cM, kit2_cousin_seg, kit2_people,kit2_cousin_index))
+             print('{0:4} | {1:36}  {2:4} | {3:4}cM | {4:2}seg | {5:13}|***| {6:4}cM | {7:2}seg | {8:13}| {9:4} |'\
+                   .format(intersectcount, kit1_cousin, kit1_cousin_index, kit1_cousin_cM, kit1_cousin_seg, kit1_people, kit2_cousin_cM, kit2_cousin_seg, kit2_people,kit2_cousin_index))
              intersectcount += 1
         else:
             print(
