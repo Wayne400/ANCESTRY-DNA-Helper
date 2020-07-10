@@ -85,7 +85,7 @@ def get_places(kit3_places, kit1_who_dict):
 
 
 def main():
-    person = "Glyn"
+    person = "Sally"
     print_filter = True
     match_filter_list = [""]
     match_filter_list2 = [""]
@@ -97,13 +97,15 @@ def main():
 
     if person == "Glyn":
         kit1_file_list = ["Glyn"]  # , "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM", "Dad_B"]
-        kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM", "Wayne_8cM", "Wayne_7cM", "Wayne_6cM", "Wayne_A"]
         match_filter_list = ["EricEngelhard"]
         kit3 = 'Top60_Dad_X_Bee_Bridle'
         kit3_places = 'places_in_trees'
+        kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM", "Wayne_8cM", "Wayne_7cM", "Wayne_6cM", "Wayne_A"]
+        kit4_file_list = ["Helen", "Helen_B"]
+        kit5_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_L"]
         kit6 = 'Glyn_Common2'
-    elif person == "Wayne":
-        kit2_file_list = ["Glyn" , "Dad_9cM", "Dad_8cM", "Dad_7cM","Dad_6cM", "Dad_B"]
+
+    if person == "Wayne":
         kit1_file_list = ["Wayne"]
         match_filter_list = ["SandraDavis","DavidLarsen","PaulineWilliams","LindaEvans","sheilaroberts","susanwhiskin","BarbaraParryManagedbyGwendaParfitt"]
         #match_filter_list = ["SandraDavis","DavidLarsen","PaulineWilliams","LindaEvans","sheilaroberts","susanwhiskin"]
@@ -111,10 +113,22 @@ def main():
         match_filter_list.extend(match_filter_list2)
         kit3 = 'Top60_ag3754'
         kit3_places = 'Top60_ag3754'
+        kit2_file_list = ["Glyn" , "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM", "Dad_B"]
+        kit4_file_list = ["Helen", "Helen_B"]
+        kit5_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_L"]
         kit6 = 'Wayne_Common'
 
-    kit4_file_list = ["Helen", "Helen_B"]
-    kit5_file_list = ["Sally", "Sally_10cM", "Sally_9cM","Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_6cM_A", "Sally_L" ]
+    if person == "Sally":
+        kit1_file_list = ["Sally" ]
+        match_filter_list = ["UJonesManagedbySteamerpoint", ""]
+        kit3 = 'Sally_Shared'
+        kit3_places = 'Sally_Shared'
+        kit2_file_list = ["Glyn" , "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM", "Dad_B"]
+        kit4_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM", "Wayne_8cM", "Wayne_7cM", "Wayne_6cM", "Wayne_A"]
+        kit5_file_list = ["Helen", "Helen_B"]
+        kit6 = 'Sally_Common'
+
+
     duplicate_check_flag = False
     dict_of_places = []
 

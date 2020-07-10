@@ -6,7 +6,7 @@
 6 FLOSSYIRENE 3rd–4th Cousin Shared DNA: 123 cM across 9 segments No Trees
 7 M.W. Managed by rod wilson 3rd–4th Cousin Shared DNA: 106 cM across 5 segments No Trees
 8 Joanne Parsonage 3rd–4th Cousin Shared DNA: 101 cM across 3 segments No Trees
-9 4th Cousin Lynne Young 4th–6th Cousin Shared DNA: 66 cM across 3 segments No Trees
+9 Lynne Young 4th–6th Cousin Shared DNA: 66 cM across 3 segments No Trees
 10 Mary Brinker 4th–6th Cousin Shared DNA: 64 cM across 5 segments No Trees
 11 N.C. Managed by Geoff Creighton 4th–6th Cousin Shared DNA: 60 cM across 3 segments 1,870 People Common ancestor
 12 David Habesch 4th–6th Cousin Shared DNA: 59 cM across 7 segments No Trees
@@ -75,7 +75,7 @@
 75 lforbes125 4th–6th Cousin Shared DNA: 28 cM across 1 segments No Trees
 76 Karen Kostenko 4th–6th Cousin Shared DNA: 28 cM across 1 segments 10 People
 77 marxmarshall2 4th–6th Cousin Shared DNA: 28 cM across 3 segments No Trees
-78  zoonie42 4th–6th Cousin Shared DNA: 28 cM across 3 segments Unlinked Tree
+78 zoonie42 4th–6th Cousin Shared DNA: 28 cM across 3 segments Unlinked Tree
 79 James Matthew Nolan 4th–6th Cousin Shared DNA: 28 cM across 1 segments 11 People
 80 Stuart Davis 4th–6th Cousin Shared DNA: 28 cM across 1 segments 477 People
 81 Joleen Langel 4th–6th Cousin Shared DNA: 28 cM across 1 segments 42 People
@@ -89,7 +89,7 @@
 89 Doug & Jo Anne Powell 4th–6th Cousin Shared DNA: 28 cM across 1 segments 26 People
 90 lambbhuna 4th–6th Cousin Shared DNA: 28 cM across 1 segments No Trees
 91 Bob Owen 4th–6th Cousin Shared DNA: 27 cM across 1 segments Unlinked Tree
-82 John Hill 4th–6th Cousin Shared DNA: 27 cM across 2 segments Unlinked Tree
+92 John Hill 4th–6th Cousin Shared DNA: 27 cM across 2 segments Unlinked Tree
 93 amber crossley 4th–6th Cousin Shared DNA: 27 cM across 2 segments Unlinked Tree
 94 Norman Hill Managed by patrickmichaelrance 4th–6th Cousin Shared DNA: 27 cM across 2 segments 12,973 People
 95 Lawrence Hamilton 4th–6th Cousin Shared DNA: 27 cM across 1 segments 3 People
@@ -6977,5 +6977,11 @@
 6977 Murray Vandefifer 5th–8th Cousin Shared DNA: 11 cM across 1 segments No Trees
 6978 Lori Nathan 5th–8th Cousin Shared DNA: 11 cM across 1 segments No Trees
 6979 Larry Bennett 5th–8th Cousin Shared DNA: 11 cM across 1 segments Unlinked Tree
-6984 Elizabeth Wynne 5th–8th Cousin Shared DNA: 6 cM across 1 segments No Trees
-6985 Barbara Parry Managed by Gwenda Parfitt 4th–6th Cousin Shared DNA: 22 cM across 2 segments 2,071 People
+6980 Elizabeth Wynne 5th–8th Cousin Shared DNA: 6 cM across 1 segments No Trees
+6981 Barbara Parry Managed by Gwenda Parfitt 4th–6th Cousin Shared DNA: 22 cM across 2 segments 2,572 People
+6982 Robert Fort 1st–2nd Cousin Shared DNA: 380 cM across 18 segments 18 People
+6983 Timothy Pengilley 4th–6th Cousin Shared DNA: 35 cM across 1 segments 23 People
+6984 Jayne Marks 4th–6th Cousin Shared DNA: 25 cM across 1 segments Unlinked Tree
+6985 Philip Fenna 4th–6th Cousin Shared DNA: 22 cM across 1 segments No Trees
+6986 U Jones Managed by Steamerpoint 1st Cousin Shared DNA: 1,809 cM across 75 segments 5,882 People
+6987 Helen Wray 4th–6th Cousin Shared DNA: 22 cM across 1 segments 280 People

@@ -1491,7 +1491,7 @@
 1491 Donald Davis 5th–8th Cousin Shared DNA: 14 cM across 2 segments No Trees
 1492 Maura Searle Managed by csearle05 5th–8th Cousin Shared DNA: 14 cM across 1 segments 1,135 People
 1493 Courtney Bell 5th–8th Cousin Shared DNA: 14 cM across 1 segments No Trees
-1494 J.P. Managed by Gordon Brown 5th–8th Cousin Shared DNA: 14 cM across 2 segments 8,991 People
+1494 J.P. Managed by Gordon Brown 5th–8th Cousin Shared DNA: 14 cM across 2 segments 9,126 People
 1495 gerisly1 5th–8th Cousin Shared DNA: 14 cM across 1 segments 23 People
 1496 Gillian and Glyn Evans 5th–8th Cousin Shared DNA: 14 cM across 2 segments 10 People
 1497 Randy Burgess 5th–8th Cousin Shared DNA: 14 cM across 1 segments Unlinked Tree
@@ -2644,7 +2644,7 @@
 2644 jennajoy27 5th–8th Cousin Shared DNA: 12 cM across 1 segments 7 People
 2645 donaldglasgow 5th–8th Cousin Shared DNA: 12 cM across 1 segments 12,858 People
 2646 Christie Owens 5th–8th Cousin Shared DNA: 12 cM across 1 segments 7 People
-2647 Joyce Welch Managed by Dawn Whalen 5th–8th Cousin Shared DNA: 12 cM across 1 segments 879 People
+2647 Joyce Welch Managed by Dawn Whalen 5th–8th Cousin Shared DNA: 12 cM across 1 segments 887 People
 2648 Carol Ann Eftink 5th–8th Cousin Shared DNA: 12 cM across 1 segments No Trees
 2649 Darrel McCall 5th–8th Cousin Shared DNA: 12 cM across 1 segments Unlinked Tree
 2650 david grant 5th–8th Cousin Shared DNA: 12 cM across 2 segments 7 People
