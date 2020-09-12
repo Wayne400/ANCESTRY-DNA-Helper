@@ -410,6 +410,10 @@
 320 S.M.ManagedbyBilliePlutchak CarolynLucke drmiller48 Ajwilson8091 E.G.ManagedbyAnnetteGann JohnnyMartin MarissaSadleir 
 320 S.M.ManagedbyBilliePlutchak KimBLACKBURN SarahCase JudyTumlin
 321 NicoleCook EmmaCharles
+322 MatthewHarris E.D.ManagedbyMindyFrench NatalieHeppell tammykiehn NancyHawk L.G.ManagedbyLARRYJEANETTE_1 heyjay2266 CarmaOlsen BrentHarvey
+322 MatthewHarris  ChrisAdams kandd101 LizzyAshcraft MartyKiehn B.M.ManagedbyBrentMcFarland BenKreger BrookWoodbine kelliesheehan127
+322 MatthewHarris Sonja_palmiereManagedbyJanetLeavensAldridge WilliamDagney I.K.ManagedbySusanKreger LizBlackburn kathleenjex DianeSears
+322 MatthewHarris  LeslieJones tomanthonyoakland blue815l CarolynLucke drmiller48 MindyFrench Ajwilson8091 EmilyHamson joedminster
 332 A.F.Managedbycarvinara bobcollins ToniaSandovalMickey DorothySandoval carvinara
 324 garrettplummer rosiebarclay370 SylvianeOts
 326 SimoneJohnson llapgoch1 Marianjob
@@ -442,7 +446,7 @@
 367 CharlesGatesManagedbydcgates87 CarolynLucke Ajwilson8091 MaryConnell JudyTumlin LareneHollingsworth KevinSwan SheilaJohnson GeneSmith
 368 LeslieJones_ D.W.ManagedbyWendyMcKenna ElenLewis arwelwjones51 eviewyn downtonbill
 371 PhilipDavies StuartCawthorneManagedbyRoslynCawthorne
-374 SusanWalton BonnieChesler
+374 SusanWalton_44% BonnieChesler
 375 RoyOlson CandaceMaryNelson-Brantigan
 378 CarolBenagh H.D.Managedbyprenjo SheilaMorken
 379 wlsnow160 tammykiehn CarmaOlsen LizzyAshcraft LizBlackburn kathleenjex
@@ -452,12 +456,15 @@
 412 P.H.Managedbycelticouple BarbaraParryManagedbyGwendaParfitt
 498 RoisinBanahan KateSmith
 524 kerryflint
+532 StephenHughes bobcollins
+553 wilayfield MichaelaPorter MattWensel
 557 NubiaBrede-Solis KenLawless KerriRobinson CandaceMaryNelson-Brantigan
 561 NicolaMcdonald ElenLewis GlynParry legin197
 564 TraceyCrofts thesmiths122
 574 HopeMcCann
 582 roselanekoi InaBlancheParry GlynParry
 605 MDonaldMills ben1272
+623 reneecortez50 JamesChilders
 628 NatalieShenkosky JefferyDoyen jennacblu
 638 monicapauffleyManagedbycpike76 MalcolmSlade
 640 faafaa74 kandd101 hhhas CarolynLucke Ajwilson8091 JudyTumlin LareneHollingsworth SheilaJohnson
@@ -465,7 +472,11 @@
 658 CatrinWalters H.H.ManagedbyReesDinbych
 661 CaiStoddard-Jones gethngethn BarbaraParryManagedbyGwendaParfitt LKevinKelly11 thesmiths122
 708 JannaLusk
+709 HelenWilliamsManagedbykenwilliams1126 S.J.Managedbyajones296 GillianandGlynEvans
+723 SimonEaves JamesChilders
+762 CaroleSharp JudyJones
 773 ThomasPayne SheilaMorken
+784 PaulRedmile ben1272
 789 WendyLeeFord tammykiehn NancyHawk L.G.ManagedbyLARRYJEANETTE_1 CarmaOlsen LizBlackburn DirkBranagan EmilyHamson AlanaDanielleBlue
 790 PenelopeHankinsManagedbySALBET TeresaMather KristiCobert
 793 GarySimpson14 JamesChilders
@@ -495,6 +506,7 @@
 898 naynay_41 aberlas ArthurBrisbane PhilipHaldane yvargas652
 902 annelockyerchristineManagedbyannelockyer aberlas JefferyDoyen thesmiths122 AdelynEllis downtonbill jewelschris
 913 llio_thomas usersam2772
+960 debrawakefield JayneMarks AndreaWilsonManagedbyRobbieWilson45
 1051 JamieOwen
 1063 MeganBenbow TamaraHaver eviewyn usersam2772
 1079 dann_fanelli StephenLegg
@@ -509,8 +521,13 @@
 1149 yoursanmin D.H.ManagedbySEANALLEN
 1154 DwayneCarrollMcDanielManagedbyDougMcDaniel AlisonCampbell WhitneyFrost RobertPark WyattMcDaniel bee_233 StevenGlennPark
 1155 JohnHeap TecwynRawson EricEngelhard
+1181 varpl roneill232 StephenLegg
+1189 SYNAPSEFAMILY SimonGray
+1212 H.B.ManagedbyEvaBrown SheilaMorken
+1310 safinkee judyrobinson
 1329 Maggie_Hummel BarbaraKayJohnson
 1349 A.R.ManagedbyBeverlyShuffett
+1374 TillyBesant LenArlow
 1383 PAULWOGEL
 1392 DavidWhite HaroldFrey98
 1416 LindaTineo SaideeHolmes
@@ -550,8 +567,11 @@
 2397 TonySweetman BonnieChesler
 2493 AndyGillis 
 2527 MaryBentleyManagedbyjohnbentley
+2599 emjaba1 arwelwjones51 eviewyn
 2832 TeighlorChismManagedbymeredithchism
 2842 WilliamSlavin
+2911 CourtneyLoy HaroldFrey98
+3170 jane308 SallyAnneGale ArthurMarkGaleManagedbySteamerpoint GillianandGlynEvans BrynRoberts
 3436 N.L.Managedbynatasharhea
 3342 BrandonClark
 3461 ronhowell98
@@ -707,3 +727,44 @@
 6476 AlanHughesManagedbyDamienTobin BarbaraParryManagedbyGwendaParfitt
 6477 DanielJubera JamesChilders
 6478 ClaireKay EirianRoberts AdelynEllis WilliamCarney usersam2772
+6479 EllenWilliams
+6480 MichaelaPorter MattWensel AlwenaJames
+6481 JenniferKline-Ray  JudyJones JudithAdair
+6482 susankrolfe 
+6483 MeganSmith susankrolfe
+6484 MadelineWall DianaMelling bee_233
+6485 ChrisAdams
+6486 MartyKiehn
+6487 pauldavies GlynParry
+6488 JeffreySmrz rnicholsonltd
+6489 NeilEvans gethngethn AdelynEllis
+6490 DewiPugh ElwynDavies GlynParry H.D.Managedbyprenjo C.H.Managedbykeiralynch99 eviewyn AlwenaJames
+6491 rj_wetherall JuneMcLachlinManagedbyoschean
+6492 shelbyloshaw JanetBarnes
+6493 AnnaSerrano wtarwater52Managedbynctarwater D.T.Managedbynctarwater
+6494 RobertKocis NeilEvans
+6495 RichardWhiting PaulDay
+6496 EricMaddox EirianRoberts AdelynEllis
+6497 AngelRedd Sonja_palmiereManagedbyJanetLeavensAldridge I.K.ManagedbySusanKreger
+6498 AnnJones-Evans GlynParry EirianRoberts eviewyn NeilEvans
+6499 I.D.ManagedbySaraDick MaryConnell 
+6500 AndrewCookeManagedbyClairePaczko KeithMartinWilliams
+6501 margaretstanley AdelynEllis
+6502 PatriciaPhillips MalcolmSlade
+6503 NolaRushing LareneHollingsworth
+6504 ThomasMichalak wtarwater52Managedbynctarwater D.T.Managedbynctarwater
+6505 spikepitt JeffreySmrz
+6506 FleurLong JoIbbotson
+6507 JoIbbotson
+6508 dawnbrough aberlas
+6509 ClaireLatham aberlas JuneMcLachlinManagedbyoschean
+6510 EricZiv E.D.ManagedbyMindyFrench NatalieHeppell tammykiehn NancyHawk BrentHarvey kandd101 LizzyAshcraft BenKreger
+6510 EricZiv BrookWoodbine kelliesheehan127 Sonja_palmiereManagedbyJanetLeavensAldridge WilliamDagney
+6510 EricZiv I.K.ManagedbySusanKreger NathanGuzman lmwier LeslieJones tomanthonyoakland blue815l CarolynLucke
+6510 EricZiv Ajwilson8091 MaryConnell LareneHollingsworth KevinSwan SheilaJohnson GeneSmith
+6511 TevinRutledge JoanneLogsdon
+6512 GarethWilliams_49% SallyAnneGale ElwynDavies H.D.Managedbyprenjo AdelynEllis
+6513 NatalieRoberts_53% aberlas SallyAnneGale ClaireDayel-Baker JohnKelly ElenLewis GlynParry ajones296 RobertCowley
+6514 farmerks182 JoanneLogsdon
+6515 aubreyanderson1987 BenKreger Sonja_palmiereManagedbyJanetLeavensAldridge I.K.ManagedbySusanKreger tomanthonyoakland
+6516 mlawrence40 HaroldFrey98

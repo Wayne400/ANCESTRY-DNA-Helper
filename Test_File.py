@@ -146,19 +146,18 @@ def get_cousin_dict(kit1, index_offset):
 
 
 def main():
-    #kit1 = 'Glyn'
-    kit1 = 'Wayne'
+    kit1 = 'Glyn'
+    #kit1 = 'Wayne'
     #kit1 = 'Helen'
     #kit1 = 'Sally'
     kit1_index_offset = 0
-    #kit1a = 'Helen_B'
+    kit1a = 'Dad_B'
+    #kit1a = 'Wayne_6cM_new'
     #kit1a = 'Sally_L'
     #kit1a = 'Dad_B'
-    kit1a = 'Wayne_7cM'
+    kit1a = 'Una_L'
     kit1a_index_offset = 10000
 
-    #kit1 = 'Wayne_5000'
-    #kit1 = 'Helen400'
     kit1_list = []
     kit1_dict_of_lists = get_cousin_dict(kit1,kit1_index_offset)
     kit1a_dict_of_lists = get_cousin_dict(kit1a, kit1a_index_offset)
