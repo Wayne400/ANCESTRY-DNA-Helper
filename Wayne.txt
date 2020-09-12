@@ -4344,7 +4344,7 @@
 4344 brenallan 5th–8th Cousin Shared DNA: 7 cM across 1 segments 1,274 People
 4345 Barry Jones Managed by Helen Jones 5th–8th Cousin Shared DNA: 7 cM across 1 segments 767 People
 4346 PAUL WOGEL 5th–8th Cousin Shared DNA: 7 cM across 1 segments 1,483 People
-4347 Violet Williams 5th–8th Cousin Shared DNA: 7 cM across 1 segments 68 People
+4347 Violet Williams 5th–8th Cousin Shared DNA: 7 cM across 1 segments 299 People
 4348 ahumphreys20 5th–8th Cousin Shared DNA: 7 cM across 1 segments 5 People
 4349 Olwen Doig 5th–8th Cousin Shared DNA: 7 cM across 1 segments 22 People
 4350 Carys Duggan-Rees 5th–8th Cousin Shared DNA: 6 cM across 1 segments 414 People
@@ -4358,3 +4358,5 @@
 4358 Alan Hughes Managed by Damien Tobin 4th–6th Cousin Shared DNA: 28 cM across 2 segments 97 People
 4359 Claire Condon 5th–8th Cousin Shared DNA: 18 cM across 1 segments 6 People
 4360 RayRutland65 5th–8th Cousin Shared DNA: 7 cM across 1 segments 2,891 People
+4361 hannah day 5th–8th Cousin Shared DNA: 9 cM across 1 segments Unlinked Tree
+4362 Steven Roberts 4th–6th Cousin Shared DNA: 23 cM across 2 segments No Trees

@@ -75,7 +75,7 @@
 75 LenArlow Buckle
 76 TamaraHaver aberlas
 77 RodneySimmons Australia Hughes
-78 NatalieHeppell LareneHollingsworth KevinSwan joedminster AlanaDanielleBlue SheilaJohnson
+78 NatalieHeppell 
 79 tammykiehn Washington
 80 NancyHawk
 81 JefferyDoyen rp_robertsManagedbyDarcieFrisch jennacblu
@@ -88,14 +88,14 @@
 88 L.G.ManagedbyLARRYJEANETTE_1
 89 thesmiths122 aberlas H.H.ManagedbyReesDinbych ElenLewis DebbieParsons ajones296 RobertCowley S.J.Managedbyajones296
 90 Maureenessom AndrewMcauliffe
-91 heyjay2266 MarissaSadleir KimBLACKBURN MaryConnell SarahCase JudyTumlin EmilyHamson joedminster AlanaDanielleBlue
+91 heyjay2266 Utah Worcestershire Sweden Edwards Arkansas Georgia
 92 CarmaOlsen
 93 TecwynRawson aberlas SallyAnneGale ArthurMarkGaleManagedbySteamerpoint DebbieParsons ajones296 BarbaraKayJohnson
 94 nkalexander7 IanHuxley
 95 BrentHarvey
 96 BarbaraKayJohnson SallyAnneGale D.W.ManagedbyWendyMcKenna DebbieParsons RyanDittman ajones296 TecwynRawson
 97 C.K.Managedbycaseykeen
-98 kandd101
+98 kandd101 Hollingsworth Alabama Virginia
 99 LizzyAshcraft
 100 MichaelGerow
 101 WhitneyFrost SimonGray BelindaSarstedt DAVIDTQUINN AlisonCampbell gewnnbrooks C.K.Managedbycaseykeen BryanYates 
@@ -111,14 +111,14 @@
 111 RichardHoyManagedbyBeverlyHoy
 112 ErinWilson FrancesSandraKey judio1343 tchester200166 ColleenOLeary lstarcevich1
 113 SarahPerriam
-114 BrookWoodbine
-115 L.B.Managedbyjojoblueberry
-116 kelliesheehan127
+114 BrookWoodbine Illinois Pennsylvania Indiana Iowa Brown England Ohio Mississippi Beard Texas
+115 L.B.Managedbyjojoblueberry see kelliesheehan127 Long
+116 kelliesheehan127 Long Iowa Beard Texas
 117 Sonja_palmiereManagedbyJanetLeavensAldridge
 118 KarineGeorge D.W.ManagedbyWendyMcKenna wjr13524ManagedbySophiaRichards
 119 PatriciaNewton
 120 JohnYoung
-121 WilliamDagney E.D.ManagedbyMindyFrench NatalieHeppell tammykiehn NancyHawk L.G.ManagedbyLARRYJEANETTE_1
+121 WilliamDagney
 122 I.K.ManagedbySusanKreger
 123 HenryWannerton Buckinghamshire
 124 LizBlackburn
@@ -164,7 +164,7 @@
 164 M.L.ManagedbyLouiseLatham AnnMcLennanManagedbymerrinmc JANICEJOHNSON
 165 BryanYates
 166 KarysHarbour BelindaSarstedt
-167 DirkBranagan E.D.ManagedbyMindyFrench NatalieHeppell tammykiehn NancyHawk L.G.ManagedbyLARRYJEANETTE_1 heyjay2266 CarmaOlsen
+167 DirkBranagan Connecticut Indiana Germany Warwickshire Norfolk Gloucestershire Berkshire Illinois Utah
 168 DerekCliffinManagedbyDeborah(Debbie)BurrowsNeePennick
 169 KatyHoggard
 170 bobcollins ToniaSandovalMickey GaryOwen chris_rosebankManagedbyjjstree1 CharlesClements DorothySandoval carvinara
@@ -180,7 +180,7 @@
 180 DianneWilson LindaHayesManagedbyPeterHayes
 181 calewis6461 aberlas
 182 TimothyTaber
-183 lmwier
+183 lmwier Indiana Pennsylvania Scotland England Ohio
 184 Marianjob SallyAnneGale D.W.ManagedbyWendyMcKenna llapgoch1 EirianRoberts usersam2772
 185 DianeSears
 186 JeanMcCauley
@@ -272,7 +272,7 @@
 272 LareneHollingsworth
 273 shereen333 G.R.Managedbygemmaroberts50 llapgoch1 gemmaroberts50 MargaretHaradaMori
 274 PatriciaGelding valerie_kent3
-275 HaroldFrey98
+275 HaroldFrey98 Illinois Kentucky SouthCarolina Tennessee Arkansas
 276 jennacblu
 277 wtarwater52Managedbynctarwater
 278 CarolCampbell
@@ -342,7 +342,7 @@
 367 CharlesGatesManagedbydcgates87 NancyHawk BrentHarvey kandd101 BenKreger BrookWoodbine kelliesheehan127 Sonja_palmiereManagedbyJanetLeavensAldridge
 368 LeslieJones_ D.W.ManagedbyWendyMcKenna ElenLewis arwelwjones51 eviewyn downtonbill
 371 PhilipDavies StuartCawthorneManagedbyRoslynCawthorne
-374 SusanWalton BonnieChesler
+374 SusanWalton_44% BonnieChesler
 375 RoyOlson CandaceMaryNelson-Brantigan
 378 CarolBenagh H.D.Managedbyprenjo SheilaMorken
 379 wlsnow160 tammykiehn CarmaOlsen LizzyAshcraft LizBlackburn kathleenjex
@@ -370,7 +370,7 @@
 793 GarySimpson14 JamesChilders
 794 nancymagaard1 golfmax101
 797 LauraTurner NancyHawk
-798 E.H.Managedbyalemge BrentHarvey BrookWoodbine L.B.Managedbyjojoblueberry kelliesheehan127 JessicaFils-Aime
+798 E.H.Managedbyalemge see Kellie Sheehan127
 808 KevinJ.Pople aberlas
 842 jimmcmanus818 ElwynDavies H.D.Managedbyprenjo BarbaraKayJohnson GillianandGlynEvans
 802 JasmineDeLaHoya JamesChilders
@@ -526,7 +526,7 @@
 6413 BARRYPATERSON SouthAustralia
 6415 SaideeHolmes Arkansas
 6416 christineannBridson SallyAnneGale ElwynDavies GlynParry H.D.Managedbyprenjo gnj07
-6417 KariStevenson HaroldFrey98
+6417 KariStevenson Arkansas
 6418 M.D.ManagedbyMollyDavidson AdelynEllis
 6419 DanielDuty NathanGuzman blue815l
 6420 BenKreger
@@ -561,4 +561,6 @@
 6483 MeganSmith susankrolfe
 6484 MadelineWall DianaMelling bee_233
 6485 ChrisAdams
-6486 MartyKiehn
+6486 MartyKiehn Washington
+6514 farmerks182 Williams Carbon Indiana
+6516 mlawrence40 Arkansas

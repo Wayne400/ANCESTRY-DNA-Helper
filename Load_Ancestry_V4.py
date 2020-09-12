@@ -217,10 +217,10 @@ def main():
     #kit1_file_list = ["Glyn"]
     kit1_number = 1
 
-    #kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM","Wayne_A"]
+    kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM_new","Wayne_A"]
     #kit2_file_list = ["Wayne"]
     kit2_number = 2
-    kit2_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_6cm_A","Sally_L"]
+    #kit2_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_6cm_A","Sally_L"]
     #kit2_file_list = ["Helen", "Helen_B"]
 
     kit1_dict_of_lists, kit1_Test_Result_Dict = load_matches(kit1_file_list, kit1_number, total_dna_list)
