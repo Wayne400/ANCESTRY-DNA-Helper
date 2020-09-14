@@ -94,7 +94,7 @@
 94 nkalexander7 4th–6th Cousin Shared DNA: 28 cM across 1 segments Unlinked Tree 
 95 Brent Harvey 4th–6th Cousin Shared DNA: 28 cM across 1 segments No Trees 
 96 Barbara Kay Johnson 4th–6th Cousin Shared DNA: 27 cM across 2 segments 18 People 
-97 C.K. Managed by casey keen 4th–6th Cousin Shared DNA: 27 cM across 2 segments Unlinked Tree 
+97 C.K. Managed by casey keen 4th–6th Cousin Shared DNAF: 27 cM across 2 segments Unlinked Tree 
 98 kandd101 4th–6th Cousin Shared DNA: 27 cM across 1 segments 208 People 
 99 Lizzy Ashcraft 4th–6th Cousin Shared DNA: 27 cM across 1 segments No Trees 
 100 Michael Gerow 4th–6th Cousin Shared DNA: 27 cM across 1 segments Unlinked Tree 
@@ -6514,3 +6514,14 @@
 6514 farmerks182 4th–6th Cousin Shared DNA: 26 cM across 2 segments 66 People
 6515 aubreyanderson1987 5th–8th Cousin Shared DNA: 13 cM across 1 segments No Trees
 6516 mlawrence40 5th–8th Cousin Shared DNA: 15 cM across 1 segments 32 People
+6517 Christine Sinclair 5th–8th Cousin Shared DNA: 14 cM across 1 segments 576 People
+6518 anweneleri18 5th–8th Cousin Shared DNA: 10 cM across 1 segments 193 People
+6519 sharontower1 5th–8th Cousin Shared DNA: 12 cM across 1 segments Unlinked Tree
+6520 CJ1980 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
+6521 Chris Grundy 5th–8th Cousin Shared DNA: 11 cM across 2 segments 3 People
+6522 Anne Jones 4th–6th Cousin Shared DNA: 26 cM across 3 segments No Trees
+6523 Frederick Williams 5th–8th Cousin Shared DNA: 18 cM across 3 segments Unlinked Tree
+6524 Stephanie J Black 5th–8th Cousin Shared DNA: 8 cM across 1 segments No Trees
+6525 phil marley 5th–8th Cousin Shared DNA: 15 cM across 1 segments Unlinked Tree
+6526 LOCOMOTIVE7 5th–8th Cousin Shared DNA: 15 cM across 2 segments 5 People
+6527 Gemma McGough 5th–8th Cousin Shared DNA: 15 cM across 1 segments No Trees

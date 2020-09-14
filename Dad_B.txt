@@ -1,3 +1,52 @@
+Ian Mutch 5th–8th Cousin Shared DNA: 11 cM across 1 segments Unlinked Tree
+Bspcr 5th–8th Cousin Shared DNA: 11 cM across 1 segments 9 People
+Louisa Davison 4th–6th Cousin Shared DNA: 25 cM across 2 segments No Trees
+Niall Johnson 5th–8th Cousin Shared DNA: 9 cM across 1 segments No Trees
+Timothy Rees 5th–8th Cousin Shared DNA: 12 cM across 2 segments No Trees
+Mair Llewellyn 5th–8th Cousin Shared DNA: 13 cM across 2 segments Unlinked Tree
+Joseph Olsen 5th–8th Cousin Shared DNA: 9 cM across 1 segments Unlinked Tree
+Jamie Smith 5th–8th Cousin Shared DNA: 9 cM across 1 segments Unlinked Tree
+Giselle Randall 5th–8th Cousin Shared DNA: 8 cM across 1 segments Unlinked Tree
+Mollie Orris 5th–8th Cousin Shared DNA: 13 cM across 2 segments Unlinked Tree
+Jeremy Drewitt 5th–8th Cousin Shared DNA: 10 cM across 1 segments 569 People
+Evan Thompson 5th–8th Cousin Shared DNA: 9 cM across 1 segments 993 People
+George Bisbee 5th–8th Cousin Shared DNA: 9 cM across 1 segments Unlinked Tree
+Bruce Venedam 5th–8th Cousin Shared DNA: 9 cM across 1 segments No Trees
+Fiona Barlow 5th–8th Cousin Shared DNA: 9 cM across 1 segments 107 People
+Judy Eames 5th–8th Cousin Shared DNA: 13 cM across 1 segments No Trees
+Perry Howard 5th–8th Cousin Shared DNA: 15 cM across 1 segments No Trees
+monica brian 5th–8th Cousin Shared DNA: 8 cM across 1 segments No Trees
+Meriel Morris 5th–8th Cousin Shared DNA: 9 cM across 1 segments 9 People
+Gregory Barker-Devereux 5th–8th Cousin Shared DNA: 13 cM across 1 segments 128 People
+susanwaterhouse_1 5th–8th Cousin Shared DNA: 9 cM across 1 segments 584 People
+Julian JANES 5th–8th Cousin Shared DNA: 15 cM across 1 segments Unlinked Tree
+rita street 5th–8th Cousin Shared DNA: 11 cM across 1 segments 2 People
+Tracy Bankier 5th–8th Cousin Shared DNA: 9 cM across 1 segments No Trees
+ROSALIND MARSH 5th–8th Cousin Shared DNA: 14 cM across 2 segments Unlinked Tree
+daniel murphy-rowe 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
+rae wynne 5th–8th Cousin Shared DNA: 10 cM across 1 segments Unlinked Tree
+Gary Nielsen 5th–8th Cousin Shared DNA: 8 cM across 1 segments 176 People
+Rachel Manser 5th–8th Cousin Shared DNA: 10 cM across 1 segments 310 People
+Joanne Smith 5th–8th Cousin Shared DNA: 10 cM across 1 segments Unlinked Tree
+William Briggs 5th–8th Cousin Shared DNA: 9 cM across 1 segments No Trees
+Susan McClees 5th–8th Cousin Shared DNA: 9 cM across 1 segments 13 People
+Dana Weikel 5th–8th Cousin Shared DNA: 15 cM across 1 segments No Trees
+Taylor Kane 5th–8th Cousin Shared DNA: 12 cM across 1 segments 806 People
+Glenn Kassahn 5th–8th Cousin Shared DNA: 9 cM across 1 segments No Trees
+R.K. Jackson 5th–8th Cousin Shared DNA: 10 cM across 1 segments 19 People
+Griffin Perry 5th–8th Cousin Shared DNA: 9 cM across 1 segments Unlinked Tree
+Steven Shook 5th–8th Cousin Shared DNA: 8 cM across 1 segments 2 People
+Sharon Gilbert 5th–8th Cousin Shared DNA: 12 cM across 1 segments Unlinked Tree
+Christina Rich 5th–8th Cousin Shared DNA: 9 cM across 1 segments Unlinked Tree
+jeanlar845689 5th–8th Cousin Shared DNA: 9 cM across 1 segments No Trees
+Samantha Anderson 5th–8th Cousin Shared DNA: 12 cM across 1 segments No Trees
+Olivia Mary Watkins 5th–8th Cousin Shared DNA: 14 cM across 1 segments Unlinked Tree
+Dustin Johnson 5th–8th Cousin Shared DNA: 12 cM across 1 segments 11 People
+Bill Rider 5th–8th Cousin Shared DNA: 9 cM across 1 segments No Trees
+Hazel Hall 5th–8th Cousin Shared DNA: 9 cM across 1 segments No Trees
+Chance Smith 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
+caladams42 5th–8th Cousin Shared DNA: 11 cM across 1 segments 8 People
+Talisa Ciramagua 5th–8th Cousin Shared DNA: 8 cM across 1 segments No Trees
 cje10549 5th–8th Cousin Shared DNA: 15 cM across 1 segments No Trees
 betty carpenter 5th–8th Cousin Shared DNA: 12 cM across 1 segments Unlinked Tree
 Kelly Sullenbarger 5th–8th Cousin Shared DNA: 10 cM across 1 segments 40 People
@@ -7,11 +56,10 @@ jeffrey nabergall 5th–8th Cousin Shared DNA: 13 cM across 1 segments Unlinked Tr
 Richard Davis 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
 RUTH STEVENS 5th–8th Cousin Shared DNA: 12 cM across 1 segments Unlinked Tree
 Sherry Aliberti 5th–8th Cousin Shared DNA: 9 cM across 1 segments 15 People
-Chris Grundy 5th–8th Cousin Shared DNA: 11 cM across 2 segments 3 People
 Frederick Williams 5th–8th Cousin Shared DNA: 18 cM across 3 segments Unlinked Tree
 Justin Lantz 5th–8th Cousin Shared DNA: 10 cM across 2 segments Unlinked Tree
 Nicole Perkins 5th–8th Cousin Shared DNA: 12 cM across 1 segments No Trees
-Linda DanielLinda Daniel 5th–8th Cousin Shared DNA: 8 cM across 1 segments Unlinked Tree
+Linda Daniel 5th–8th Cousin Shared DNA: 8 cM across 1 segments Unlinked Tree
 marlene westfall 5th–8th Cousin Shared DNA: 16 cM across 1 segments No Trees
 Cody Henderson 5th–8th Cousin Shared DNA: 9 cM across 1 segments Unlinked Tree
 Martyn Roberts Managed by Mellissa Edwards 5th–8th Cousin Shared DNA: 9 cM across 1 segments 19 People
@@ -41,16 +89,15 @@ Joe Matthews 5th–8th Cousin Shared DNA: 8.9 cM across 1 segments Unlinked Tree
 Thomas McDevitt 5th–8th Cousin Shared DNA: 7.1 cM across 1 segments Unlinked Tree
 Michael Sherman 5th–8th Cousin Shared DNA: 7.1 cM across 1 segments No Trees
 Taylor Pegues 5th–8th Cousin Shared DNA: 6.0 cM across 1 segments 9 People
-Gloria WoodGloria Wood 5th–8th Cousin Shared DNA: 7.1 cM across 1 segments Unlinked Tree
+Gloria Wood 5th–8th Cousin Shared DNA: 7.1 cM across 1 segments Unlinked Tree
 Amanda Walton 5th–8th Cousin Shared DNA: 6.6 cM across 1 segments Unlinked Tree
 Caroline Moseley 5th–8th Cousin Shared DNA: 7.2 cM across 1 segments 30 People
 Roslyn McGovern 5th–8th Cousin Shared DNA: 6.9 cM across 1 segments 8 People
 lawrence bosch 5th–8th Cousin Shared DNA: 7.8 cM across 1 segments No Trees
-Carl ChandlerCarl Chandler 5th–8th Cousin Shared DNA: 12 cM across 1 segments No Trees
+Carl Chandler 5th–8th Cousin Shared DNA: 12 cM across 1 segments No Trees
 James Paige 5th–8th Cousin Shared DNA: 11 cM across 1 segments Unlinked Tree
 Brittany Fulks 5th–8th Cousin Shared DNA: 6.0 cM across 1 segments Unlinked Tree
 Danny Harness 5th–8th Cousin Shared DNA: 8.0 cM across 1 segments No Trees
-Stephanie J Black 5th–8th Cousin Shared DNA: 8.0 cM across 1 segments No Trees
 John Lambert 5th–8th Cousin Shared DNA: 6.0 cM across 1 segments No Trees
 jenkins1801 5th–8th Cousin Shared DNA: 13 cM across 1 segments No Trees
 dane rolf 5th–8th Cousin Shared DNA: 11 cM across 1 segments No Trees
@@ -1874,7 +1921,6 @@ mitchellbalding 5th–8th Cousin Shared DNA: 7 cM across 1 segments Unlinked Tree
 Hazel Kirby 5th–8th Cousin Shared DNA: 13 cM across 1 segments 335 People
 gailewalls 5th–8th Cousin Shared DNA: 8 cM across 1 segments Unlinked Tree
 Rosa Walker 5th–8th Cousin Shared DNA: 9 cM across 1 segments No Trees
-Gemma McGough 5th–8th Cousin Shared DNA: 15 cM across 1 segments No Trees
 Simon Walker 5th–8th Cousin Shared DNA: 11 cM across 1 segments Unlinked Tree
 Sue Macallan 5th–8th Cousin Shared DNA: 6 cM across 1 segments No Trees
 Emily Weston 5th–8th Cousin Shared DNA: 14 cM across 1 segments No Trees

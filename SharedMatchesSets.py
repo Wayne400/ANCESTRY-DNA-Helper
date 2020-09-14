@@ -96,9 +96,9 @@ def main():
         kit1_file_list = ["Glyn"]  # , "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM", "Dad_B"]
         match_filter_list = ["aberlas", "UJonesManagedbySteamerpoint", "SallyAnneGale", "H.H.ManagedbyReesDinbych","gethngethn", \
                              "ArthurMarkGaleManagedbySteamerpoint", "BarbaraParryManagedbyGwendaParfitt", "D.W.ManagedbyWendyMcKenna",\
-                             "G.R.Managedbygemmaroberts50", "ElizabethPritchard", "sheree8","ajones296","AlwenaJames"]
-        #match_filter_list2 = ["EricEngelhard","SimonGray", "JudithBuckle" ,"MalcolmSlade", "EricEngelhard"]
-        match_filter_list2 = ["EricEngelhard", "NatalieRoberts_53%"]
+                             "G.R.Managedbygemmaroberts50", "ElizabethPritchard", "sheree8","AlwenaJames"]
+        match_filter_list2 = ["EricEngelhard","SimonGray", "JudithBuckle" ,"MalcolmSlade", "NatalieRoberts_53%"]
+        #match_filter_list2 = ["EricEngelhard", "NatalieRoberts_53%"]
         match_filter_list.extend(match_filter_list2)
         kit3 = 'Top60_Dad_X_Bee_Bridle'
         kit3_places = 'places_in_trees'
@@ -305,7 +305,7 @@ def main():
                             kit1_cM = kit1_dict_of_lists[kit1_index]["cM"]
                             kit1_seg = kit1_dict_of_lists[kit1_index]["segments"]
                             #print( kit1_index, kit1_cM + "cM", kit1_seg + " seg",cousin4, "*" + str(no_of_shared_matches) + "*",match_kit2, match_kit4 , match_kit5, trail_string)
-                            if places_flag:
+                            if not places_flag:
                               print('{0:40} {1:3}cM {2:2}seg   {3:11} {4:11} {5:11} {6:11}   {7:4} *{8:1}* {9:30}' \
                                   .format( cousin4, kit1_cM, kit1_seg,
                                           match_kit2, match_kit4, match_kit5, match_kit7, kit1_index, str(no_of_shared_matches), common_string))
