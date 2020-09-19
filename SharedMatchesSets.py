@@ -97,7 +97,7 @@ def main():
         match_filter_list = ["aberlas", "UJonesManagedbySteamerpoint", "SallyAnneGale", "H.H.ManagedbyReesDinbych","gethngethn", \
                              "ArthurMarkGaleManagedbySteamerpoint", "BarbaraParryManagedbyGwendaParfitt", "D.W.ManagedbyWendyMcKenna",\
                              "G.R.Managedbygemmaroberts50", "ElizabethPritchard", "sheree8","AlwenaJames"]
-        match_filter_list2 = ["EricEngelhard","SimonGray", "JudithBuckle" ,"MalcolmSlade", "NatalieRoberts_53%"]
+        match_filter_list2 = ["EricEngelhard","SimonGray", "JudithBuckle" ,"MalcolmSlade", "NatalieRoberts_53%", "StevenRoberts","AmandaStanton"]
         #match_filter_list2 = ["EricEngelhard", "NatalieRoberts_53%"]
         match_filter_list.extend(match_filter_list2)
         kit3 = 'Top60_Dad_X_Bee_Bridle'
@@ -131,7 +131,7 @@ def main():
         kit3 = 'Sally_Shared'
         kit3_places = 'Sally_Shared'
         kit2_file_list = ["Glyn" , "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM", "Dad_B"]
-        kit4_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM", "Wayne_8cM", "Wayne_7cM", "Wayne_6cM", "Wayne_A"]
+        kit4_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM", "Wayne_8cM", "Wayne_7cM", "Wayne_6cM_new", "Wayne_A"]
         kit5_file_list = ["Helen", "Helen_B"]
         kit6 = 'Sally_Common'
         kit7_file_list = ["Una", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM", "Una_7cM", "Una_6cM", "Una_L"]
