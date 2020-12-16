@@ -96,8 +96,8 @@ def main():
         kit1_file_list = ["Glyn"]  # , "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM", "Dad_B"]
         match_filter_list = ["aberlas", "UJonesManagedbySteamerpoint", "SallyAnneGale", "H.H.ManagedbyReesDinbych","gethngethn", \
                              "ArthurMarkGaleManagedbySteamerpoint", "BarbaraParryManagedbyGwendaParfitt", "D.W.ManagedbyWendyMcKenna",\
-                             "G.R.Managedbygemmaroberts50", "ElizabethPritchard", "sheree8","AlwenaJames"]
-        match_filter_list2 = ["EricEngelhard","SimonGray", "JudithBuckle" ,"MalcolmSlade", "NatalieRoberts_53%", "StevenRoberts","AmandaStanton"]
+                              "ElizabethPritchard", "sheree8","AlwenaJames","judio1343"]
+        match_filter_list2 = ["EricEngelhard", "NatalieRoberts_53%", "StevenRoberts"]
         #match_filter_list2 = ["EricEngelhard", "NatalieRoberts_53%"]
         match_filter_list.extend(match_filter_list2)
         kit3 = 'Top60_Dad_X_Bee_Bridle'

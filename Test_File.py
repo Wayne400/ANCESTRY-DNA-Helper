@@ -15,6 +15,7 @@ def find_cousin_column(word_list):
 
 def get_data(word_list,index_offset):
     new_word_dict = {}
+    tree_flag = False
     i = 0
     new_word_dict["index"] = word_list[0]
     for column in word_list:
@@ -75,20 +76,24 @@ def get_data(word_list,index_offset):
             new_word_dict[column] = word_list[i-1]
             #new_word_dict["who"] = new_word_dict["who"] + "_" + word_list[i-1]
             new_word_dict["key_string"] = new_word_dict["who"] + "_" + word_list[i - 1]
+            tree_flag = True
         if column == "Unlinked":
             #print(new_word_dict["index"])
             new_word_dict["Tree"] = "Unlinked Tree"
             new_word_dict["who"] = new_word_dict["who"] + "_U"
             new_word_dict["key_string"] = new_word_dict["who"] + "_U"
+            tree_flag = True
         if column == "Trees":
             #print(new_word_dict["index"])
             new_word_dict["Tree"] = "No Trees"
             new_word_dict["who"] = new_word_dict["who"] + "_N"
             new_word_dict["key_string"] = new_word_dict["who"] + "_N"
+            tree_flag = True
         if column == "unavailable":
             new_word_dict["Tree"] = "unavailable"
             new_word_dict["who"] = new_word_dict["who"] + "_u"
             new_word_dict["key_string"] = new_word_dict["who"] + "_u"
+            tree_flag = True
         if column == "Common":
             new_word_dict[column] = "Wally"
         if column == "GEDMATCH":
@@ -98,7 +103,7 @@ def get_data(word_list,index_offset):
 
         i += 1
 
-    return new_word_dict
+    return new_word_dict,tree_flag
 
 
 def get_cousin_dictY(kit, index_offset):
@@ -135,7 +140,9 @@ def get_cousin_dict(kit1, index_offset):
         line = line.replace('\t',' ')
         line = line.replace(',', '')
         word_list = line.split()
-        kit_word_dict = get_data(word_list, index_offset)
+        kit_word_dict,tree_flag = get_data(word_list, index_offset)
+        if not tree_flag :
+            exit
         print(kit_word_dict["index"], line_no, kit_word_dict["segments"],kit_word_dict["cM"], word_list)
         dna_kit = kit_word_dict["who"]
         kit_word_dict["index"] = line_no + index_offset
@@ -151,11 +158,11 @@ def main():
     #kit1 = 'Helen'
     #kit1 = 'Sally'
     kit1_index_offset = 0
-    kit1a = 'Dad_B'
+    #kit1a = 'Dad_B'
     #kit1a = 'Wayne_6cM_new'
     #kit1a = 'Sally_L'
-    #kit1a = 'Dad_B'
-    kit1a = 'Una_L'
+    kit1a = 'Dad_B'
+    #kit1a = 'Una_L'
     kit1a_index_offset = 10000
 
     kit1_list = []
