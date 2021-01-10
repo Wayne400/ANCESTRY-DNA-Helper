@@ -36,7 +36,7 @@
 17 BelindaSarstedt C.K.Managedbycaseykeen WhitneyFrost HenryWannerton KarysHarbour simpsonsam87 bee_233
 18 llapgoch1 arwelwjones51 ajones296 Marianjob eviewyn MargaretHaradaMori shereen333
 19 PaulDay sheree8 JohnKelly ElenLewis LKevinKelly11 judio1343 ADavis0214 ColleenOLeary lstarcevich1 janietea58
-20 IanHuxley arwelwjones51 nkalexander7
+20 IanHuxley arwelwjones51 nkalexander7 AnneJones
 21 RayRutland65 BrianLonghurst stevemcgarry189 ashtonEg slbrooks311 DeanLowe PatriciaBlois EmmaCharles
 21 RayRutland65 P.C.Managedbybrad5780 brad5780 LCameron75 JenniferPerez IanRicketts VirginiaCrowther
 22 davidparker SimonGray JanetBarnes
@@ -534,6 +534,7 @@
 913 llio_thomas usersam2772
 917 renoufdj judyrobinson kfmacdonald valerie_kent3 PatriciaGelding
 960 debrawakefield JayneMarks AndreaWilsonManagedbyRobbieWilson45
+986 ZoeWalker NatalieHeppell
 1045 GingerOgaffney sheree8 JohnKelly LKevinKelly11 AnnStoddard RobertCowley lstarcevich1 janietea58
 1051 JamieOwen
 1063 MeganBenbow TamaraHaver eviewyn usersam2772
@@ -584,6 +585,7 @@
 1850 mitches1829
 1923 BronEdwards
 2017 AllanCanton BarbaraParryManagedbyGwendaParfitt
+2027 SusanGabriels Komphillips
 2098 cat197353 aberlas BarbaraParryManagedbyGwendaParfitt llapgoch1 ElenLewis ElwynDavies GlynParry peterwynnjones
 2098 cat197353 H.D.Managedbyprenjo JudyJones JulieThompson
 2099 DavidLloyddla H.D.Managedbyprenjo
@@ -631,6 +633,7 @@
 5705 loxton01 H.D.Managedbyprenjo
 5743 MildredFetherlin
 5920 StephenDavis H.H.ManagedbyReesDinbych G.R.Managedbygemmaroberts50 JacqueleneHolland
+6132 BrianMiller JessieGraham
 6270 DonnaMoore
 6291 PaulWiceManagedbylorinorth1 BarbaraParryManagedbyGwendaParfitt RussellWilliams
 6337 SarahYim H.H.ManagedbyReesDinbych danacavan
@@ -643,7 +646,7 @@
 6367 ChrisHughes gnj07 GillianandGlynEvans 
 6369 JulianneVandermeer rnicholsonltd
 6370 SteveBridle
-6371 zandorf1946
+6371 zandorf1946 BrynRoberts
 6372 MarkPortman rosiebarclay370 StephenLegg
 6373 VioletWilliams SallyAnneGale gethngethn GlynParry EirianRoberts AlwenaJames opj142
 6374 GlynParry aberlas BarbaraParryManagedbyGwendaParfitt ElenLewis ElwynDavies H.D.Managedbyprenjo ajones296 thesmiths122
@@ -831,7 +834,7 @@
 6545 AnnaWade E.D.ManagedbyMindyFrench NatalieHeppell tammykiehn NancyHawk
 6546 JaneBradshaw PenelopePettitt JohnWaddy EricEngelhard NathanielFroud patsobocienski
 6547 JohnWaddy JaneBradshaw
-6548 RobWilliams_67% InaBlancheParry
+6548 RobWilliams InaBlancheParry
 6549 ThadLeemaster WilliamDagney
 6550 RyanAspell carvinara
 6551 SusanNeve wtarwater52Managedbynctarwater D.T.Managedbynctarwater
@@ -860,7 +863,7 @@
 6572 johnrichardhughesManagedbytraceycookson
 6573 LynneSandmeyer
 6574 JoanneAckermann
-6575 ErinCameron
+6575 ErinCameronX
 6576 Tarbrook1
 6577 TiaRoberts LeonaCarter ben1272
 6578 JudyEames PhilipHaldane
@@ -877,3 +880,41 @@
 6588 KristinaPeterson H.H.ManagedbyReesDinbych G.R.Managedbygemmaroberts50 NancyJaber
 6589 BRYONEllsberry wtarwater52Managedbynctarwater D.T.Managedbynctarwater
 6590 MarielenaSchifando JoanNorrisManagedbyAlistairLowe-Norris
+6591 Bettymcmann
+6592 lawrenceRoberts
+6593 Allaboutskinvb
+6594 sian560
+6595 angeliahuckabaa
+6596 meljones
+6597 FrancesSteedleyManagedbyRobertCarruth
+6598 T.R.ManagedbyKathrynRice
+6599 JamesMcPherson
+6600 AngelaBeedlesManagedbyGwendaParfitt
+6601 MaggieKelly
+6602 ShirleyFisherManagedbyFPisauro
+6603 DianeStaplehurst
+6604 AlwenaLadell
+6605 AnwenThomas
+6606 JanetSmithManagedbydenisekelly281
+6607 LadyDee
+6608 RebeccaPaul
+6609 GavinEvans DonaldCohn DennisTucker GEMMAHUGHES
+6610 GordonGarfat AmandaStanton BelindaSarstedt S.R.Managedbycaerportus HenryWannerton JoyMorton B.H.Managedbyrdfulks
+6611 ColinWilles EricEngelhard ElizabethParry
+6612 MargiFloate  H.H.ManagedbyReesDinbych IanHuxley GarethDavies JulieThompson
+6613 beardsley1138 D.W.ManagedbyWendyMcKenna GlynParry FrancesSandraKey
+6613 beardsley1138 AnnStoddard thesmiths122 S.H.Managedbyjanietea58 janietea58
+6614 GeorginaSturgess KenLawless KerriRobinson
+6615 LJ aberlas H.H.ManagedbyReesDinbych llapgoch1 PaulDay IanHuxley rdjones7314
+6615 LJ arwelwjones51 judio1343 AnnStoddard Marianjob
+6616 robinjones D.W.ManagedbyWendyMcKenna maggie2071 usersam2772
+6617 AfonwyJonesManagedbyBethanDolan aberlas arwelwjones51 carvinara
+6618 JessieGraham
+6619 GillianHensman InaBlancheParry ElwynDavies GlynParry arwelwjones51 H.D.Managedbyprenjo gnj07 eviewyn
+6620 TanaPenn JamesChilders
+6621 C.G.ManagedbyCharlotteGriffith C.H.Managedbykeiralynch99
+6622 DouglasPike EirianRoberts
+6623 JamesJardine D.W.ManagedbyWendyMcKenna S.H.Managedbyjanietea58 lstarcevich1 janietea58
+6624 WRJonesManagedbyJulieJones eviewyn
+6625 BronwynCalub bernardprice181
+6626 RowenaLeek BarbaraDodsonManagedbydouglasdumbarton

@@ -1086,7 +1086,7 @@
 1086 wdfree51 5th–8th Cousin Shared DNA: 8 cM across 1 segments 4,157 People GEDMATCH A193515
 1087 arjc06 5th–8th Cousin Shared DNA: 8 cM across 2 segments 3,720 People GEDMATCH A283323
 1088 Peter James 5th–8th Cousin Shared DNA: 8 cM across 1 segments 6 People
-1089 E.F. Managed by jepiper59 5th–8th Cousin Shared DNA: 8 cM across 1 segments 2,564 People
+1089 E.F. Managed by jepiper59 5th–8th Cousin Shared DNA: 8 cM across 1 segments 3,067 People
 1090 MARGARET MITCHELL 5th–8th Cousin Shared DNA: 8 cM across 1 segments 6 People
 1091 Robert Edward Martin Dyer 5th–8th Cousin Shared DNA: 8 cM across 1 segments 29 People
 1092 Miriam Elaine Davies 5th–8th Cousin Shared DNA: 8 cM across 1 segments 34 People
@@ -1243,7 +1243,7 @@
 1243 Eryl Jones 5th–8th Cousin Shared DNA: 8 cM across 3 segments 36 People
 1244 faulkner5ish 5th–8th Cousin Shared DNA: 8 cM across 1 segments 561 People GEDMATCH A328889
 1245 Stanley Craig Wakefield 5th–8th Cousin Shared DNA: 8 cM across 1 segments 197 People
-1246 Carys Duggan-Rees 5th–8th Cousin Shared DNA: 8 cM across 1 segments 402 People
+1246 Carys Duggan-Rees 5th–8th Cousin Shared DNA: 8 cM across 1 segments 414 People
 1247 debsjohn_heyes 5th–8th Cousin Shared DNA: 8 cM across 1 segments 295 People
 1248 shillprice 5th–8th Cousin Shared DNA: 8 cM across 2 segments Unlinked Tree
 1249 C.M. Thomas Managed by Jane Beattie 5th–8th Cousin Shared DNA: 8 cM across 1 segments 6,000 People
