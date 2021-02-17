@@ -6970,7 +6970,7 @@
 6970 Nancy Camillone 5th–8th Cousin Shared DNA: 11 cM across 1 segments No Trees
 6971 Theo Mink 5th–8th Cousin Shared DNA: 11 cM across 2 segments Unlinked Tree
 6972 E.W. Managed by SHERRIE GEMZA 5th–8th Cousin Shared DNA: 11 cM across 2 segments 201 People
-6973 kimmilam22 kimmilam22 5th–8th Cousin Shared DNA: 11 cM across 1 segments 85 People
+6973 kimmilam22 5th–8th Cousin Shared DNA: 11 cM across 1 segments 85 People
 6974 Cynthia Pingree 5th–8th Cousin Shared DNA: 11 cM across 1 segments 4 People
 6975 julieannholl 5th–8th Cousin Shared DNA: 11 cM across 1 segments No Trees
 6976 Glen Weill 5th–8th Cousin Shared DNA: 11 cM across 1 segments No Trees
@@ -7008,3 +7008,4 @@
 7008 jonclark78 4th–6th Cousin Shared DNA: 22 cM across 1 segments 182 People
 7009 warby41 4th–6th Cousin Shared DNA: 20 cM across 1 segments Unlinked Tree
 7010 Joan skorupski 4th–6th Cousin Shared DNA: 24 cM across 1 segments No Trees
+7011 Les Williams 5th–8th Cousin Shared DNA: 12 cM across 1 segments 3,073 People

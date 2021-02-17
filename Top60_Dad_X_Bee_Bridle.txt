@@ -461,6 +461,7 @@
 405 dewievans ElwynDavies JuneMcLachlinManagedbyoschean H.D.Managedbyprenjo AnnStoddard KarineGeorge
 406 satitus gillholgate
 412 P.H.Managedbycelticouple BarbaraParryManagedbyGwendaParfitt
+437 DavidCyrilJonesManagedbyNiaWilliams ElenLewis ElwynDavies GlynParry gnj07 
 486 S.S.Managedbylmshepherd56
 489 angiabbott kandd101 BenKreger PamelaWilson BrookWoodbine kelliesheehan127 
 489 angiabbott I.K.ManagedbySusanKreger tomanthonyoakland KimBLACKBURN Sonja_palmiereManagedbyJanetLeavensAldridge
@@ -538,6 +539,7 @@
 1045 GingerOgaffney sheree8 JohnKelly LKevinKelly11 AnnStoddard RobertCowley lstarcevich1 janietea58
 1051 JamieOwen
 1063 MeganBenbow TamaraHaver eviewyn usersam2772
+1067 CarolArthur
 1079 dann_fanelli StephenLegg
 1082 jamesdianerandijoe nora_engelhard MichaelGerow EricEngelhard
 1108 N.M.Managedbynadinemcgarry5 KarlaStoker
@@ -546,6 +548,7 @@
 1125 K.S.ManagedbyPatsyHogan dsberger120
 1131 H.M.Managedbymorken_mary SheilaMorken
 1134 janduncancomcastnet dsberger120 drmiller48 Ajwilson8091 JohnnyMartin
+1136 RonaldEnnion HenryRobertsManagedbyHollyMonday-Jones E.G.ManagedbyKarenBracegirdle
 1138 WhitneyIvey HaroldFrey98
 1149 yoursanmin D.H.ManagedbySEANALLEN
 1150 RachelRogers G.R.Managedbygemmaroberts50
@@ -609,6 +612,7 @@
 3555 Davidwilliams
 3665 brenda_sg
 3693 A.S.Managedbyptsymington
+3707 DanWilliams usersam2772
 3850 PhilWilliams
 3928 JanetMerola
 4013 R.D.Managedbyradavies1 BarbaraParryManagedbyGwendaParfitt TecwynRawson GillianandGlynEvans
@@ -621,6 +625,8 @@
 4680 cyndycox
 4773 BrianMartschinske
 4849 E.R.Managedbymeganlroberts peterwynnjones calewis6461
+5325 Ann_helwig H.H.ManagedbyReesDinbych IanHuxley JuneMcLachlinManagedbyoschean AnnStoddard
+5325 Ann_helwig TecwynRawson AdelynEllis MaribethCulver-Lammas usersam2772
 5351 K.F.ManagedbyHeatherFirth rdjones7314 G.M.ManagedbySueHamberg AlwenaJames
 5352 carvinara bobcollins ToniaSandovalMickey DorothySandoval
 5353 SidneyLutes AnnieShackelfordManagedbymarcycousino12
@@ -918,3 +924,10 @@
 6624 WRJonesManagedbyJulieJones eviewyn
 6625 BronwynCalub bernardprice181
 6626 RowenaLeek BarbaraDodsonManagedbydouglasdumbarton
+6627 shellyboo_1
+6628 maxineheath11
+6629 E.G.ManagedbyKarenBracegirdle aberlas JudyJones
+6630 KimRobertson LeslieJones
+6631 mersadiesphillips
+6632 LaurenRoberts SallyAnneGale
+6633 dewiwynnejones UJonesManagedbySteamerpoint IanHuxley Marianjob NeilEvans

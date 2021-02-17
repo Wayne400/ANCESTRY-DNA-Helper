@@ -1,7 +1,9 @@
 
 import re
 import operator
-from Load_Ancestry2 import get_data , get_cousin_dict , load_matches
+#from Load_Ancestry2 import get_data , get_cousin_dict , load_matches
+from Load_Ancestry_V5 import  load_matches
+#from Load_Ancestry_V5 import get_data
 
 def swap_in_key_string(old_list, match_filter_list,homonym_to_primarykey_dict,primarykey_to_keystring ):
 
@@ -13,7 +15,7 @@ def swap_in_key_string(old_list, match_filter_list,homonym_to_primarykey_dict,pr
             new_list.append(new_entry)
     return new_list
 
-def get_shared_match2(kit3, match_filter_list, kit1_primary_index,kit1_index_keystring_dict):
+def get_shared_match2(kit3, match_filter_list, kit1_primary_index,kit1_index_keystring_dict, kit1_Test_Result_Dict):
     print(match_filter_list)
     cousin_list = []
     list_of_lists = []
@@ -26,13 +28,16 @@ def get_shared_match2(kit3, match_filter_list, kit1_primary_index,kit1_index_key
         orig_word_list = line.split()
         primary_index = orig_word_list[0]  + "." + orig_word_list[1]
         homonym = orig_word_list[1]
+#        print(orig_word_list[1])
         keystring = kit1_index_keystring_dict[int(orig_word_list[0])]   # use the index to get keystring
         this_cousin = kit1_primary_index[primary_index]
         homonym_to_primarykey_dict[homonym] = this_cousin  # will go homonym >> primarykey >> matchstring_245
         primarykey_to_keystring[this_cousin] = keystring
+        cm_total = kit1_Test_Result_Dict[this_cousin].centimorgans
         #print(match_filter_list)
-        #print(this_cousin, homonym)
-        if (this_cousin != last_cousin) and (homonym not in match_filter_list) :
+        #print(this_cousin, homonym, cm_total)
+        if (homonym not in match_filter_list) and (int(cm_total) < 50):
+          if (this_cousin != last_cousin) :
             if orig_word_list[1] in cousin_list:
                 print("ouch", orig_word_list[1])
             else:
@@ -40,7 +45,7 @@ def get_shared_match2(kit3, match_filter_list, kit1_primary_index,kit1_index_key
                 list_of_lists.append(orig_word_list)
                 cousin_list.append(orig_word_list[0])
                 last_cousin = this_cousin
-        elif (this_cousin == last_cousin) and (homonym not in match_filter_list):
+          elif (this_cousin == last_cousin):
             del orig_word_list[0]  # dont add  cousin name again
             del orig_word_list[0]
             list_of_lists[-1].extend(orig_word_list)
@@ -90,14 +95,14 @@ def main():
     places_flag = False
     match_filter_list = [""]
     match_filter_list2 = [""]
-
+    total_dna_list = []
 
     if person == "Glyn":
         kit1_file_list = ["Glyn"]  # , "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM", "Dad_B"]
         match_filter_list = ["aberlas", "UJonesManagedbySteamerpoint", "SallyAnneGale", "H.H.ManagedbyReesDinbych","gethngethn", \
                              "ArthurMarkGaleManagedbySteamerpoint", "BarbaraParryManagedbyGwendaParfitt", "D.W.ManagedbyWendyMcKenna",\
-                             "G.R.Managedbygemmaroberts50", "ElizabethPritchard", "sheree8","AlwenaJames"]
-        match_filter_list2 = ["EricEngelhard","SimonGray", "JudithBuckle" ,"MalcolmSlade", "NatalieRoberts_53%", "StevenRoberts","AmandaStanton"]
+                              "ElizabethPritchard", "sheree8","AlwenaJames","judio1343", "LJ"]
+        match_filter_list2 = ["EricEngelhard", "NatalieRoberts_53%", "StevenRoberts"]
         #match_filter_list2 = ["EricEngelhard", "NatalieRoberts_53%"]
         match_filter_list.extend(match_filter_list2)
         kit3 = 'Top60_Dad_X_Bee_Bridle'
@@ -141,67 +146,56 @@ def main():
     dict_of_places = []
 
 
-    kit1_dict_of_lists = load_matches(kit1_file_list, duplicate_check_flag)
-    kit1_list = []
+#    kit1_dict_of_lists = load_matches(kit1_file_list, duplicate_check_flag)
+    kit1_Test_Result_Dict = load_matches(kit1_file_list, 1)
     kit1_key_dict = {}
     kit1_who_dict = {}
     kit1_index_dict = {}
     kit1_index_keystring_dict = {}
     kit1_cM_dict = {}
     kit1_primary_index = {}
-    for cousin in kit1_dict_of_lists:
-        #print(cousin)
-        kit1_list.append(kit1_dict_of_lists[int(cousin)]["key_string"])
-        kit1_who_dict[kit1_dict_of_lists[int(cousin)]["who"]] = kit1_dict_of_lists[int(cousin)]["key_string"]
-        kit1_index_dict[kit1_dict_of_lists[int(cousin)]["key_string"]] = kit1_dict_of_lists[int(cousin)]["index"]
-        kit1_index_keystring_dict[kit1_dict_of_lists[int(cousin)]["index"]] = kit1_dict_of_lists[int(cousin)]["key_string"]
-        kit1_cM_dict[kit1_dict_of_lists[int(cousin)]["key_string"]] = int(kit1_dict_of_lists[int(cousin)]["cM"])
-        kit1_primary_index[str(kit1_dict_of_lists[int(cousin)]["index"]) + "." + kit1_dict_of_lists[int(cousin)]["who"]] = \
-            kit1_dict_of_lists[int(cousin)]["key_string"]
+    kit1_keystring_list = []
+    for kit1_Test_Result in kit1_Test_Result_Dict:
+        kit1_keystring_list.append(kit1_Test_Result_Dict[kit1_Test_Result].keystring)
+    for cousin in kit1_keystring_list:
+#        print("cousin", cousin)
+#        print( kit1_Test_Result_Dict[cousin].index, cousin)
+#        print("keystring", kit1_Test_Result_Dict[cousin].keystring)
+        kit1_who_dict[kit1_Test_Result_Dict[cousin].who] = kit1_Test_Result_Dict[cousin].keystring
+        kit1_index_dict[kit1_Test_Result_Dict[cousin].keystring] = kit1_Test_Result_Dict[cousin].index
+        kit1_index_keystring_dict[kit1_Test_Result_Dict[cousin].index] = kit1_Test_Result_Dict[cousin].keystring
+        kit1_cM_dict[kit1_Test_Result_Dict[cousin].keystring] = int(kit1_Test_Result_Dict[cousin].centimorgans)
+        kit1_primary_index[str(kit1_Test_Result_Dict[cousin].index) + "." + kit1_Test_Result_Dict[cousin].who] = \
+                kit1_Test_Result_Dict[cousin].keystring
 
     common_dict = get_common_ancestor(kit6, kit1_index_keystring_dict)
 
-    dict_of_sets, dict_of_shared_matches = get_shared_match2(kit3, match_filter_list, kit1_primary_index, kit1_index_keystring_dict)
+    dict_of_sets, dict_of_shared_matches = get_shared_match2(kit3, match_filter_list, kit1_primary_index, kit1_index_keystring_dict, kit1_Test_Result_Dict)
     dict_of_places = get_places(kit3_places, kit1_who_dict)
 
+    kit2_Test_Result_Dict = load_matches(kit2_file_list, 2)
+    kit2_keystring_list = []
+    for kit2_Test_Result in kit2_Test_Result_Dict:
+        kit2_keystring_list.append(kit2_Test_Result_Dict[kit2_Test_Result].keystring)
 
+    kit4_Test_Result_Dict = load_matches(kit4_file_list, 4)
+    kit4_keystring_list = []
+    for kit4_Test_Result in kit4_Test_Result_Dict:
+        kit4_keystring_list.append(kit4_Test_Result_Dict[kit4_Test_Result].keystring)
 
-    kit2_dict_of_lists = load_matches(kit2_file_list, duplicate_check_flag)
-    kit2_list = []
-    kit2_index_dict = {}
-    for cousin in kit2_dict_of_lists:
-        kit2_index_dict[kit2_dict_of_lists[int(cousin)]["key_string"]] = kit2_dict_of_lists[int(cousin)]["index"]
-        kit2_list.append(kit2_dict_of_lists[int(cousin)]["key_string"])
+    kit5_Test_Result_Dict = load_matches(kit5_file_list, 5)
+    kit5_keystring_list = []
+    for kit5_Test_Result in kit5_Test_Result_Dict:
+        kit5_keystring_list.append(kit5_Test_Result_Dict[kit5_Test_Result].keystring)
 
-
-
-    kit4_dict_of_lists = load_matches(kit4_file_list, duplicate_check_flag)
-    kit4_list = []
-    kit4_index_dict = {}
-    for cousin in kit4_dict_of_lists:
-        #print (cousin)
-        kit4_index_dict[kit4_dict_of_lists[int(cousin)]["key_string"]] = kit4_dict_of_lists[int(cousin)]["index"]
-        kit4_list.append(kit4_dict_of_lists[int(cousin)]["key_string"])
-
-
-
-    kit5_dict_of_lists = load_matches(kit5_file_list, duplicate_check_flag)
-    kit5_list = []
-    kit5_index_dict = {}
-    for cousin in kit5_dict_of_lists:
-        kit5_index_dict[kit5_dict_of_lists[int(cousin)]["key_string"]] = kit5_dict_of_lists[int(cousin)]["index"]
-        kit5_list.append(kit5_dict_of_lists[int(cousin)]["key_string"])
-
-    kit7_dict_of_lists = load_matches(kit7_file_list, duplicate_check_flag)
-    kit7_list = []
-    kit7_index_dict = {}
-    for cousin in kit7_dict_of_lists:
-        kit7_index_dict[kit7_dict_of_lists[int(cousin)]["key_string"]] = kit7_dict_of_lists[int(cousin)]["index"]
-        kit7_list.append(kit7_dict_of_lists[int(cousin)]["key_string"])
+    kit7_Test_Result_Dict = load_matches(kit7_file_list, 7)
+    kit7_keystring_list = []
+    for kit7_Test_Result in kit7_Test_Result_Dict:
+        kit7_keystring_list.append(kit7_Test_Result_Dict[kit7_Test_Result].keystring)
 
 
 
-    print("***********************Combing now*****************************")
+    print("*********************** Combining now *****************************")
     print("***************************************************************")
 
     new_cousin_list=[]
@@ -255,7 +249,7 @@ def main():
             for cousin4 in sorted(temp_dict, key=temp_dict.get, reverse=True):
                     cousin4_index = kit1_index_dict[cousin4]
                     punter += 1
-                    for cousin3 in kit1_list:  # step though all the cousins and match on the shared match group
+                    for cousin3 in kit1_keystring_list:  # step though all the cousins and match on the shared match group
                         match_kit2 = ""
                         match_kit4 = ""
                         match_kit5 = ""
@@ -275,14 +269,17 @@ def main():
                         trail_string = ""
                         no_of_shared_matches = 0
                         if cousin3 == cousin4:
-                            if "GEDMATCH" in kit1_dict_of_lists[kit1_index_dict[cousin4]]:
-                                trail_string = trail_string + "GEDMATCH " + kit1_dict_of_lists[kit1_index_dict[cousin4]]["GEDMATCH"]
-                            if "CHROMOSOMES" in kit1_dict_of_lists[kit1_index_dict[cousin4]]:
+#                            if "GEDMATCH" in kit1_dict_of_lists[kit1_index_dict[cousin4]]:
+#                               trail_string = trail_string + "GEDMATCH " + kit1_dict_of_lists[kit1_index_dict[cousin4]]["GEDMATCH"]
+                            if kit1_Test_Result_Dict[cousin4].gedmatch != "":
+                                trail_string = trail_string + "GEDMATCH " + kit1_Test_Result_Dict[cousin4].gedmatch
+                            if kit1_Test_Result_Dict[cousin4].chromosomes != "":
+#                            if "CHROMOSOMES" in kit1_dict_of_lists[kit1_index_dict[cousin4]]:
                                 kit1_supergroup[cousin3] = supergroup
-                                trail_string = trail_string + " chr " + kit1_dict_of_lists[kit1_index_dict[cousin4]]["CHROMOSOMES"]
-                                #chromo_dict[cousin3] = kit1_dict_of_lists[kit1_index_dict[cousin4]]["CHROMOSOMES"]
-                                chromo_string = kit1_dict_of_lists[kit1_index_dict[cousin4]]["CHROMOSOMES"]
-                                chromo_string_1 = kit1_dict_of_lists[kit1_index_dict[cousin4]]["CHROMOSOMES"]
+                                #trail_string = trail_string + " chr " + kit1_dict_of_lists[kit1_index_dict[cousin4]]["CHROMOSOMES"]
+                                #chromo_string = kit1_dict_of_lists[kit1_index_dict[cousin4]]["CHROMOSOMES"]
+                                chromo_string = kit1_Test_Result_Dict[cousin4].chromosomes
+                                #chromo_string_1 = kit1_dict_of_lists[kit1_index_dict[cousin4]]["CHROMOSOMES"]
                                 chromo_string = chromo_string.replace('(', ' ')
                                 chromo_string = chromo_string.replace(')', ' ')
                                 chromo_string = chromo_string.replace('-', ' ')
@@ -292,18 +289,26 @@ def main():
                                 no_of_shared_matches =    len(dict_of_shared_matches[cousin4])
 
 
-                            if cousin3 in kit2_list:
-                                match_kit2 = kit2_file_list[0] + "=" + kit2_dict_of_lists[kit2_index_dict[cousin4]]["cM"] + "cM"
-                            if cousin3 in kit4_list:
-                                match_kit4 = kit4_file_list[0] + "=" + kit4_dict_of_lists[kit4_index_dict[cousin4]]["cM"] + "cM"
-                            if cousin3 in kit5_list:
-                                match_kit5 = kit5_file_list[0] + "=" + kit5_dict_of_lists[kit5_index_dict[cousin4]]["cM"] + "cM"
-                            if cousin3 in kit7_list:
-                                match_kit7 = kit7_file_list[0] + "=" + kit7_dict_of_lists[kit7_index_dict[cousin4]]["cM"] + "cM"
+                            if cousin3 in kit2_keystring_list:
+                                #match_kit2 = kit2_file_list[0] + "=" + kit2_dict_of_lists[kit2_index_dict[cousin4]]["cM"] + "cM"
+                                match_kit2 = kit2_file_list[0] + "=" + kit2_Test_Result_Dict[cousin4].centimorgans  + "cM"
+                            if cousin3 in kit4_keystring_list:
+#                                match_kit4 = kit4_file_list[0] + "=" + kit4_dict_of_lists[kit4_index_dict[cousin4]]["cM"] + "cM"
+                                match_kit4 = kit4_file_list[0] + "=" + kit4_Test_Result_Dict[cousin4].centimorgans  + "cM"
+
+                            if cousin3 in kit5_keystring_list:
+#                                match_kit5 = kit5_file_list[0] + "=" + kit5_dict_of_lists[kit5_index_dict[cousin4]]["cM"] + "cM"
+                                match_kit5 = kit5_file_list[0] + "=" + kit5_Test_Result_Dict[cousin4].centimorgans  + "cM"
+
+                            if cousin3 in kit7_keystring_list:
+#                                match_kit7 = kit7_file_list[0] + "=" + kit7_dict_of_lists[kit7_index_dict[cousin4]]["cM"] + "cM"
+                                match_kit7 = kit7_file_list[0] + "=" + kit7_Test_Result_Dict[cousin4].centimorgans  + "cM"
 
                             kit1_index = kit1_index_dict[cousin4]
-                            kit1_cM = kit1_dict_of_lists[kit1_index]["cM"]
-                            kit1_seg = kit1_dict_of_lists[kit1_index]["segments"]
+#                            kit1_cM = kit1_dict_of_lists[kit1_index]["cM"]
+                            kit1_cM = kit1_Test_Result_Dict[cousin4].centimorgans
+                            kit1_seg = kit1_Test_Result_Dict[cousin4].segments
+#                            kit1_seg = kit1_dict_of_lists[kit1_index]["segments"]
                             #print( kit1_index, kit1_cM + "cM", kit1_seg + " seg",cousin4, "*" + str(no_of_shared_matches) + "*",match_kit2, match_kit4 , match_kit5, trail_string)
                             if not places_flag:
                               print('{0:40} {1:3}cM {2:2}seg   {3:11} {4:11} {5:11} {6:11}   {7:4} *{8:1}* {9:30}' \
@@ -332,17 +337,19 @@ def main():
           if chromosome_string in chromo_dict[cousin_chromo]:
               cousin_string = ""
               trail_string = ""
-              if "GEDMATCH" in kit1_dict_of_lists[kit1_index_dict[cousin_chromo]]:
-                  trail_string = trail_string + "GEDMATCH " + kit1_dict_of_lists[kit1_index_dict[cousin_chromo]]["GEDMATCH"]
+              if kit1_Test_Result_Dict[cousin_chromo].gedmatch != "":
+                  trail_string = trail_string + "GEDMATCH " + kit1_Test_Result_Dict[cousin_chromo].gedmatch
+#              if "GEDMATCH" in kit1_dict_of_lists[kit1_index_dict[cousin_chromo]]:
+#                  trail_string = trail_string + "GEDMATCH " + kit1_dict_of_lists[kit1_index_dict[cousin_chromo]]["GEDMATCH"]
               #if cousin_chromo in common_dict:
               #    trail_string = common_dict[cousin_chromo]
-              if cousin_chromo in kit2_list:
+              if cousin_chromo in kit2_keystring_list:
                   cousin_string = kit2_file_list[0]
-              if cousin_chromo in kit4_list:
+              if cousin_chromo in kit4_keystring_list:
                   cousin_string = cousin_string + " " + kit4_file_list[0]
-              if cousin_chromo in kit5_list:
+              if cousin_chromo in kit5_keystring_list:
                   cousin_string = cousin_string + " " + kit5_file_list[0]
-              if cousin_chromo in kit7_list:
+              if cousin_chromo in kit7_keystring_list:
                   cousin_string = cousin_string + " " + kit7_file_list[0]
               if chromosome_string in chromo_dict[cousin_chromo]:
                   print('{0:50} {1:20} {2:20} {3:3}'.format(cousin_chromo, cousin_string, trail_string, kit1_supergroup[cousin_chromo]))

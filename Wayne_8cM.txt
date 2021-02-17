@@ -1055,7 +1055,7 @@ Deanna Vandeveer 5th–8th Cousin Shared DNA: 8 cM across 1 segments 526 People
 nicksandersongough 5th–8th Cousin Shared DNA: 8 cM across 1 segments Unlinked Tree
 Ken Griffin 5th–8th Cousin Shared DNA: 8 cM across 1 segments 66 People
 Susan Pritchard 5th–8th Cousin Shared DNA: 8 cM across 1 segments Unlinked Tree
-Add/edit groups David Lucas 5th–8th Cousin Shared DNA: 8 cM across 1 segments 104 People
+David Lucas 5th–8th Cousin Shared DNA: 8 cM across 1 segments 104 People
 barbsilinger 5th–8th Cousin Shared DNA: 8 cM across 1 segments 144 People
 Joseph Lovrek 5th–8th Cousin Shared DNA: 8 cM across 1 segments 123 People
 JanetKett66 5th–8th Cousin Shared DNA: 8 cM across 1 segments 28 People
@@ -3769,7 +3769,7 @@ Michael McCabe Managed by joannmccabe 5th–8th Cousin Shared DNA: 8 cM across 1 s
 Michael Starkey 5th–8th Cousin Shared DNA: 8 cM across 1 segments No Trees
 Hattmark 5th–8th Cousin Shared DNA: 8 cM across 1 segments 96 People
 Jenna Harkin 5th–8th Cousin Shared DNA: 8 cM across 1 segments 145 People
-Jean Beckhàm 5th–8th Cousin Shared DNA: 8 cM across 1 segments Unlinked Tree
+Jean Beckham 5th–8th Cousin Shared DNA: 8 cM across 1 segments Unlinked Tree
 John Thomas 5th–8th Cousin Shared DNA: 8 cM across 1 segments No Trees
 keith Roberts 5th–8th Cousin Shared DNA: 8 cM across 2 segments 3,037 People
 Linda McFee 5th–8th Cousin Shared DNA: 8 cM across 1 segments Unlinked Tree
@@ -4820,7 +4820,7 @@ Morgan Church 5th–8th Cousin Shared DNA: 8 cM across 1 segments Unlinked Tree
 Linda Rossio 5th–8th Cousin Shared DNA: 8 cM across 1 segments Unlinked Tree
 Roxanne Watling 5th–8th Cousin Shared DNA: 8 cM across 1 segments Unlinked Tree
 Catrin Walters 5th–8th Cousin Shared DNA: 8 cM across 1 segments 29 People
-Add/edit groups T.M. Managed by PatriciaWalkamaNast 5th–8th Cousin Shared DNA: 8 cM across 1 segments 1,118 People
+T.M. Managed by PatriciaWalkamaNast 5th–8th Cousin Shared DNA: 8 cM across 1 segments 1,118 People
 Orleen Waldie 5th–8th Cousin Shared DNA: 8 cM across 1 segments 13 People
 Stephen Baum 5th–8th Cousin Shared DNA: 8 cM across 1 segments 301 People
 ZoeWoodman 5th–8th Cousin Shared DNA: 8 cM across 1 segments 58 People
@@ -6383,3 +6383,4 @@ J.P. Managed by 1992angel 5th–8th Cousin Shared DNA: 8 cM across 1 segments No T
 Steven Smith 5th–8th Cousin Shared DNA: 8 cM across 1 segments No Trees
 B.A. Managed by deedeenew 5th–8th Cousin Shared DNA: 8 cM across 1 segments 5,239 People
 Kaitlin Parmentier 5th–8th Cousin Shared DNA: 8 cM across 1 segments 9 People
+b_orcutt1 5th–8th Cousin Shared DNA: 8 cM across 1 segments 22 People

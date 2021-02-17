@@ -102,7 +102,7 @@ def get_data(word_list,index_offset):
             new_word_dict[column] = word_list[i+1]
 
         i += 1
-
+    print(tree_flag, new_word_dict )
     return new_word_dict,tree_flag
 
 
@@ -135,7 +135,8 @@ def get_cousin_dict(kit1, index_offset):
     dict_of_lists = {}
     list_of_lists = []
     line_no = 1
-    for line in open(kit1 + '.txt'):
+#    for line in open(kit1 + '.txt'):
+    for line in open(kit1 + '.txt', encoding='latin-1'):
         line = line.rstrip()
         line = line.replace('\t',' ')
         line = line.replace(',', '')
@@ -147,22 +148,22 @@ def get_cousin_dict(kit1, index_offset):
         dna_kit = kit_word_dict["who"]
         kit_word_dict["index"] = line_no + index_offset
         dict_of_lists[dna_kit] = kit_word_dict
-        #print (kit_word_dict["index"], line_no, word_list)
+#        print (kit_word_dict["index"], line_no, word_list)
         line_no = line_no + 1
     return dict_of_lists
 
 
 def main():
-    kit1 = 'Glyn'
+    #kit1 = 'Glyn'
     #kit1 = 'Wayne'
-    #kit1 = 'Helen'
+    kit1 = 'Helen'
     #kit1 = 'Sally'
     kit1_index_offset = 0
     #kit1a = 'Dad_B'
-    #kit1a = 'Wayne_6cM_new'
+    kit1a = 'Wayne_9cM'
     #kit1a = 'Sally_L'
-    kit1a = 'Dad_B'
-    #kit1a = 'Una_L'
+    #kit1a = 'Dad_B'
+    #kit1a = 'Una_6cM'
     kit1a_index_offset = 10000
 
     kit1_list = []

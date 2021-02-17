@@ -115,8 +115,8 @@ def get_data(word_list,index_offset , line_no, kit, kit_number):
             new_word_dict[column] = word_list[i+1]
 
         i += 1
-    #print(int(new_index) , new_word_dict["who"])
-    #kit_duplicate_check = new_word_dict["key_string"] + "_" + new_word_dict["cM"] + "_" + new_word_dict["segments"]
+    #print(int(line_no) , new_word_dict["who"])  # debug iso format text
+
     kit_duplicate_check = new_word_dict["who"] + "_" + new_word_dict["cM"] + "_" + new_word_dict["segments"]  # allow for recent tree changes
 
     test_result = DNA_Result(int(line_no) , index_offset, new_word_dict["who"] , new_word_dict["cM"] ,
@@ -133,7 +133,7 @@ def get_cousin_dict(kit,kit_number, index_offset,  kit_key_list,duplicate_key_li
     dict_of_lists = {}
     old_index=9999999999
     line_no = 1
-    for line in open(kit + '.txt'):
+    for line in open(kit + '.txt', encoding='latin-1'):
         line = line.rstrip()
         line = line.replace('\t',' ')
         line = line.replace(',', '')
@@ -225,18 +225,18 @@ def main():
     #kit1_file_list = ["Sally"]
     #kit1_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM_new","Wayne_A"]
     #kit1_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM","Sally_L"]
+    #kit1_file_list = ["Una", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM", "Una_7cM", "Una_6cM", "Una_L"]
 
-    kit1_number = 1
 
-    kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM_new","Wayne_A"]
+    #kit2_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM","Dad_B"]
+    #kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM_new","Wayne_A"]
     #kit2_file_list = ["Wayne"]
     #kit2_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM","Sally_L"]
     #kit2_file_list = ["Helen", "Helen_B"]
-    #kit2_file_list = ["Una", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM", "Una_7cM", "Una_6cM", "Una_L"]
+    kit2_file_list = ["Una", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM", "Una_7cM", "Una_6cM", "Una_L"]
 
-    kit1_Test_Result_Dict = load_matches(kit1_file_list, kit1_number)
-    kit2_number = 2
-    kit2_Test_Result_Dict = load_matches(kit2_file_list, kit2_number)
+    kit1_Test_Result_Dict = load_matches(kit1_file_list, 1)
+    kit2_Test_Result_Dict = load_matches(kit2_file_list, 2)
     for kit1_Test_Result in kit1_Test_Result_Dict:
         kit1_keystring_list.append(kit1_Test_Result_Dict[kit1_Test_Result].keystring)
     for kit2_Test_Result in kit2_Test_Result_Dict:
@@ -308,8 +308,8 @@ def main():
         cm2 = kit2_Test_Result_Dict[key2].centimorgans
         #print(mismatch_index, cousin_who, key1, key2)
         try:
-            print('{0:4} | {1:36} | {2:36} {3:3} | {4:36} {5:3} ' \
-                  .format(mismatch_index, cousin_who, key1, cm1, key2, cm2))
+            print('{0:4} | {1:32} | {2:3} {3:32} |{4:3} {5:32} ' \
+                  .format(mismatch_index, cousin_who, cm1, key1, cm2, key2))
         except UnicodeEncodeError:
             print("error with mismatch ASCII UnicodeEncodeError " , kit1_Test_Result_Dict[key1].kit,"=", kit1_Test_Result_Dict[key1].index, kit2_Test_Result_Dict[key2].kit, "=" ,  kit2_Test_Result_Dict[key2].index )
             exit(1)
