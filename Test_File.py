@@ -102,32 +102,8 @@ def get_data(word_list,index_offset):
             new_word_dict[column] = word_list[i+1]
 
         i += 1
-    print(tree_flag, new_word_dict )
+#    print(tree_flag, new_word_dict )
     return new_word_dict,tree_flag
-
-
-def get_cousin_dictY(kit, index_offset):
-
-    kit_who_list = []
-    dict_of_lists = {}
-    line_no = 1
-    for line in open(kit + '.txt'):
-        line = line.rstrip()
-        line = line.replace('\t',' ')
-        line = line.replace(',', '')
-        word_list = line.split()
-        kit_word_dict = get_data(word_list, index_offset)
-        search_duplicate_string = kit_word_dict["who"] + "_" + kit_word_dict["cM"] + "cM"
-        if search_duplicate_string in kit_who_list:
-            print(kit, kit_who_list.index(search_duplicate_string) + 1, line_no, "duplicate", kit_word_dict["who"], kit_word_dict["cM"], "cM",
-                   search_duplicate_string)
-        else:
-            kit_who_list.append(search_duplicate_string)
-        kit_word_dict["index"] = line_no + index_offset
-        dict_of_lists[int(line_no + index_offset)] = kit_word_dict
-        line_no = line_no + 1
-    return dict_of_lists
-
 
 
 def get_cousin_dict(kit1, index_offset):
@@ -141,6 +117,7 @@ def get_cousin_dict(kit1, index_offset):
         line = line.replace('\t',' ')
         line = line.replace(',', '')
         word_list = line.split()
+        # print(line_no)
         kit_word_dict,tree_flag = get_data(word_list, index_offset)
         if not tree_flag :
             exit
@@ -156,14 +133,16 @@ def get_cousin_dict(kit1, index_offset):
 def main():
     #kit1 = 'Glyn'
     #kit1 = 'Wayne'
-    kit1 = 'Helen'
+    #kit1 = 'Helen'
     #kit1 = 'Sally'
+    kit1 = 'Gary'
     kit1_index_offset = 0
     #kit1a = 'Dad_B'
-    kit1a = 'Wayne_9cM'
+    #kit1a = 'Wayne_9cM'
     #kit1a = 'Sally_L'
     #kit1a = 'Dad_B'
     #kit1a = 'Una_6cM'
+    kit1a = "Gary_8cM"
     kit1a_index_offset = 10000
 
     kit1_list = []

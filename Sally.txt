@@ -781,7 +781,7 @@
 781 Larry Atkins 5th–8th Cousin Shared DNA: 17 cM across 2 segments 24 People
 782 Katelyn Brown 5th–8th Cousin Shared DNA: 17 cM across 1 segments 7 People
 783 Ashton Willey 5th–8th Cousin Shared DNA: 17 cM across 3 segments 161 People
-784 C.M. Managed by metcalfemark 5th–8th Cousin Shared DNA: 17 cM across 1 segments 2,080 People
+784 C.M. Managed by metcalfemark Duplicate 5th–8th Cousin Shared DNA: 17 cM across 1 segments 2,080 People
 785 Susan Coyne 5th–8th Cousin Shared DNA: 17 cM across 3 segments Unlinked Tree
 786 Francis Egan Managed by Judith Egan 5th–8th Cousin Shared DNA: 17 cM across 1 segments 140 People
 787 Dilan DePauli-Wiltse 5th–8th Cousin Shared DNA: 17 cM across 1 segments 8 People
@@ -6287,7 +6287,7 @@
 6287 Samantha Tonn 5th–8th Cousin Shared DNA: 11 cM across 1 segments 5 People
 6288 Jean Rucker 5th–8th Cousin Shared DNA: 11 cM across 1 segments 4 People
 6289 Linda Sprouse Lindan 5th–8th Cousin Shared DNA: 11 cM across 1 segments 55 People
-6290 Sir Jameson Nelson Lord of Skåne, 5th–8th Cousin Shared DNA: 11 cM across 2 segments No Trees
+6290 Sir Jameson Nelson Lord of Skane, 5th–8th Cousin Shared DNA: 11 cM across 2 segments No Trees
 6291 Mary Fontenot 5th–8th Cousin Shared DNA: 11 cM across 1 segments No Trees
 6292 Alice Berner 5th–8th Cousin Shared DNA: 11 cM across 1 segments No Trees
 6293 D.V. Managed by Debera Molohon 5th–8th Cousin Shared DNA: 11 cM across 1 segments 943 People

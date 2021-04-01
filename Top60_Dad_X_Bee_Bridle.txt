@@ -207,11 +207,15 @@
 143 slbrooks311 brad5780 KennyCasados LCameron75 JenniferPerez VirginiaCrowther
 144 BonnieChesler
 145 ColleenOLeary PaulDay judio1343 tchester200166 ADavis0214 ErinWilson
-146 DeanLowe
+146 DeanLowe BrianLonghurst stevemcgarry189 RayRutland65 ashtonEg slbrooks311 PatriciaBlois
+146 DeanLowe EmmaCharles P.C.Managedbybrad5780 brad5780 KennyCasados LCameron75 
+146 DeanLowe JenniferPerez MitchelCasados IanRicketts BARRYPATERSON VirginiaCrowther
 147 GRColeman4
-148 PatriciaBlois 
+148 PatriciaBlois stevemcgarry189 RayRutland65 ashtonEg slbrooks311 DeanLowe EmmaCharles
+148 PatriciaBlois P.C.Managedbybrad5780 brad5780 KennyCasados LCameron75 JenniferPerez
+148 PatriciaBlois MitchelCasados IanRicketts BARRYPATERSON VirginiaCrowther
 149 CathleenJillson JEFFREYGODFREY MichaelO'Mara
-150 jillfoster10
+150 jillfoster10 JudyJones LouisaDavison
 151 PhilipHaldane SheilaMorken mathewpound JessicaHyde Stephencoughlin
 152 DennisTucker
 153 gnj07 ElwynDavies H.D.Managedbyprenjo GillianandGlynEvans
@@ -240,7 +244,9 @@
 170 bobcollins ToniaSandovalMickey GaryOwen chris_rosebankManagedbyjjstree1 CharlesClements DorothySandoval carvinara
 171 GwynethWilson
 172 JoanNorrisManagedbyAlistairLowe-Norris
-173 IanRicketts
+173 IanRicketts stevemcgarry189 RayRutland65 ashtonEg DeanLowe PatriciaBlois EmmaCharles
+173 IanRicketts P.C.Managedbybrad5780 brad5780 KennyCasados LCameron75 JenniferPerez
+173 IanRicketts MitchelCasados VirginiaCrowther
 174 BrendaHulm DROGERS
 175 JessicaFils-Aime
 176 JamesChilders CarolynLucke DonnaFitzgerald
@@ -278,7 +284,9 @@
 208 jojoblueberry
 209 D.H.ManagedbySEANALLEN H.H.ManagedbyReesDinbych JEFFREYGODFREY MichaelO'Mara GillianandGlynEvans GarethDavies
 210 KateSmith
-211 VirginiaCrowther
+211 VirginiaCrowther stevemcgarry189 RayRutland65 ashtonEg slbrooks311 DeanLowe PatriciaBlois
+211 VirginiaCrowther EmmaCharles P.C.Managedbybrad5780 brad5780 KennyCasados LCameron75
+211 VirginiaCrowther JenniferPerez MitchelCasados IanRicketts BARRYPATERSON
 212 CarolynLucke
 213 BrynRoberts zandorf1946
 214 drmiller48
@@ -593,6 +601,7 @@
 2098 cat197353 H.D.Managedbyprenjo JudyJones JulieThompson
 2099 DavidLloyddla H.D.Managedbyprenjo
 2128 K.C.ManagedbyRobin_Atkins51 SimonGray DAVIDTQUINN AlisonCampbell C.K.Managedbycaseykeen WhitneyFrost
+2258 kaitonydavid
 2301 ArthurUnmack CandaceMaryNelson-Brantigan
 2323 rachellehicks25
 2368 DavidEntwistle
@@ -696,7 +705,8 @@
 6408 RickyDoran BarbaraParryManagedbyGwendaParfitt J.H.Managedbykeiralynch99
 6409 E.M.Managedbyplourdedoran MyraWenzel
 6410 rupparti2Managedbyrupparti
-6411 CaroleSteers H.H.ManagedbyReesDinbych D.W.ManagedbyWendyMcKenna JacqueleneHolland
+6411 CaroleSteers H.H.ManagedbyReesDinbych D.W.ManagedbyWendyMcKenna JacqueleneHolland 
+6411 CaroleSteers HenryRobertsManagedbyHollyMonday-Jones StevenRoberts_80%
 6412 edwinroberts52 H.H.ManagedbyReesDinbych G.R.Managedbygemmaroberts50 sheree8 C.H.Managedbykeiralynch99 AdelynEllis
 6413 BARRYPATERSON stevemcgarry189 RayRutland65 ashtonEg DeanLowe PatriciaBlois EmmaCharles P.C.Managedbybrad5780
 6413 BARRYPATERSON brad5780 KennyCasados LCameron75 JenniferPerez VirginiaCrowther
@@ -727,7 +737,7 @@
 6437 CaroleLorraineHorlockManagedbyCorinneAnnChalmers JudithBuckle JanetBarnes DianaMelling PenelopePettitt MathiasPetersen
 6438 WyattMcDaniel DAVIDTQUINN RobertPark PatriciaNewton BryanYates JoyMorton StevenGlennPark
 6439 JayneMarks SallyAnneGale ArthurMarkGaleManagedbySteamerpoint AlexandriaMaple PhilipFenna AndreaWilsonManagedbyRobbieWilson45
-6440 StevenRoberts TecwynRawson gnj07 BrendaHulm WilliamCarney
+6440 StevenRoberts_80% AnnStoddard TecwynRawson gnj07 BrendaHulm WilliamCarney
 6441 A.B.ManagedbyAlexesBradshaw SaideeHolmes
 6442 TrevorGarethWilliams TecwynRawson
 6443 homalone1 BarbaraParryManagedbyGwendaParfitt JudyJones
@@ -755,7 +765,7 @@
 6465 ManonDavies gethngethn IanHuxley ElwynDavies JuneMcLachlinManagedbyoschean H.D.Managedbyprenjo
 6466 ChrisVickeyManagedbymargaretjackson5 JudithAdair
 6467 JudithAdair ElenLewis
-6468 P.F.Managedbygeoffflood37 StevenRoberts KarineGeorge
+6468 P.F.Managedbygeoffflood37 StevenRoberts_80% KarineGeorge
 6469 M.H.ManagedbyCarlReisinger
 6470 AnnwenHughes D.W.ManagedbyWendyMcKenna IanHuxley arwelwjones51 usersam2772
 6471 AndrewLewis aberlas
@@ -809,7 +819,7 @@
 6516 mlawrence40 HaroldFrey98
 6517 ChristineSinclair
 6518 anweneleri18 BarbaraParryManagedbyGwendaParfitt KarineGeorge
-6519 sharontower1 StevenRoberts
+6519 sharontower1 StevenRoberts_80%
 6520 CJ1980 NathanGuzman
 6521 ChrisGrundy aberlas GlynParry AnneJones JulieThompson
 6522 AnneJones IanHuxley AdelynEllis NeilEvans
@@ -822,7 +832,7 @@
 6529 Bspcr JoshSando JoanNorrisManagedbyAlistairLowe-Norris DavidPayne
 6530 IanMutch nora_engelhard RichardHoyManagedbyBeverlyHoy F.P.ManagedbyRobertPearson
 6531 AmandaStanton JudithBuckle JanetBarnes JoyMorton rosiebarclay370 MarkPortman SylvianeOts
-6532 BarbaraDodsonManagedbydouglasdumbarton
+6532 BarbaraDodsonManagedbydouglasdumbarton BeverleyBrownManagedbyJessicaDarvill RowenaLeek
 6533 PamelaWilson E.D.ManagedbyMindyFrench NatalieHeppell tammykiehn NancyHawk heyjay2266
 6533 PamelaWilson L.G.ManagedbyLARRYJEANETTE_1 CarmaOlsen BrentHarvey ChrisAdams kandd101 LizzyAshcraft
 6533 PamelaWilson MartyKiehn B.M.ManagedbyBrentMcFarland BenKreger BrookWoodbine L.B.Managedbyjojoblueberry
@@ -931,3 +941,37 @@
 6631 mersadiesphillips
 6632 LaurenRoberts SallyAnneGale
 6633 dewiwynnejones UJonesManagedbySteamerpoint IanHuxley Marianjob NeilEvans
+6634 HarryBridson LouisaDavison jillfoster10
+6635 AngelaSturgess KenLawless KerriRobinson
+6636 NinaMickleburgh beej4sue
+6637 DustinThrasher D.T.Managedbynctarwater
+6638 SandraBryan JamesChilders
+6639 SethWintermute JoanneLogsdon
+6640 rae_paz JamesChilders
+6641 PeterHaydnPritchard AnnStoddard
+6642 PaulineOxberry JessieGraham
+6643 CledwynAshford C.H.Managedbykeiralynch99
+6644 BeverleyBrownManagedbyJessicaDarvill BarbaraDodsonManagedbydouglasdumbarton RowenaLeek
+6645 ChristineWells KateSmith
+6646 ReecePowell SidneyLutes
+6647 paulamunro0604 JEFFREYGODFREY
+6648 ChristineJonesMonaccio maggie2071 GillianandGlynEvans
+6649 JenniferHorton JamesChilders
+6650 RobertSpringate ShirleyFisherManagedbyFPisauro
+6651 KeithBayliss ShirleyFisherManagedbyFPisauro
+6652 jp4dyce NeilEvans
+6653 G.H.ManagedbyGavinHope aberlas
+6654 MitchelCasados stevemcgarry189 RayRutland65 ashtonEg slbrooks311 DeanLowe
+6654 MitchelCasados PatriciaBlois EmmaCharles P.C.Managedbybrad5780 brad5780
+6654 MitchelCasados KennyCasados LCameron75 JenniferPerez IanRicketts BARRYPATERSON 
+6654 MitchelCasados VirginiaCrowther
+6655 DavidDavies ElwynDavies
+6656 j_merryweather58 HenryRobertsManagedbyHollyMonday-Jones judio1343
+6657 armyberry17 wtarwater52Managedbynctarwater D.T.Managedbynctarwater
+6658 E.T.ManagedbyKarriTadayon HaroldFrey98
+6659 AndreaFielden GlynParry AnnStoddard ajones296 S.J.Managedbyajones296 AdelynEllis
+6660 CarterGrenewicz BARRYPATERSON
+6661 bronmiod maggie2071 AlwenaJames
+6661 CarolRoberts aberlas BarbaraParryManagedbyGwendaParfitt GlynParry arwelwjones51 WilliamCarney
+6662 BarryPriest charlenegrantham
+6663 AnnmarieWilliams 

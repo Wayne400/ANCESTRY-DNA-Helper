@@ -151,11 +151,11 @@
 151 Philip Haldane 4th–6th Cousin Shared DNA: 24 cM across 1 segments 160 People 
 152 Dennis Tucker 4th–6th Cousin Shared DNA: 24 cM across 3 segments 7 People 
 153 gnj07 4th–6th Cousin Shared DNA: 24 cM across 2 segments 17 People Common ancestor
-154 Emma Charles 4th–6th Cousin Shared DNA: 24 cM across 1 segments Tree unavailable 
+154 Emma Charles 4th–6th Cousin Shared DNA: 24 cM across 1 segments 42 People 
 155 P.C.Managedbybrad5780 4th–6th Cousin Shared DNA: 24 cM across 1 segments 1,096 People 
 156 brad5780 4th–6th Cousin Shared DNA: 24 cM across 1 segments 1,096 People 
 157 Matt Wensel 4th–6th Cousin Shared DNA: 24 cM across 2 segments 242 People 
-158 LCameron75 4th–6th Cousin Shared DNA: 24 cM across 1 segments 18 People 
+158 LCameron75 4th–6th Cousin Shared DNA: 24 cM across 1 segments 28 People 
 159 Jennifer Perez 4th–6th Cousin Shared DNA: 24 cM across 1 segments No Trees 
 160 J.P. Managed by Warwickraymondprotheroe 4th–6th Cousin Shared DNA: 24 cM across 2 segments No Trees 
 161 L.L. Managed by keiralynch99 4th–6th Cousin Shared DNA: 24 cM across 3 segments Unlinked Tree 
@@ -170,7 +170,7 @@
 170 bob collins 4th–6th Cousin Shared DNA: 23 cM across 1 segments 3 People 
 171 Gwyneth Wilson 4th–6th Cousin Shared DNA: 23 cM across 4 segments Unlinked Tree 
 172 Joan Norris Managed by Alistair Lowe-Norris 4th–6th Cousin Shared DNA: 23 cM across 3 segments 667 People 
-173 Ian Ricketts 4th–6th Cousin Shared DNA: 23 cM across 1 segments No Trees 
+173 Ian Ricketts 4th–6th Cousin Shared DNA: 23 cM across 1 segments 1,062 People
 174 Brenda Hulm 4th–6th Cousin Shared DNA: 23 cM across 4 segments 75 People 
 175 Jessica Fils-Aime 4th–6th Cousin Shared DNA: 23 cM across 1 segments No Trees 
 176 James Childers 4th–6th Cousin Shared DNA: 23 cM across 2 segments 187 People 
@@ -2255,7 +2255,7 @@
 2255 margaret_lisa 5th–8th Cousin Shared DNA: 12 cM across 1 segments No Trees
 2256 Rebecca Wells 5th–8th Cousin Shared DNA: 12 cM across 1 segments 14 People
 2257 Rhonda Campbell 5th–8th Cousin Shared DNA: 12 cM across 1 segments 13 People
-2258 kaitonydavid 5th–8th Cousin Shared DNA: 12 cM across 1 segments 221 People
+2258 kaitonydavid 5th–8th Cousin Shared DNA: 12 cM across 1 segments 221 People GEDMATCH A171274 CHROMOSOMES (3)
 2259 M.M. Managed by Dmcnultz 5th–8th Cousin Shared DNA: 12 cM across 1 segments Unlinked Tree
 2260 Sheryl Edwards-Althauser 5th–8th Cousin Shared DNA: 12 cM across 1 segments 90 People
 2261 Lynda Kay Watts Jones 5th–8th Cousin Shared DNA: 12 cM across 1 segments Unlinked Tree
@@ -6411,7 +6411,7 @@
 6411 Carole Steers 5th–8th Cousin Shared DNA: 7 cM across 1 segments 695 People GEDMATCH T233539 CHROMOSOMES (18)
 6412 edwinroberts52 5th–8th Cousin Shared DNA: 9 cM across 1 segments 956 People
 6413 BARRY PATERSON 4th–6th Cousin Shared DNA: 22 cM across 1 segments 7 People
-6414 Kenny Casados 4th–6th Cousin Shared DNA: 24 cM across 2 segments No Trees
+6414 Kenny Casados 4th–6th Cousin Shared DNA: 24 cM across 2 segments 3 People
 6415 Saidee Holmes 4th–6th Cousin Shared DNA: 21 cM across 1 segments 35 People
 6416 christine ann Bridson 5th–8th Cousin Shared DNA: 8 cM across 2 segments 760 People
 6417 Kari Stevenson 5th–8th Cousin Shared DNA: 15 cM across 2 segments 293 People 
@@ -6437,7 +6437,7 @@
 6437 Carole Lorraine Horlock Managed by Corinne Ann Chalmers 5th–8th Cousin Shared DNA: 7 cM across 1 segments 3 People
 6438 Wyatt McDaniel 4th–6th Cousin Shared DNA: 25 cM across 1 segments No Trees
 6439 Jayne Marks 4th–6th Cousin Shared DNA: 22 cM across 1 segments Unlinked Tree
-6440 Steven Roberts 4th–6th Cousin Shared DNA: 27 cM across 4 segments No Trees
+6440 Steven Roberts _80% 4th–6th Cousin Shared DNA: 27 cM across 4 segments No Trees
 6441 A.B. Managed by Alexes Bradshaw 4th–6th Cousin Shared DNA: 21 cM across 2 segments Unlinked Tree 
 6442 Trevor Gareth Williams 5th–8th Cousin Shared DNA: 11 cM across 1 segments No Trees
 6443 homalone1 5th–8th Cousin Shared DNA: 8 cM across 1 segments 78 People
@@ -6519,7 +6519,7 @@
 6519 sharontower1 5th–8th Cousin Shared DNA: 12 cM across 1 segments Unlinked Tree
 6520 CJ1980 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
 6521 Chris Grundy 5th–8th Cousin Shared DNA: 11 cM across 2 segments 3 People
-6522 Anne Jones 4th–6th Cousin Shared DNA: 26 cM across 3 segments No Trees
+6522 Anne Jones 4th–6th Cousin Shared DNA: 26 cM across 3 segments 46 People
 6523 Frederick Williams 5th–8th Cousin Shared DNA: 18 cM across 3 segments Unlinked Tree
 6524 Stephanie J Black 5th–8th Cousin Shared DNA: 8 cM across 1 segments No Trees
 6525 phil marley 5th–8th Cousin Shared DNA: 15 cM across 1 segments Unlinked Tree
@@ -6631,3 +6631,34 @@
 6631 mersadies phillips 5th–8th Cousin Shared DNA: 14 cM across 2 segments 7 People GEDMATCH BC1485308 CHROMOSOMES (3)
 6632 Lauren Roberts 5th–8th Cousin Shared DNA: 8 cM across 1 segments 571 People
 6633 dewiwynnejones 5th–8th Cousin Shared DNA: 9 cM across 1 segments 319 People
+6634 Harry Bridson 5th–8th Cousin Shared DNA: 9 cM across 1 segments Unlinked Tree
+6635 Angela Sturgess 5th–8th Cousin Shared DNA: 19 cM across 1 segments  210 People
+6636 Nina Mickleburgh 5th–8th Cousin Shared DNA: 10 cM across 1 segments Unlinked Tree
+6637 Dustin Thrasher 5th–8th Cousin Shared DNA: 12 cM across 1 segments Unlinked Tree
+6638 Sandra Bryan 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
+6639 Seth Wintermute 5th–8th Cousin Shared DNA: 14 cM across 1 segments  Unlinked Tree
+6640 rae_paz 5th–8th Cousin Shared DNA: 17 cM across 1 segments Unlinked Tree
+6641 Peter Haydn Pritchard 5th–8th Cousin Shared DNA: 10 cM across 2 segments No Trees
+6642 Pauline Oxberry 5th–8th Cousin Shared DNA: 10 cM across 1 segments No Trees
+6643 Cledwyn Ashford 5th–8th Cousin Shared DNA: 10 cM across 1 segments Unlinked Tree
+6644 Beverley Brown Managed by Jessica Darvill 4th–6th Cousin Shared DNA: 21 cM across 1 segments 100 People
+6645 Christine Wells 5th–8th Cousin Shared DNA: 12 cM across 1 segments 190 People
+6646 Reece Powell 5th–8th Cousin Shared DNA: 8 cM across 1 segments 9 People
+6647 paulamunro0604 5th–8th Cousin Shared DNA: 8 cM across 1 segments 153 People
+6648 Christine Jones Monaccio 5th–8th Cousin Shared DNA: 9 cM across 1 segments No Trees
+6649 Jennifer Horton 5th–8th Cousin Shared DNA: 16 cM across 1 segments 24 People
+6650 Robert Springate 5th–8th Cousin Shared DNA: 8 cM across 1 segments 5 People
+6651 Keith Bayliss 4th–6th Cousin Shared DNA: 20 cM across 4 segments 59 People
+6652 jp4dyce 5th–8th Cousin Shared DNA: 8 cM across 1 segments Unlinked Tree
+6653 G.H. Managed by Gavin Hope 5th–8th Cousin Shared DNA: 10 cM across 1 segments Unlinked Tree
+6654 Mitchel Casados 4th–6th Cousin Shared DNA: 24 cM across 1 segments No Trees
+6655 David Davies 5th–8th Cousin Shared DNA: 8 cM across 1 segments 84 People
+6656 j_merryweather58 5th–8th Cousin Shared DNA: 10 cM across 2 segments Unlinked Tree
+6657 armyberry17 5th–8th Cousin Shared DNA: 12 cM across 1 segments 14 People
+6658 E.T. Managed by Karri Tadayon 5th–8th Cousin Shared DNA: 8 cM across 1 segments Unlinked Tree
+6659 Andrea Fielden 5th–8th Cousin Shared DNA: 9 cM across 2 segments 42 People
+6660 Carter Grenewicz 5th–8th Cousin Shared DNA: 9 cM across 1 segments No Trees
+6661 bronmiod 5th–8th Cousin Shared DNA: 13 cM across 2 segments 106 People
+6661 Carol Roberts 4th–6th Cousin Shared DNA: 22 cM across 3 segments 7 People
+6662 BarryPriest 4th–6th Cousin Shared DNA: 33 cM across 2 segments 8 People
+6663 Ann marie Williams 5th–8th Cousin Shared DNA: 8 cM across 1 segments 3,270 People GEDMATCH GP5885809 CHROMOSOMES (5-22)

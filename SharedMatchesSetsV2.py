@@ -15,7 +15,7 @@ def swap_in_key_string(old_list, match_filter_list,homonym_to_primarykey_dict,pr
             new_list.append(new_entry)
     return new_list
 
-def get_shared_match2(kit3, match_filter_list, kit1_primary_index,kit1_index_keystring_dict, kit1_Test_Result_Dict):
+def get_shared_match2(kit3, match_filter_list, kit1_primary_index, kit1_index_keystring_dict):
     print(match_filter_list)
     cousin_list = []
     list_of_lists = []
@@ -26,18 +26,22 @@ def get_shared_match2(kit3, match_filter_list, kit1_primary_index,kit1_index_key
     for line in open(kit3 + '.txt'):
         line = line.rstrip()
         orig_word_list = line.split()
-        primary_index = orig_word_list[0]  + "." + orig_word_list[1]
+    #    print(orig_word_list)
+        primary_index = orig_word_list[0] + "." + orig_word_list[1]
+        # print(primary_index)
         homonym = orig_word_list[1]
-#        print(orig_word_list[1])
-        keystring = kit1_index_keystring_dict[int(orig_word_list[0])]   # use the index to get keystring
-        this_cousin = kit1_primary_index[primary_index]
-        homonym_to_primarykey_dict[homonym] = this_cousin  # will go homonym >> primarykey >> matchstring_245
-        primarykey_to_keystring[this_cousin] = keystring
-        cm_total = kit1_Test_Result_Dict[this_cousin].centimorgans
-        #print(match_filter_list)
-        #print(this_cousin, homonym, cm_total)
-        if (homonym not in match_filter_list) and (int(cm_total) < 50):
-          if (this_cousin != last_cousin) :
+        if orig_word_list[1] not in match_filter_list:
+          #if orig_word_list[1] == 'M.M.ManagedbyJamesMerz':  #looking for a duplicate key
+          #    print("primary_index", primary_index)
+          this_cousin = kit1_primary_index[primary_index]
+          # print(primary_index, this_cousin)
+          keystring = kit1_index_keystring_dict[int(orig_word_list[0])]   # use the index to get keystring
+          homonym_to_primarykey_dict[homonym] = this_cousin  # will go homonym >> primarykey >> matchstring_245
+          primarykey_to_keystring[this_cousin] = keystring
+          #print(match_filter_list)
+          # print(this_cousin, homonym)
+
+          if (this_cousin != last_cousin) and (homonym not in match_filter_list) :
             if orig_word_list[1] in cousin_list:
                 print("ouch", orig_word_list[1])
             else:
@@ -45,7 +49,7 @@ def get_shared_match2(kit3, match_filter_list, kit1_primary_index,kit1_index_key
                 list_of_lists.append(orig_word_list)
                 cousin_list.append(orig_word_list[0])
                 last_cousin = this_cousin
-          elif (this_cousin == last_cousin):
+          elif (this_cousin == last_cousin) and (homonym not in match_filter_list):
             del orig_word_list[0]  # dont add  cousin name again
             del orig_word_list[0]
             list_of_lists[-1].extend(orig_word_list)
@@ -61,6 +65,7 @@ def get_shared_match2(kit3, match_filter_list, kit1_primary_index,kit1_index_key
         dict_of_shared_matches[index] = cousin_set
     return dict_of_sets, dict_of_shared_matches
 
+
 def get_common_ancestor(kit6, kit1_index_keystring_dict):
     cousin_list = []
     new_dict = {}
@@ -69,8 +74,9 @@ def get_common_ancestor(kit6, kit1_index_keystring_dict):
         orig_word_list = line.split()
         this_cousin = orig_word_list[1]
         key_string = kit1_index_keystring_dict[int(orig_word_list[0])]
-        #print(orig_word_list[0], orig_word_list[1], key_string)
-        new_dict[key_string] = orig_word_list[2]
+#        print(orig_word_list[0], orig_word_list[1], key_string)
+        if len(orig_word_list) > 2:
+           new_dict[key_string] = orig_word_list[2]
         #cousin_list.append(key_string)
     return new_dict
 
@@ -91,6 +97,7 @@ def get_places(kit3_places, kit1_who_dict):
 
 def main():
     person = "Glyn"
+    duplicate_check_flag = False
     print_filter = False
     places_flag = False
     match_filter_list = [""]
@@ -99,12 +106,43 @@ def main():
 
     if person == "Glyn":
         kit1_file_list = ["Glyn"]  # , "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM", "Dad_B"]
+
         match_filter_list = ["aberlas", "UJonesManagedbySteamerpoint", "SallyAnneGale", "H.H.ManagedbyReesDinbych","gethngethn", \
                              "ArthurMarkGaleManagedbySteamerpoint", "BarbaraParryManagedbyGwendaParfitt", "D.W.ManagedbyWendyMcKenna",\
-                              "ElizabethPritchard", "sheree8","AlwenaJames","judio1343", "LJ"]
-        match_filter_list2 = ["EricEngelhard", "NatalieRoberts_53%", "StevenRoberts"]
-        #match_filter_list2 = ["EricEngelhard", "NatalieRoberts_53%"]
+                              "ElizabethPritchard", "sheree8","AlwenaJames", "LJ"]
+
+        match_filter_list2 = ["EricEngelhard", "NatalieRoberts_53%", "StevenRoberts", "nora_engelhard","JudithBuckle",
+                              "patsobocienski","SimonGray"]
+
+        match_filter_list3 = ["G.R.Managedbygemmaroberts50","H.D.Managedbyprenjo","usersam2772",\
+                              "IforGlynLloyd","E.G.ManagedbyKarenBracegirdle","JudyJones",\
+                              "HenryRobertsManagedbyHollyMonday-Jones", "StevenRoberts_80%"]
+
+
+        match_filter_list4 = ["ElizabethPritchard",
+                               "AdelynEllis" , "CliffordDaviesManagedbyAnnDavies",
+                              "DewiPugh", "ElwynDavies",  "GlynParry",
+                              "gwendahumphries", "InaBlancheParry"]
+
+        match_filter_list5 = ["JaredDeWittie"]
+
+        match_filter_list6 = [ "PaulDay", "LKevinKelly11", "tchester200166", "ADavis0214",
+                              "ErinWilson", "ColleenOLeary","AnnStoddard", "RebeccaBailey","arwelwjones51",
+                               "JuneMcLachlinManagedbyoschean"]
+        match_filter_list7 = ["GillianandGlynEvans", "D.H.ManagedbySEANALLEN"]
+        match_filter_list8 = ["stevemcgarry189", "BrianLonghurst" ,
+                              "MalcolmSlade" , "ClaireDayel-Baker", "judyrobinson"]
+
+
         match_filter_list.extend(match_filter_list2)
+        match_filter_list.extend(match_filter_list3)
+        match_filter_list.extend(match_filter_list4)
+        match_filter_list.extend(match_filter_list5)
+        match_filter_list.extend(match_filter_list6)
+        match_filter_list.extend(match_filter_list7)
+        match_filter_list.extend(match_filter_list8)
+
+
         kit3 = 'Top60_Dad_X_Bee_Bridle'
         kit3_places = 'places_in_trees'
         kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM", "Wayne_8cM", "Wayne_7cM", "Wayne_6cM_new", "Wayne_A"]
@@ -112,6 +150,8 @@ def main():
         kit5_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_L"]
         kit6 = 'Glyn_Common2'
         kit7_file_list = ["Una", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM", "Una_7cM", "Una_6cM", "Una_L" ]
+        kit8_file_list = ["Gary", "Gary_15cM", "Gary_14cM", "Gary_13cM", "Gary_12cM", "Gary_11cM", "Gary_10cM", "Gary_9cM", "Gary_A"]
+
     if person == "Wayne":
         kit1_file_list = ["Wayne"]
         match_filter_list = ["SandraDavis","DavidLarsen","PaulineWilliams","LindaEvans","sheilaroberts","susanwhiskin","BarbaraParryManagedbyGwendaParfitt"]
@@ -125,6 +165,25 @@ def main():
         kit5_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_L"]
         kit6 = 'Wayne_Common'
         kit7_file_list = ["Una", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM", "Una_7cM", "Una_6cM", "Una_L"]
+        kit8_file_list = ["Gary", "Gary_14cM", "Gary_13cM", "Gary_12cM", "Gary_11cM", "Gary_10cM", "Gary_9cM", "Gary_A"]
+
+    if person == "Gary":
+        kit1_file_list = ["Gary", "Gary_15cM", "Gary_14cM"]
+        match_filter_list = ["SandraDavis", "DavidLarsen", "PaulineWilliams","LindaEvans","sheilaroberts","susanwhiskin"]
+        match_filter_list2 = ["nogoodboyoManagedbyRhiannonWilliams"]
+        match_filter_list3 = ["aberlas", "UJonesManagedbySteamerpoint", "SallyAnneGale", "H.H.ManagedbyReesDinbych","gethngethn", \
+                              "LaurenJames", "BarbaraParryManagedbyGwendaParfitt"]
+        match_filter_list.extend(match_filter_list2)
+        match_filter_list.extend(match_filter_list3)
+        kit3 = 'Gary_Shared'
+        kit3_places = 'Gary_Places'
+        kit2_file_list = ["Glyn" , "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM", "Dad_B"]
+        kit4_file_list = ["Helen", "Helen_B"]
+        kit5_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_L"]
+        kit6 = 'Gary_Common'
+        kit7_file_list = ["Una", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM", "Una_7cM", "Una_6cM", "Una_L"]
+        kit8_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM", "Wayne_8cM", "Wayne_7cM", "Wayne_6cM_new", "Wayne_A"]
+
 
     if person == "Sally":
         kit1_file_list = ["Sally" ]
@@ -140,14 +199,13 @@ def main():
         kit5_file_list = ["Helen", "Helen_B"]
         kit6 = 'Sally_Common'
         kit7_file_list = ["Una", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM", "Una_7cM", "Una_6cM", "Una_L"]
+        kit8_file_list = ["Gary", "Gary_14cM", "Gary_13cM", "Gary_12cM", "Gary_11cM", "Gary_10cM", "Gary_9cM", "Gary_A"]
 
-
-    duplicate_check_flag = False
     dict_of_places = []
 
 
 #    kit1_dict_of_lists = load_matches(kit1_file_list, duplicate_check_flag)
-    kit1_Test_Result_Dict = load_matches(kit1_file_list, 1)
+    kit1_Test_Result_Dict = load_matches(kit1_file_list, 1, duplicate_check_flag)
     kit1_key_dict = {}
     kit1_who_dict = {}
     kit1_index_dict = {}
@@ -170,28 +228,36 @@ def main():
 
     common_dict = get_common_ancestor(kit6, kit1_index_keystring_dict)
 
-    dict_of_sets, dict_of_shared_matches = get_shared_match2(kit3, match_filter_list, kit1_primary_index, kit1_index_keystring_dict, kit1_Test_Result_Dict)
+#    dict_of_sets, dict_of_shared_matches = get_shared_match2(kit3, match_filter_list, kit1_primary_index, kit1_index_keystring_dict, kit1_Test_Result_Dict)
+    dict_of_sets, dict_of_shared_matches = get_shared_match2(kit3, match_filter_list, kit1_primary_index, kit1_index_keystring_dict)
+
     dict_of_places = get_places(kit3_places, kit1_who_dict)
 
-    kit2_Test_Result_Dict = load_matches(kit2_file_list, 2)
+    kit2_Test_Result_Dict = load_matches(kit2_file_list, 2, duplicate_check_flag)
     kit2_keystring_list = []
     for kit2_Test_Result in kit2_Test_Result_Dict:
         kit2_keystring_list.append(kit2_Test_Result_Dict[kit2_Test_Result].keystring)
 
-    kit4_Test_Result_Dict = load_matches(kit4_file_list, 4)
+    kit4_Test_Result_Dict = load_matches(kit4_file_list, 4, duplicate_check_flag)
     kit4_keystring_list = []
     for kit4_Test_Result in kit4_Test_Result_Dict:
         kit4_keystring_list.append(kit4_Test_Result_Dict[kit4_Test_Result].keystring)
 
-    kit5_Test_Result_Dict = load_matches(kit5_file_list, 5)
+    kit5_Test_Result_Dict = load_matches(kit5_file_list, 5, duplicate_check_flag)
     kit5_keystring_list = []
     for kit5_Test_Result in kit5_Test_Result_Dict:
         kit5_keystring_list.append(kit5_Test_Result_Dict[kit5_Test_Result].keystring)
 
-    kit7_Test_Result_Dict = load_matches(kit7_file_list, 7)
+    kit7_Test_Result_Dict = load_matches(kit7_file_list, 7, duplicate_check_flag)
     kit7_keystring_list = []
     for kit7_Test_Result in kit7_Test_Result_Dict:
         kit7_keystring_list.append(kit7_Test_Result_Dict[kit7_Test_Result].keystring)
+
+    kit8_Test_Result_Dict = load_matches(kit8_file_list, 8, duplicate_check_flag)
+    kit8_keystring_list = []
+    for kit8_Test_Result in kit8_Test_Result_Dict:
+        kit8_keystring_list.append(kit8_Test_Result_Dict[kit8_Test_Result].keystring)
+
 
 
 
@@ -236,8 +302,8 @@ def main():
             print("****************************************************")
             group_total = len(new_dict_of_lists[cousin])
             #print(supergroup, cousin ,group_total,new_dict_of_lists[cousin] )
-            dad_string = " >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "
-            print(supergroup, dad_string,  cousin, group_total,  dad_string)
+            banner_string = " >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "
+            print(supergroup, banner_string,  cousin, group_total,  banner_string)
             new_index = 1
             temp_dict = {}
             #kit1_supergroup[cousin] = ""
@@ -254,6 +320,7 @@ def main():
                         match_kit4 = ""
                         match_kit5 = ""
                         match_kit7 = ""
+                        match_kit8 = ""
                         common_string = ""
                         place_list = []
                         filter_flag = False
@@ -276,10 +343,7 @@ def main():
                             if kit1_Test_Result_Dict[cousin4].chromosomes != "":
 #                            if "CHROMOSOMES" in kit1_dict_of_lists[kit1_index_dict[cousin4]]:
                                 kit1_supergroup[cousin3] = supergroup
-                                #trail_string = trail_string + " chr " + kit1_dict_of_lists[kit1_index_dict[cousin4]]["CHROMOSOMES"]
-                                #chromo_string = kit1_dict_of_lists[kit1_index_dict[cousin4]]["CHROMOSOMES"]
                                 chromo_string = kit1_Test_Result_Dict[cousin4].chromosomes
-                                #chromo_string_1 = kit1_dict_of_lists[kit1_index_dict[cousin4]]["CHROMOSOMES"]
                                 chromo_string = chromo_string.replace('(', ' ')
                                 chromo_string = chromo_string.replace(')', ' ')
                                 chromo_string = chromo_string.replace('-', ' ')
@@ -290,19 +354,19 @@ def main():
 
 
                             if cousin3 in kit2_keystring_list:
-                                #match_kit2 = kit2_file_list[0] + "=" + kit2_dict_of_lists[kit2_index_dict[cousin4]]["cM"] + "cM"
                                 match_kit2 = kit2_file_list[0] + "=" + kit2_Test_Result_Dict[cousin4].centimorgans  + "cM"
                             if cousin3 in kit4_keystring_list:
-#                                match_kit4 = kit4_file_list[0] + "=" + kit4_dict_of_lists[kit4_index_dict[cousin4]]["cM"] + "cM"
                                 match_kit4 = kit4_file_list[0] + "=" + kit4_Test_Result_Dict[cousin4].centimorgans  + "cM"
 
                             if cousin3 in kit5_keystring_list:
-#                                match_kit5 = kit5_file_list[0] + "=" + kit5_dict_of_lists[kit5_index_dict[cousin4]]["cM"] + "cM"
                                 match_kit5 = kit5_file_list[0] + "=" + kit5_Test_Result_Dict[cousin4].centimorgans  + "cM"
 
                             if cousin3 in kit7_keystring_list:
-#                                match_kit7 = kit7_file_list[0] + "=" + kit7_dict_of_lists[kit7_index_dict[cousin4]]["cM"] + "cM"
                                 match_kit7 = kit7_file_list[0] + "=" + kit7_Test_Result_Dict[cousin4].centimorgans  + "cM"
+
+                            if cousin3 in kit8_keystring_list:
+                                match_kit8 = kit8_file_list[0] + "=" + kit8_Test_Result_Dict[cousin4].centimorgans  + "cM"
+
 
                             kit1_index = kit1_index_dict[cousin4]
 #                            kit1_cM = kit1_dict_of_lists[kit1_index]["cM"]
@@ -311,13 +375,13 @@ def main():
 #                            kit1_seg = kit1_dict_of_lists[kit1_index]["segments"]
                             #print( kit1_index, kit1_cM + "cM", kit1_seg + " seg",cousin4, "*" + str(no_of_shared_matches) + "*",match_kit2, match_kit4 , match_kit5, trail_string)
                             if not places_flag:
-                              print('{0:40} {1:3}cM {2:2}seg   {3:11} {4:11} {5:11} {6:11}   {7:4} *{8:1}* {9:30}' \
-                                  .format( cousin4, kit1_cM, kit1_seg,
-                                          match_kit2, match_kit4, match_kit5, match_kit7, kit1_index, str(no_of_shared_matches), common_string))
+                              print('{0:6} {1:40} {2:3}cM {3:2}seg   {4:11} {5:11} {6:11} {7:11} {8:11}  *{9:1}* {10:30}' \
+                                  .format(kit1_index, cousin4, kit1_cM, kit1_seg,
+                                          match_kit2, match_kit8, match_kit5, match_kit7, match_kit4,  str(no_of_shared_matches), places_string))
                             else:
                                print('{0:4} {1:40} {2:3}cM {3:2}seg {4:30}' \
                                   .format( kit1_index, cousin4, kit1_cM, kit1_seg,
-                                          places_string))
+                                          common_string))
 
             supergroup += 1
             supertotal = supertotal + group_total

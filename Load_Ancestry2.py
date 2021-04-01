@@ -123,6 +123,7 @@ def load_matches(file_list, duplicate_check_flag):
     kit_offset_index = 0
     kit_who_list = []
     for text_file in file_list:
+        print("loading ", text_file)
         temp_dict_of_lists = {}
         #print (text_file, 10000* kit_offset_index)
         temp_dict_of_lists = get_cousin_dict(text_file, kit_offset_index * 20000, kit_who_list, duplicate_check_flag)
