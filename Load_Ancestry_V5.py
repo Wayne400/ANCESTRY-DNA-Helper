@@ -24,7 +24,7 @@ class DNA_Result(object):
 
 
 
-def get_data(word_list,index_offset , line_no, kit, kit_number):
+def get_data(word_list,index_offset , line_no, kit, kit_number, duplicate_check_flag):
     new_word_dict = {}
     new_word_dict["People"] = "zero"
     new_word_dict["Tree"] = ""
@@ -34,9 +34,11 @@ def get_data(word_list,index_offset , line_no, kit, kit_number):
     new_index = 9999999
 
     for column in word_list:
-        if column == "Cousin" and index_offset == 0:
-            new_word_dict["index"] = word_list[0]
-            new_index = word_list[0]
+        if column == "Cousin" and (index_offset == 0 or index_offset == 160000 or index_offset == 150000):
+#            print(index_offset, word_list)
+            new_word_dict["index"] = str(int(word_list[0]) + index_offset)
+#            print(new_word_dict["index"] , word_list)
+#            new_index = word_list[0]
             new_word_dict[column] = word_list[i-1]
             if i == 3:
                 new_word_dict["who"] = word_list[1]
@@ -58,9 +60,9 @@ def get_data(word_list,index_offset , line_no, kit, kit_number):
                 new_word_dict["who"] = word_list[1] + word_list[2] + word_list[3] + word_list[4] + word_list[5] + word_list[6] + word_list[7] + word_list[8] + word_list[9]
             if i == 12:
                 new_word_dict["who"] = word_list[1] + word_list[2] + word_list[3] + word_list[4] + word_list[5] + word_list[6] + word_list[7] + word_list[8] + word_list[9] + word_list[10]
-        elif column == "Cousin" and index_offset != 0:
+        elif column == "Cousin" and (index_offset != 0 and index_offset != 150000 and index_offset != 160000):
             new_index = line_no + index_offset
-            new_word_dict["index"] = line_no + index_offset
+            new_word_dict["index"] = new_index
             new_word_dict[column] = word_list[i-1]
             if i == 2:
                 new_word_dict["who"] = word_list[0]
@@ -115,11 +117,13 @@ def get_data(word_list,index_offset , line_no, kit, kit_number):
             new_word_dict[column] = word_list[i+1]
 
         i += 1
-    #print(int(new_index) , new_word_dict["who"])
-    #kit_duplicate_check = new_word_dict["key_string"] + "_" + new_word_dict["cM"] + "_" + new_word_dict["segments"]
-    kit_duplicate_check = new_word_dict["who"] + "_" + new_word_dict["cM"] + "_" + new_word_dict["segments"]  # allow for recent tree changes
+    #print(int(line_no) , new_word_dict["who"])  # debug iso format text
+    kit_duplicate_check = "none"
+    if duplicate_check_flag:
+        kit_duplicate_check = new_word_dict["who"] + "_" + new_word_dict["cM"] + "_" + new_word_dict["segments"]  # allow for recent tree changes
 
-    test_result = DNA_Result(int(line_no) , index_offset, new_word_dict["who"] , new_word_dict["cM"] ,
+#    test_result = DNA_Result(int(line_no) , index_offset, new_word_dict["who"] , new_word_dict["cM"] ,
+    test_result = DNA_Result(int(new_word_dict["index"]) , index_offset, new_word_dict["who"] , new_word_dict["cM"] ,
                              new_word_dict["segments"], new_word_dict["People"], new_word_dict["key_string"],
                              new_word_dict["Tree"], kit_duplicate_check , kit, kit_number,
                              new_word_dict["GEDMATCH"], new_word_dict["CHROMOSOMES"])
@@ -128,27 +132,38 @@ def get_data(word_list,index_offset , line_no, kit, kit_number):
     return new_word_dict, test_result, kit_duplicate_check
 
 
-def get_cousin_dict(kit,kit_number, index_offset,  kit_key_list,duplicate_key_list, kit_who_list,kit_who_dict, dna_list, dna_list_index, duplicate_dict, cousin_key_list, Test_Result_Dict):
+def get_cousin_dict(kit,kit_number, index_offset,  kit_key_list,duplicate_key_list, kit_who_list,kit_who_dict, dna_list, dna_list_index, duplicate_dict, cousin_key_list, Test_Result_Dict, duplicate_check_flag):
 
     dict_of_lists = {}
     old_index=9999999999
     line_no = 1
-    for line in open(kit + '.txt'):
+    for line in open(kit + '.txt', encoding='latin-1'):
+        error_string = ''
         line = line.rstrip()
         line = line.replace('\t',' ')
         line = line.replace(',', '')
         word_list = line.split()
-        search_duplicate_string = ""
-        kit_word_dict, test_result, kit_duplicate_check = get_data(word_list, index_offset , line_no, kit, kit_number)
-        search_duplicate_string = kit_duplicate_check
-        #print(test_result.keystring)
+#        search_duplicate_string = ""
+        pattern = re.compile(".+_(.*)cM")   # looking for pre-indexed files eg Gary_14cM
+        if (line_no == 1) and word_list[0] == "1":
+            mobj = pattern.match(kit)
+            if mobj:
+                  index_offset = (30 - int(mobj.group(1))) * 10000  # start at 160000 for 14cM
+                  #index_offset = int(mobj.group(1)) * 1000  # start at 160000 for 14cM
+                  print("file is indexed already", kit)
+                  print("file is indexed already", mobj.group(1) , index_offset)
 
-        if kit_word_dict["key_string"] not in kit_key_list:
+        kit_word_dict, test_result, kit_duplicate_check = get_data(word_list, index_offset , line_no, kit, kit_number, duplicate_check_flag)
+#        search_duplicate_string = kit_duplicate_check
+        #print(test_result.keystring)
+        if duplicate_check_flag:
+          search_duplicate_string = kit_duplicate_check
+          if kit_word_dict["key_string"] not in kit_key_list:
               kit_key_list.append(kit_word_dict["key_string"])
-        else:
+          else:
             error_string = kit + " " + str(line_no) + " " + kit_word_dict["key_string"]
             duplicate_key_list.append(error_string)
-        if search_duplicate_string in kit_who_list:
+          if search_duplicate_string in kit_who_list:
             old_index = kit_who_dict[search_duplicate_string]
             old_index2 = dna_list_index.index(old_index)
             old_test = dna_list[old_index2]
@@ -157,17 +172,20 @@ def get_cousin_dict(kit,kit_number, index_offset,  kit_key_list,duplicate_key_li
                 duplicate_dict[search_duplicate_string].append(test_result.mega_index)
             else:
                 duplicate_dict[search_duplicate_string] = [old_test.mega_index, test_result.mega_index]
-        else:
+          else:
             kit_who_list.append(search_duplicate_string)
             kit_who_dict[search_duplicate_string] = line_no + index_offset
+
+
         kit_word_dict["index"] = line_no + index_offset
         #kit_person_dict[int(line_no) + int(index_offset)] = test_result
         dict_of_lists[int(line_no) + int(index_offset)] = kit_word_dict
         dna_list.append(test_result)
 #        total_dna_list.append(test_result)
         keystring = test_result.keystring
-        if keystring not in cousin_key_list:
-            cousin_key_list.append(keystring)
+#        if keystring not in cousin_key_list:
+#            cousin_key_list.append(keystring)
+        if error_string == '':
             Test_Result_Dict[keystring] = test_result
             #print(keystring)
 
@@ -176,7 +194,7 @@ def get_cousin_dict(kit,kit_number, index_offset,  kit_key_list,duplicate_key_li
     return
 
 
-def load_matches(file_list, kit_number):
+def load_matches(file_list, kit_number, duplicate_check_flag):
     kit_offset_index = 0
     kit_who_list = []
     kit_key_list = []
@@ -192,18 +210,20 @@ def load_matches(file_list, kit_number):
         kit_person = file_list[0]
         #print (text_file, 10000* kit_offset_index)
         print("loading ", text_file)
-        get_cousin_dict(text_file, kit_number, kit_offset_index * 20000, kit_key_list, duplicate_key_list, kit_who_list,
-                                             kit_who_dict, dna_list, dna_list_index, duplicate_dict, cousin_key_list, Test_Result_Dict)
+        get_cousin_dict(text_file, kit_number, kit_offset_index * 70000, kit_key_list, duplicate_key_list, kit_who_list,
+                                             kit_who_dict, dna_list, dna_list_index, duplicate_dict, cousin_key_list, Test_Result_Dict, duplicate_check_flag)
         kit_offset_index += 1
     duplicate_index = 1
-    for error in duplicate_key_list:
+    if duplicate_check_flag:
+      for error in duplicate_key_list:
         print(duplicate_index, "duplicate key >>>>>", error)
         duplicate_index += 1
-    duplicate_index = 1
-    for duplo in duplicate_dict:
+      duplicate_index = 1
+      for duplo in duplicate_dict:
         new_index = 0
         print("--------------------" , duplicate_index , "------------------------------------")
         for mega_index1 in duplicate_dict[duplo]:
+              print (mega_index1)
               old_index2 = dna_list_index.index(mega_index1)
               test = dna_list[old_index2]
               kitname = test.kit
@@ -216,8 +236,7 @@ def load_matches(file_list, kit_number):
     return Test_Result_Dict
 
 def main():
-
-
+    duplicate_check_flag = True
     kit1_keystring_list = []
     kit2_keystring_list = []
     kit1_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM","Dad_B"]
@@ -225,18 +244,19 @@ def main():
     #kit1_file_list = ["Sally"]
     #kit1_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM_new","Wayne_A"]
     #kit1_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM","Sally_L"]
+    #kit1_file_list = ["Una", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM", "Una_7cM", "Una_6cM", "Una_L"]
 
-    kit1_number = 1
 
-    kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM_new","Wayne_A"]
+    #kit2_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM","Dad_B"]
+    #kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM_new","Wayne_A"]
     #kit2_file_list = ["Wayne"]
     #kit2_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM","Sally_L"]
     #kit2_file_list = ["Helen", "Helen_B"]
     #kit2_file_list = ["Una", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM", "Una_7cM", "Una_6cM", "Una_L"]
+    kit2_file_list = ["Gary", "Gary_14cM", "Gary_13cM", "Gary_12cM","Gary_11cM", "Gary_10cM","Gary_9cM", "Gary_8cM", "Gary_A"]
 
-    kit1_Test_Result_Dict = load_matches(kit1_file_list, kit1_number)
-    kit2_number = 2
-    kit2_Test_Result_Dict = load_matches(kit2_file_list, kit2_number)
+    kit1_Test_Result_Dict = load_matches(kit1_file_list, 1, duplicate_check_flag)
+    kit2_Test_Result_Dict = load_matches(kit2_file_list, 2, duplicate_check_flag)
     for kit1_Test_Result in kit1_Test_Result_Dict:
         kit1_keystring_list.append(kit1_Test_Result_Dict[kit1_Test_Result].keystring)
     for kit2_Test_Result in kit2_Test_Result_Dict:
@@ -308,8 +328,8 @@ def main():
         cm2 = kit2_Test_Result_Dict[key2].centimorgans
         #print(mismatch_index, cousin_who, key1, key2)
         try:
-            print('{0:4} | {1:36} | {2:36} {3:3} | {4:36} {5:3} ' \
-                  .format(mismatch_index, cousin_who, key1, cm1, key2, cm2))
+            print('{0:4} | {1:32} | {2:3} {3:32} |{4:3} {5:32} ' \
+                  .format(mismatch_index, cousin_who, cm1, key1, cm2, key2))
         except UnicodeEncodeError:
             print("error with mismatch ASCII UnicodeEncodeError " , kit1_Test_Result_Dict[key1].kit,"=", kit1_Test_Result_Dict[key1].index, kit2_Test_Result_Dict[key2].kit, "=" ,  kit2_Test_Result_Dict[key2].index )
             exit(1)
