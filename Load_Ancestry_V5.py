@@ -132,12 +132,14 @@ def get_data(word_list,index_offset , line_no, kit, kit_number, duplicate_check_
     return new_word_dict, test_result, kit_duplicate_check
 
 
-def get_cousin_dict(kit,kit_number, index_offset,  kit_key_list,duplicate_key_list, kit_who_list,kit_who_dict, dna_list, dna_list_index, duplicate_dict, cousin_key_list, Test_Result_Dict, duplicate_check_flag):
+def get_cousin_dict(kit,kit_number, index_offset,  kit_key_list,duplicate_key_list, kit_who_list,kit_who_dict, dna_list, dna_list_index, duplicate_dict, cousin_key_list, Test_Result_Dict, duplicate_check_flag, file_path):
 
     dict_of_lists = {}
+    #file_path = '/mnt/c/Users/Wayne/DNA/'
+    #file_path = "c:/Users/Wayne/DNA/"
     old_index=9999999999
     line_no = 1
-    for line in open(kit + '.txt', encoding='latin-1'):
+    for line in open(file_path + kit + '.txt', encoding='latin-1'):
         error_string = ''
         line = line.rstrip()
         line = line.replace('\t',' ')
@@ -194,7 +196,7 @@ def get_cousin_dict(kit,kit_number, index_offset,  kit_key_list,duplicate_key_li
     return
 
 
-def load_matches(file_list, kit_number, duplicate_check_flag):
+def load_matches(file_list, kit_number, duplicate_check_flag, file_path):
     kit_offset_index = 0
     kit_who_list = []
     kit_key_list = []
@@ -211,7 +213,7 @@ def load_matches(file_list, kit_number, duplicate_check_flag):
         #print (text_file, 10000* kit_offset_index)
         print("loading ", text_file)
         get_cousin_dict(text_file, kit_number, kit_offset_index * 70000, kit_key_list, duplicate_key_list, kit_who_list,
-                                             kit_who_dict, dna_list, dna_list_index, duplicate_dict, cousin_key_list, Test_Result_Dict, duplicate_check_flag)
+                                             kit_who_dict, dna_list, dna_list_index, duplicate_dict, cousin_key_list, Test_Result_Dict, duplicate_check_flag, file_path)
         kit_offset_index += 1
     duplicate_index = 1
     if duplicate_check_flag:
@@ -239,10 +241,10 @@ def main():
     duplicate_check_flag = True
     kit1_keystring_list = []
     kit2_keystring_list = []
-    kit1_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM","Dad_B"]
+    #kit1_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM","Dad_B"]
     #kit1_file_list = ["Glyn"]
     #kit1_file_list = ["Sally"]
-    #kit1_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM_new","Wayne_A"]
+    kit1_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM_new","Wayne_A"]
     #kit1_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM","Sally_L"]
     #kit1_file_list = ["Una", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM", "Una_7cM", "Una_6cM", "Una_L"]
 
