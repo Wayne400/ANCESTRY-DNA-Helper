@@ -1,5 +1,6 @@
 
 import re
+import sys
 import operator
 #from Load_Ancestry2 import get_data , get_cousin_dict , load_matches
 from Load_Ancestry_V5 import  load_matches
@@ -97,8 +98,10 @@ def get_places(kit3_places, kit1_who_dict, file_path):
 
 def main():
     person = "Glyn"
-    file_path = '/mnt/c/Users/Wayne/DNA/'
-    #file_path = "c:/Users/Wayne/DNA/"
+    if len(sys.argv) > 1:
+        file_path = '/mnt/c/Users/Wayne/DNA/'
+    else:
+        file_path = "c:/Users/Wayne/DNA/"
     duplicate_check_flag = False
     print_filter = False
     places_flag = False
@@ -111,7 +114,7 @@ def main():
 
         match_filter_list = ["aberlas", "UJonesManagedbySteamerpoint", "SallyAnneGale", "H.H.ManagedbyReesDinbych","gethngethn", \
                              "ArthurMarkGaleManagedbySteamerpoint", "BarbaraParryManagedbyGwendaParfitt", "D.W.ManagedbyWendyMcKenna",\
-                              "ElizabethPritchard", "sheree8","AlwenaJames", "LJ"]
+                              "ElizabethPritchard", "sheree8","AlwenaJames", "LJ", "thesmiths122"]
 
         match_filter_list2 = ["EricEngelhard", "NatalieRoberts_53%", "StevenRoberts", "nora_engelhard","JudithBuckle",
                               "patsobocienski","SimonGray"]
@@ -136,7 +139,7 @@ def main():
         match_filter_list8 = ["stevemcgarry189", "BrianLonghurst" ,
                               "MalcolmSlade" , "ClaireDayel-Baker", "judyrobinson"]
         match_filter_list9 = ["ElenLewis"]
-        match_filter_list10 = ["AmandaStanton","JohnNolan573ManagedbySianShrewsbury"]
+        match_filter_list10 = ["AmandaStanton","JohnNolan573ManagedbySianShrewsbury", "RayRutland65"]
 
         print(match_filter_list)
         match_filter_list.extend(match_filter_list2)
