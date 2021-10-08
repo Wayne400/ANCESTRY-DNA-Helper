@@ -2,9 +2,7 @@
 import re
 import sys
 import operator
-#from Load_Ancestry2 import get_data , get_cousin_dict , load_matches
 from Load_Ancestry_V5 import  load_matches
-#from Load_Ancestry_V5 import get_data
 
 def swap_in_key_string(old_list, match_filter_list,homonym_to_primarykey_dict,primarykey_to_keystring ):
 
@@ -17,7 +15,6 @@ def swap_in_key_string(old_list, match_filter_list,homonym_to_primarykey_dict,pr
     return new_list
 
 def get_shared_match2(kit3, match_filter_list, kit1_primary_index, kit1_index_keystring_dict, file_path):
-    print(match_filter_list)
     cousin_list = []
     list_of_lists = []
     homonym_to_primarykey_dict = {}
@@ -98,9 +95,13 @@ def get_places(kit3_places, kit1_who_dict, file_path):
 
 def main():
     person = "Glyn"
+    file_path = "c:/Users/Wayne/DNA/"
+
     if len(sys.argv) > 1:
+      if sys.argv[1] == "ubuntu":
         file_path = '/mnt/c/Users/Wayne/DNA/'
-    else:
+        person = sys.argv[2]
+      else:
         file_path = "c:/Users/Wayne/DNA/"
     duplicate_check_flag = False
     print_filter = False
@@ -141,25 +142,16 @@ def main():
         match_filter_list9 = ["ElenLewis"]
         match_filter_list10 = ["AmandaStanton","JohnNolan573ManagedbySianShrewsbury", "RayRutland65"]
 
-        print(match_filter_list)
         match_filter_list.extend(match_filter_list2)
-        print(match_filter_list2)
         match_filter_list.extend(match_filter_list3)
-        print(match_filter_list3)
         match_filter_list.extend(match_filter_list4)
-        print(match_filter_list4)
         match_filter_list.extend(match_filter_list5)
-        print(match_filter_list5)
         match_filter_list.extend(match_filter_list6)
-        print(match_filter_list6)
         match_filter_list.extend(match_filter_list7)
-        print(match_filter_list7)
         match_filter_list.extend(match_filter_list8)
-        print(match_filter_list8)
         match_filter_list.extend(match_filter_list9)
-        print(match_filter_list9)
         match_filter_list.extend(match_filter_list10)
-        print(match_filter_list10)
+        print(match_filter_list)
 
 
         kit3 = 'Top60_Dad_X_Bee_Bridle'
@@ -173,21 +165,22 @@ def main():
 
     if person == "Wayne":
         kit1_file_list = ["Wayne"]
-        match_filter_list = ["SandraDavis","DavidLarsen","PaulineWilliams","LindaEvans","sheilaroberts","susanwhiskin","BarbaraParryManagedbyGwendaParfitt"]
-        #match_filter_list = ["SandraDavis","DavidLarsen","PaulineWilliams","LindaEvans","sheilaroberts","susanwhiskin"]
-        match_filter_list2 = ["nogoodboyoManagedbyRhiannonWilliams"]
+        match_filter_list = ["SandraDavis","LauraStupple","ag3754", "DavidLarsen","sheilaroberts","BarbaraParryManagedbyGwendaParfitt"]
+        match_filter_list2 = ["ThomasBennett"]
         match_filter_list.extend(match_filter_list2)
+        match_filter_list3 = ["PaulineWilliams", "LindaEvans", "susanwhiskin_149", "MichaelEvans"]
+        match_filter_list.extend(match_filter_list3)
         kit3 = 'Top60_ag3754'
-        kit3_places = 'Top60_ag3754'
+        kit3_places = 'Wayne_Places'
         kit2_file_list = ["Glyn" , "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM", "Dad_B"]
         kit4_file_list = ["Helen", "Helen_B"]
         kit5_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_L"]
         kit6 = 'Wayne_Common'
         kit7_file_list = ["Una", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM", "Una_7cM", "Una_6cM", "Una_L"]
-        kit8_file_list = ["Gary", "Gary_14cM", "Gary_13cM", "Gary_12cM", "Gary_11cM", "Gary_10cM", "Gary_9cM","Gary_8cM", "Gary_A"]
+        kit8_file_list = ["Gary", "Gary_15cM", "Gary_14cM", "Gary_13cM", "Gary_12cM", "Gary_11cM", "Gary_10cM", "Gary_9cM","Gary_8cM", "Gary_A"]
 
     if person == "Gary":
-        kit1_file_list = ["Gary", "Gary_15cM", "Gary_14cM"]
+        kit1_file_list = ["Gary", "Gary_13cM", "Gary_14cM", "Gary_15cM"]
         match_filter_list = ["SandraDavis", "DavidLarsen", "PaulineWilliams","LindaEvans","sheilaroberts","susanwhiskin"]
         match_filter_list2 = ["nogoodboyoManagedbyRhiannonWilliams"]
         match_filter_list3 = ["aberlas", "UJonesManagedbySteamerpoint", "SallyAnneGale", "H.H.ManagedbyReesDinbych","gethngethn", \
