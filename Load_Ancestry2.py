@@ -1,6 +1,6 @@
 
 import re
-
+import sys
 
 
 
@@ -90,12 +90,12 @@ def get_data(word_list,index_offset):
     return new_word_dict
 
 
-def get_cousin_dict(kit, index_offset,kit_who_list, duplicate_check_flag):
+def get_cousin_dict(kit, index_offset,kit_who_list, duplicate_check_flag, file_path):
 
 #    kit_who_list = []
     dict_of_lists = {}
     line_no = 1
-    for line in open(kit + '.txt'):
+    for line in open(file_path + kit + '.txt'):
         line = line.rstrip()
         line = line.replace('\t',' ')
         line = line.replace(',', '')
@@ -118,7 +118,7 @@ def get_cousin_dict(kit, index_offset,kit_who_list, duplicate_check_flag):
     return dict_of_lists
 
 
-def load_matches(file_list, duplicate_check_flag):
+def load_matches(file_list, duplicate_check_flag, file_path):
     dict_of_lists = {}
     kit_offset_index = 0
     kit_who_list = []
@@ -126,24 +126,22 @@ def load_matches(file_list, duplicate_check_flag):
         print("loading ", text_file)
         temp_dict_of_lists = {}
         #print (text_file, 10000* kit_offset_index)
-        temp_dict_of_lists = get_cousin_dict(text_file, kit_offset_index * 20000, kit_who_list, duplicate_check_flag)
+        temp_dict_of_lists = get_cousin_dict(text_file, kit_offset_index * 20000, kit_who_list, duplicate_check_flag, file_path)
         dict_of_lists.update(temp_dict_of_lists)
         kit_offset_index += 1
 
     return dict_of_lists
 
 def main():
-
+    file_path = "c:/Users/Wayne/DNA/"
 
     kit1_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM","Dad_B"]
     #kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM","Wayne_A"]
-
-    
-    kit2_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_6cM_A","Sally_L"]
+    kit2_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_L"]
     #kit2_file_list = ["Helen", "Helen_B"]
     duplicate_check_flag = True
 
-    kit1_dict_of_lists = load_matches(kit1_file_list, duplicate_check_flag)
+    kit1_dict_of_lists = load_matches(kit1_file_list, duplicate_check_flag, file_path)
     kit1_index_list = []
     kit1_index_dict = {}
     kit1_cM_dict = {}
@@ -159,7 +157,7 @@ def main():
 
 
 
-    kit2_dict_of_lists = load_matches(kit2_file_list, duplicate_check_flag)
+    kit2_dict_of_lists = load_matches(kit2_file_list, duplicate_check_flag, file_path)
     kit2_index_dict = {}
     kit2_index_list = []
     kit2_keystring_list = []
