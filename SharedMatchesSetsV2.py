@@ -129,7 +129,7 @@ def main():
         kit1_file_list,kit2_file_list,kit4_file_list, kit5_file_list, kit7_file_list, kit8_file_list, match_filter_list = load_profile(person)
 
     if person == "Wayne":
-        kit3 = 'Top60_ag3754'
+        kit3 = 'Wayne_Shared'
         kit3_places = 'Wayne_Places'
         kit6 = 'Wayne_Common'
         kit1_file_list,kit2_file_list,kit4_file_list, kit5_file_list, kit7_file_list, kit8_file_list, match_filter_list = load_profile(person)

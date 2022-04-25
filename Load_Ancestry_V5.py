@@ -34,6 +34,7 @@ def get_data(word_list,index_offset , line_no, kit, kit_number, duplicate_check_
     new_index = 9999999
 
     for column in word_list:
+      if "Shared" or "DNA:" in word_list:
         if column == "Cousin" and (index_offset == 0 or index_offset == 150000 or index_offset == 140000 or index_offset == 130000):
 #            print(index_offset, word_list)
             new_word_dict["index"] = str(int(word_list[0]) + index_offset)
@@ -86,17 +87,23 @@ def get_data(word_list,index_offset , line_no, kit, kit_number, duplicate_check_
                 new_word_dict["who"] = word_list[0] + word_list[1] + word_list[2] + word_list[3] + word_list[4] + word_list[5] + word_list[6] + word_list[7] + word_list[8] + word_list[9]
             if i == 12:
                 new_word_dict["who"] = word_list[0] + word_list[1] + word_list[2] + word_list[3] + word_list[4] + word_list[5] + word_list[6] + word_list[7] + word_list[8] + word_list[9] + word_list[10]
-
+            if i == 13:
+                new_word_dict["who"] = word_list[0] + word_list[1] + word_list[2] + word_list[3] + word_list[4] + word_list[5] + word_list[6] + word_list[7] + word_list[8] + word_list[9] + word_list[10] + word_list[11]
+            if i == 14:
+                new_word_dict["who"] = word_list[0] + word_list[1] + word_list[2] + word_list[3] + word_list[4] + word_list[5] + word_list[6] + word_list[7] + word_list[8] + word_list[9] + word_list[10] + word_list[11] + word_list[12]
         if column == "cM":
             new_word_dict[column] = word_list[i-1]
             # new_word_dict["who"] = new_word_dict["who"] + word_list[i-1] + "cM"
         if column == "segments":
             new_word_dict[column] = word_list[i-1]
         if column == "People":
-            #print(new_word_dict["index"])
-            new_word_dict[column] = word_list[i-1]
-            #new_word_dict["People"] = new_word_dict["People"].replace(',', '')
-            new_word_dict["key_string"] = new_word_dict["who"] + "_" + word_list[i-1]
+            try:
+                new_word_dict[column] = word_list[i-1]
+                #new_word_dict["People"] = new_word_dict["People"].replace(',', '')
+                new_word_dict["key_string"] = new_word_dict["who"] + "_" + word_list[i-1]
+            except:
+                print(word_list, column, i, index_offset, new_word_dict)
+                exit(1)
         if column == "Unlinked":
             #print(new_word_dict["index"])
             new_word_dict["Tree"] = "Unlinked Tree"
@@ -117,6 +124,10 @@ def get_data(word_list,index_offset , line_no, kit, kit_number, duplicate_check_
             new_word_dict[column] = word_list[i+1]
 
         i += 1
+      else:
+          print ("Shared or DNA: is missing",word_list, line_no, kit)
+          exit(1)
+
     #print(int(line_no) , new_word_dict["who"])  # debug iso format text
     kit_duplicate_check = "none"
     if duplicate_check_flag:
@@ -163,6 +174,12 @@ def get_cousin_dict(kit,kit_number, kit_key_list,duplicate_key_list, kit_who_lis
             index_offset = 50000
         if int(mobj.group(1)) == 12:
             index_offset = 60000
+        if int(mobj.group(1)) == 13:
+            index_offset = 70000
+        if int(mobj.group(1)) == 14:
+            index_offset = 80000
+        if int(mobj.group(1)) == 15:
+            index_offset = 90000
     if mobjA or mobjB or mobjL:
         index_offset = 500000
     print("loading ", kit + " offset = " + str(index_offset))
@@ -218,12 +235,13 @@ def get_cousin_dict(kit,kit_number, kit_key_list,duplicate_key_list, kit_who_lis
         dna_list.append(test_result)
 #        total_dna_list.append(test_result)
         keystring = test_result.keystring
-#        if keystring not in cousin_key_list:
-#            cousin_key_list.append(keystring)
+#        if keystring in cousin_key_list:   # useful debug
+#            print(keystring, kit, line_no)
+#            exit(1)
         if error_string == '':
             Test_Result_Dict[keystring] = test_result
             #print(keystring)
-
+        cousin_key_list.append(keystring)
 #        dna_list_index.append(test_result.index + index_offset)
         dna_list_index.append(test_result.index)
         line_no = line_no + 1
@@ -272,10 +290,12 @@ def load_matches(file_list, kit_number, duplicate_check_flag, file_path):
 
 def main():
     duplicate_check_flag = True
+    file_path = "c:/Users/Wayne/DNA/"
     if len(sys.argv) > 1:
       if sys.argv[1] == "ubuntu":
         file_path = '/mnt/c/Users/Wayne/DNA/'
-        person = sys.argv[2]
+      elif sys.argv[1] == "aws":
+        file_path = "/home/ec2-user/"
       else:
         file_path = "c:/Users/Wayne/DNA/"
 
@@ -284,9 +304,9 @@ def main():
     kit1_keystring_list = []
     kit2_keystring_list = []
     #kit1_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM","Dad_B"]
-    #kit1_file_list = ["Glyn"]
+    kit1_file_list = ["Glyn"]
     #kit1_file_list = ["Sally"]
-    kit1_file_list = ["Wayne", "Wayne_11cM" , "Wayne_10cM" , "Wayne_9cM", "Wayne_8cM" , "Wayne_7cM","Wayne_6cM","Wayne_A"]
+   # kit1_file_list = ["Wayne", "Wayne_11cM" , "Wayne_10cM" , "Wayne_9cM", "Wayne_8cM" , "Wayne_7cM","Wayne_6cM","Wayne_A"]
  #   kit1_file_list = ["Wayne",  "Wayne_A"]
     #kit1_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM","Sally_L"]
     #kit1_file_list = ["Una", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM", "Una_7cM", "Una_6cM", "Una_L"]
@@ -294,11 +314,11 @@ def main():
 
     #kit2_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM","Dad_B"]
     #kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM_new","Wayne_A"]
-    #kit2_file_list = ["Wayne"]
+    kit2_file_list = ["Wayne"]
     #kit2_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM","Sally_L"]
     #kit2_file_list = ["Helen", "Helen_B"]
     #kit2_file_list = ["Una", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM", "Una_7cM", "Una_6cM", "Una_L"]
-    kit2_file_list = ["Gary", "Gary_14cM", "Gary_13cM", "Gary_12cM","Gary_11cM", "Gary_10cM","Gary_9cM", "Gary_8cM"]
+    #kit2_file_list = ["Gary", "Gary_14cM", "Gary_13cM", "Gary_12cM","Gary_11cM", "Gary_10cM","Gary_9cM", "Gary_8cM"]
 
     kit1_Test_Result_Dict = load_matches(kit1_file_list, 1, duplicate_check_flag, file_path)
     kit2_Test_Result_Dict = load_matches(kit2_file_list, 2, duplicate_check_flag, file_path)
