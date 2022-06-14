@@ -1,5 +1,7 @@
 
-file_path = "c:/Users/Wayne/DNA/"
+
+file_path = "//wsl$/Ubuntu-20.04/home/waynew/git_environment/ANCESTRY-DNA-Helper/DNA/"
+
 line_no = 1
 word_list = []
 key_list = []

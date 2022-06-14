@@ -180,8 +180,11 @@ def get_cousin_dict(kit,kit_number, kit_key_list,duplicate_key_list, kit_who_lis
             index_offset = 80000
         if int(mobj.group(1)) == 15:
             index_offset = 90000
-    if mobjA or mobjB or mobjL:
+    if mobjA or mobjB:
         index_offset = 500000
+    if mobjL:
+        index_offset = 510000
+
     print("loading ", kit + " offset = " + str(index_offset))
     line_no = 1
     for line in open(file_path + kit + '.txt', encoding='latin-1'):
