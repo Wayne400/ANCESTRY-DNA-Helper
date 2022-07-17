@@ -21,7 +21,8 @@ def load_profile(person):
                              "TecwynRawson",  # collides with Buckle
                              "ArthurMarkGaleManagedbySteamerpoint", "BarbaraParryManagedbyGwendaParfitt",
                              "D.W.ManagedbyWendyMcKenna",
-                             "ElizabethPritchard", "sheree8", "AlwenaJames", "LJ", "thesmiths122"]
+                             "ElizabethPritchard", "sheree8", "AlwenaJames", "LJ", "thesmiths122",
+                             "LindaJones","WilliamCarney"]
         match_filter_list2 = [
           #  "EricEngelhard",
             "NatalieRoberts_53%",

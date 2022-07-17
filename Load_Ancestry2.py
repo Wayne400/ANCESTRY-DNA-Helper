@@ -62,7 +62,7 @@ def get_data(word_list,index_offset):
         if column == "segments":
             new_word_dict[column] = word_list[i-1]
         if column == "People":
-            #print(new_word_dict["index"], word_list)
+            # print(word_list)  # debug only
             new_word_dict[column] = word_list[i-1]
             #new_word_dict["People"] = new_word_dict["People"].replace(',', '')
             new_word_dict["key_string"] = new_word_dict["who"] + "_" + word_list[i-1]
@@ -134,11 +134,13 @@ def load_matches(file_list, duplicate_check_flag, file_path):
 
 def main():
     file_path = "c:/Users/Wayne/DNA/"
+    file_path = "//wsl$/Ubuntu-20.04/home/waynew/git_environment/ANCESTRY-DNA-Helper/DNA/"
 
-    kit1_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM","Dad_B"]
-    #kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM","Wayne_A"]
-    kit2_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_L"]
-    #kit2_file_list = ["Helen", "Helen_B"]
+   # kit1_file_list = ["Glyn", "Glyn_9cM", "Glyn_8cM", "Glyn_7cM", "Glyn_6cM","Glyn_B"]
+    kit1_file_list = ["Wayne", "Wayne_15cM", "Wayne_14cM", "Wayne_13cM", "Wayne_12cM", "Wayne_11cM",
+                      "Wayne_10cM", "Wayne_9cM", "Wayne_8cM", "Wayne_7cM", "Wayne_6cM"]
+    #kit2_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_L"]
+    kit2_file_list = ["Marg", "Marg_15cM"]
     duplicate_check_flag = True
 
     kit1_dict_of_lists = load_matches(kit1_file_list, duplicate_check_flag, file_path)
@@ -165,6 +167,7 @@ def main():
     for cousin in kit2_dict_of_lists:
         #key = kit2_dict_of_lists[cousin]["key_string"]
         key = kit2_dict_of_lists[cousin]["who"]
+        # print(cousin, key)
         kit2_index_dict[kit2_dict_of_lists[int(cousin)]["who"]] = kit2_dict_of_lists[int(cousin)]["index"]
         kit2_index_keystring_dict[kit2_dict_of_lists[int(cousin)]["index"]] = kit2_dict_of_lists[int(cousin)]["key_string"]
         kit2_index_list.append(key)

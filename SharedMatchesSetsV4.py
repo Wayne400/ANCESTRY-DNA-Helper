@@ -53,7 +53,7 @@ def get_shared_matches(person, match_filter_list, file_path):
     homonym_to_primarykey_dict = {}
     check_all_entry_list = []  # check to find all shared matches are indexed too
     primary_entry_list = []
-    print("here", match_filter_list)
+   # print("here", match_filter_list)
 
     for line in open(file_path + person + '_Shared.txt'):
         line = line.rstrip()

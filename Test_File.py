@@ -78,7 +78,7 @@ def get_data(word_list,index_offset):
             new_word_dict["key_string"] = new_word_dict["who"] + "_" + word_list[i - 1]
             tree_flag = True
         if column == "Unlinked":
-            #print(new_word_dict["index"])
+       #     print(new_word_dict["index"])   # debug only
             new_word_dict["Tree"] = "Unlinked Tree"
             new_word_dict["who"] = new_word_dict["who"] + "_U"
             new_word_dict["key_string"] = new_word_dict["who"] + "_U"
@@ -108,11 +108,13 @@ def get_data(word_list,index_offset):
 
 def get_cousin_dict(kit1, index_offset):
 
+    file_path = "//wsl$/Ubuntu-20.04/home/waynew/git_environment/ANCESTRY-DNA-Helper/DNA/"
     dict_of_lists = {}
     list_of_lists = []
     line_no = 1
 #    for line in open(kit1 + '.txt'):
-    for line in open(kit1 + '.txt', encoding='latin-1'):
+    for line in open(file_path + kit1 + '.txt', encoding='latin-1'):
+ #   for line in open(kit1 + '.txt', encoding='latin-1'):
         line = line.rstrip()
         line = line.replace('\t',' ')
         line = line.replace(',', '')
@@ -135,14 +137,14 @@ def main():
     #kit1 = 'Wayne'
     #kit1 = 'Helen'
     #kit1 = 'Sally'
-    kit1 = 'Gary'
+    kit1 = 'Marg'
     kit1_index_offset = 0
     #kit1a = 'Dad_B'
     #kit1a = 'Wayne_9cM'
     #kit1a = 'Sally_L'
     #kit1a = 'Dad_B'
     #kit1a = 'Una_6cM'
-    kit1a = "Gary_8cM"
+    kit1a = "Marg_13cM"
     kit1a_index_offset = 10000
 
     kit1_list = []

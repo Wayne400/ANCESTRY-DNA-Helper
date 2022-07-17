@@ -184,7 +184,6 @@ def get_cousin_dict(kit,kit_number, kit_key_list,duplicate_key_list, kit_who_lis
         index_offset = 500000
     if mobjL:
         index_offset = 510000
-
     print("loading ", kit + " offset = " + str(index_offset))
     line_no = 1
     for line in open(file_path + kit + '.txt', encoding='latin-1'):
@@ -293,10 +292,11 @@ def load_matches(file_list, kit_number, duplicate_check_flag, file_path):
 
 def main():
     duplicate_check_flag = True
-    file_path = "c:/Users/Wayne/DNA/"
+    # file_path = "/mnt/c/Users/Wayne/DNA/"
+    file_path = "//wsl$/Ubuntu-20.04/home/waynew/git_environment/ANCESTRY-DNA-Helper/DNA/"
     if len(sys.argv) > 1:
       if sys.argv[1] == "ubuntu":
-        file_path = '/mnt/c/Users/Wayne/DNA/'
+        file_path = "/home/waynew/git_environment/ANCESTRY-DNA-Helper/DNA/"
       elif sys.argv[1] == "aws":
         file_path = "/home/ec2-user/"
       else:
@@ -307,17 +307,20 @@ def main():
     kit1_keystring_list = []
     kit2_keystring_list = []
     #kit1_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM","Dad_B"]
-    kit1_file_list = ["Glyn"]
+    # kit1_file_list = ["Glyn"]
     #kit1_file_list = ["Sally"]
    # kit1_file_list = ["Wayne", "Wayne_11cM" , "Wayne_10cM" , "Wayne_9cM", "Wayne_8cM" , "Wayne_7cM","Wayne_6cM","Wayne_A"]
  #   kit1_file_list = ["Wayne",  "Wayne_A"]
+    kit1_file_list = ["Wayne", "Wayne_15cM", "Wayne_14cM", "Wayne_13cM", "Wayne_12cM", "Wayne_11cM",
+                      "Wayne_10cM", "Wayne_9cM", "Wayne_8cM", "Wayne_7cM", "Wayne_6cM"]
     #kit1_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM","Sally_L"]
     #kit1_file_list = ["Una", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM", "Una_7cM", "Una_6cM", "Una_L"]
 
 
     #kit2_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM","Dad_B"]
     #kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM_new","Wayne_A"]
-    kit2_file_list = ["Wayne"]
+#    kit2_file_list = ["Wayne"]
+    kit2_file_list = ["Marg", "Marg_15cM", "Marg_14cM", "Marg_13cM"]
     #kit2_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM","Sally_L"]
     #kit2_file_list = ["Helen", "Helen_B"]
     #kit2_file_list = ["Una", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM", "Una_7cM", "Una_6cM", "Una_L"]
@@ -355,7 +358,7 @@ def main():
             kit2_people = ''
 
         try:
-            print('{0:4} | {1:36}  {2:4} | {3:4}cM | {4:2}seg | {5:13}|***| {6:4}cM | {7:2}seg | {8:13}| {9:4} |'\
+            print('{0:4} | {1:36}  {2:6} | {3:4}cM | {4:2}seg | {5:13}|***| {6:4}cM | {7:2}seg | {8:13}| {9:6} |'\
                    .format(intersectcount, kit1_cousin, kit1_index, kit1_cousin_cM, kit1_cousin_seg, kit1_people, kit2_cousin_cM, kit2_cousin_seg, kit2_people,kit2_index))
         except UnicodeEncodeError:
             print("error with ASCII UnicodeEncodeError " , kit1_Test_Result_Dict[cousin_key].kit,"=", kit1_Test_Result_Dict[cousin_key].index, kit2_Test_Result_Dict[cousin_key].kit, "=" ,  kit2_Test_Result_Dict[cousin_key].index )
@@ -396,8 +399,10 @@ def main():
         cm2 = kit2_Test_Result_Dict[key2].centimorgans
         #print(mismatch_index, cousin_who, key1, key2)
         try:
-            print('{0:4} | {1:32} | {2:3} {3:32} |{4:3} {5:32} ' \
-                  .format(mismatch_index, cousin_who, cm1, key1, cm2, key2))
+         #    print( key1, key2, cm1, cm2, cousin_who)
+          #  print('{0:4} | {1:36} | {2:4} cM | {3:36 } | {4:4} cM | {5:32} ' .format(mismatch_index, key1, cm1, key2, cm2, cousin_who))
+            print('{0:4} | {1:36} {2:3}cM | {3:36} {4:3}cM | {5:32} '
+                   .format(mismatch_index, key1, cm1, key2, cm2, cousin_who))
         except UnicodeEncodeError:
             print("error with mismatch ASCII UnicodeEncodeError " , kit1_Test_Result_Dict[key1].kit,"=", kit1_Test_Result_Dict[key1].index, kit2_Test_Result_Dict[key2].kit, "=" ,  kit2_Test_Result_Dict[key2].index )
             exit(1)
