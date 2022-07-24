@@ -144,7 +144,7 @@ def main():
     #kit1a = 'Sally_L'
     #kit1a = 'Dad_B'
     #kit1a = 'Una_6cM'
-    kit1a = "Marg_13cM"
+    kit1a = "Marg_11cM"
     kit1a_index_offset = 10000
 
     kit1_list = []

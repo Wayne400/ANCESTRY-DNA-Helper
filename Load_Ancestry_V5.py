@@ -313,6 +313,9 @@ def main():
  #   kit1_file_list = ["Wayne",  "Wayne_A"]
     kit1_file_list = ["Wayne", "Wayne_15cM", "Wayne_14cM", "Wayne_13cM", "Wayne_12cM", "Wayne_11cM",
                       "Wayne_10cM", "Wayne_9cM", "Wayne_8cM", "Wayne_7cM", "Wayne_6cM"]
+  #  kit1_file_list = ["Gary", "Gary_15cM", "Gary_14cM", "Gary_13cM", "Gary_12cM","Gary_11cM", "Gary_10cM","Gary_9cM", "Gary_8cM"]
+
+
     #kit1_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM","Sally_L"]
     #kit1_file_list = ["Una", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM", "Una_7cM", "Una_6cM", "Una_L"]
 
@@ -320,7 +323,7 @@ def main():
     #kit2_file_list = ["Glyn", "Dad_9cM", "Dad_8cM", "Dad_7cM", "Dad_6cM","Dad_B"]
     #kit2_file_list = ["Wayne", "Wayne_10cM", "Wayne_9cM" , "Wayne_8cM", "Wayne_7cM","Wayne_6cM_new","Wayne_A"]
 #    kit2_file_list = ["Wayne"]
-    kit2_file_list = ["Marg", "Marg_15cM", "Marg_14cM", "Marg_13cM"]
+    kit2_file_list = ["Marg", "Marg_15cM", "Marg_14cM", "Marg_13cM", "Marg_12cM", "Marg_11cM"]
     #kit2_file_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM","Sally_L"]
     #kit2_file_list = ["Helen", "Helen_B"]
     #kit2_file_list = ["Una", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM", "Una_7cM", "Una_6cM", "Una_L"]
