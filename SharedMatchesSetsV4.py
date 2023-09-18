@@ -19,7 +19,7 @@ def load_surnames(file_path, filename):
     return surnames
 
 
-def swap_in_index(list_of_lists,homonym_to_primarykey_dict):
+def swap_in_index(list_of_lists,homonym_to_primarykey_dict,kit1_index_keystring_dict):
 
     new_list_of_lists = []
     for list in list_of_lists:
@@ -30,7 +30,7 @@ def swap_in_index(list_of_lists,homonym_to_primarykey_dict):
                 primary_key = homonym_to_primarykey_dict[homonym]
                 new_list.append(primary_key)
             except:
-                print("duplicate key = ", homonym)
+                print("duplicate key = ", homonym, primary_key)
                 print(list)
                 exit(1)
 
@@ -47,7 +47,7 @@ def filter_list(list_to_filter, index_match_filter_list):
 
 
 
-def get_shared_matches(person, match_filter_list, file_path):
+def get_shared_matches(person, match_filter_list, file_path, kit1_index_keystring_dict):
     list_of_lists = []
     new_list_of_lists = []
     homonym_to_primarykey_dict = {}
@@ -87,8 +87,8 @@ def get_shared_matches(person, match_filter_list, file_path):
                # del orig_word_list[0]  # dont add  cousin name again
                 del orig_word_list[0]
                 list_of_lists[-1].extend(filter_list(orig_word_list, match_filter_list))
-
-        new_list_of_lists = swap_in_index(list_of_lists, homonym_to_primarykey_dict)
+# made a change was calling in for loop above
+    new_list_of_lists = swap_in_index(list_of_lists, homonym_to_primarykey_dict, kit1_index_keystring_dict)
 
     return list_of_lists, new_list_of_lists #, homonym_to_primarykey_dict
 
@@ -100,6 +100,7 @@ def get_places(kit1_places, file_path, kit1_index_keystring_dict):
     for line in open(file_path + kit1_places + '.txt'):
         line = line.rstrip()
         orig_word_list = line.split()
+#        print(orig_word_list[0], orig_word_list[1], kit1_places)
         this_cousin = kit1_index_keystring_dict[int(orig_word_list[0])]
         del orig_word_list[0]  # the index number
         del orig_word_list[0]  # cousin
@@ -159,7 +160,7 @@ def print_cluster(supergroup, cousin, new_dict_of_lists,kit1_cM_dict, kit1_keyst
                 kit1_cM = Test_Result_Dict[0][cousin4].centimorgans
                 kit1_seg = Test_Result_Dict[0][cousin4].segments
                 if int(kit1_cM) == centimorgan or centimorgan == 0:
-                  print('{0:6} {1:40} {2:3}cM {3:2}seg   {4:11} {5:11} {6:11} {7:11} {8:11}  *{9:1}* *{10:1}* {11:30}' \
+                  print('{0:6} {1:30} {2:3}cM {3:2}seg   {4:11} {5:11} {6:11} {7:11} {8:11}  *{9:1}* *{10:1}* {11:20}' \
                       .format(kit1_index, cousin4, kit1_cM, kit1_seg,
                               match_kit2, match_kit3, match_kit4, match_kit5, match_kit6,
                               str(no_of_shared_matches), supergroup,
@@ -246,7 +247,8 @@ def main():
 
     punters_list = [kit2_file_list[0], kit3_file_list[0], kit4_file_list[0], kit5_file_list[0],kit6_file_list[0]]
 
-    kit1_Test_Result_Dict = load_matches(kit1_file_list, 1, duplicate_check_flag, file_path)
+    #kit1_Test_Result_Dict = load_matches(kit1_file_list, 1, duplicate_check_flag, file_path)
+    kit1_Test_Result_Dict = load_matches(kit1_file_list, 1, True, file_path)
     kit1_key_dict = {}
     kit1_who_dict = {}
     kit1_index_dict = {}
@@ -258,10 +260,14 @@ def main():
     kit1_index_to_cM_dict = {}
     for kit1_Test_Result in kit1_Test_Result_Dict:
         kit1_keystring_list.append(kit1_Test_Result_Dict[kit1_Test_Result].keystring)
+
     for kit1_Test_Result in kit1_Test_Result_Dict:
         kit1_index_dict[kit1_Test_Result_Dict[kit1_Test_Result].index] = kit1_Test_Result_Dict[kit1_Test_Result].keystring
         kit1_who_to_index_dict[kit1_Test_Result_Dict[kit1_Test_Result].who] = kit1_Test_Result_Dict[kit1_Test_Result].index
         kit1_who_dict[kit1_Test_Result_Dict[kit1_Test_Result].who] = kit1_Test_Result_Dict[kit1_Test_Result].keystring
+        if kit1_Test_Result_Dict[kit1_Test_Result].index in kit1_index_keystring_dict:
+            print("gotcha duplicate index", kit1_Test_Result_Dict[kit1_Test_Result].index, kit1_Test_Result_Dict[kit1_Test_Result].keystring )
+
         kit1_index_keystring_dict[kit1_Test_Result_Dict[kit1_Test_Result].index] = kit1_Test_Result_Dict[kit1_Test_Result].keystring
         kit1_key_dict[kit1_Test_Result_Dict[kit1_Test_Result].keystring] = kit1_Test_Result_Dict[kit1_Test_Result].index
         kit1_cM_dict[kit1_Test_Result_Dict[kit1_Test_Result].keystring] = int(kit1_Test_Result_Dict[kit1_Test_Result].centimorgans)
@@ -270,9 +276,8 @@ def main():
                 kit1_Test_Result_Dict[kit1_Test_Result].keystring
 
 #    print(kit1_index_dict)
-    list_of_lists, new_list_of_lists = get_shared_matches(person, match_filter_list, file_path)
-
-    even_newer_list_of_lists = swap_in_index(new_list_of_lists, kit1_index_dict)
+    list_of_lists, new_list_of_lists = get_shared_matches(person, match_filter_list, file_path, kit1_index_keystring_dict)
+    even_newer_list_of_lists = swap_in_index(new_list_of_lists, kit1_index_dict,kit1_index_keystring_dict)
 
 
 
@@ -280,6 +285,7 @@ def main():
     kit2_keystring_list = []
     for kit2_Test_Result in kit2_Test_Result_Dict:
         kit2_keystring_list.append(kit2_Test_Result_Dict[kit2_Test_Result].keystring)
+
     kit3_Test_Result_Dict = load_matches(kit3_file_list, 4, duplicate_check_flag, file_path)
     kit3_keystring_list = []
     for kit3_Test_Result in kit3_Test_Result_Dict:
@@ -303,6 +309,9 @@ def main():
 
     Test_Result_Dict = [kit1_Test_Result_Dict, kit2_Test_Result_Dict, kit3_Test_Result_Dict, kit4_Test_Result_Dict,
                         kit5_Test_Result_Dict, kit6_Test_Result_Dict]
+    dict_of_places = []
+    person_places = person + '_Places'
+    dict_of_places = get_places(person_places, file_path, kit1_index_keystring_dict)
 
 
     dict_of_sets = {}
@@ -313,26 +322,19 @@ def main():
             index = cousin_set[0]
             dict_of_sets[index] = set(cousin_set)
             del cousin_set[0]  # dont include key index for shared matches
-            dict_of_shared_matches[index] = cousin_set
+            dict_of_shared_matches[index] = cousin_set   # used by print_cluster
         except:
             print(person," blank line at end of file ", cousin_set,index)
             exit(1)
-    dict_of_places = []
-    person_places = person + '_Places'
-    dict_of_places = get_places(person_places, file_path, kit1_index_keystring_dict)
-
-
 
     print("*********************** Combining now *****************************")
     print("***************************************************************")
-
     new_cousin_list=[]
     new_dict_of_lists = {}
     for cousin1 in dict_of_sets:
         for cousin2 in dict_of_sets:
-            if cousin1 != cousin2:
+            if cousin1 != cousin2: # ignore the first entry other entries not in any particular order
                 if len(list(dict_of_sets[cousin1].intersection(dict_of_sets[cousin2]))) > 0:
-                    #print("adding to ", cousin1 ,cousin2, (dict_of_sets[cousin2].intersection(dict_of_sets[cousin1])))
                     dict_of_sets[cousin1] = dict_of_sets[cousin1].union(dict_of_sets[cousin2])
                     dict_of_sets[cousin2] = dict_of_sets[cousin1].union(dict_of_sets[cousin2])
 

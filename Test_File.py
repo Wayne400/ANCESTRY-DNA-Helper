@@ -137,14 +137,16 @@ def main():
     #kit1 = 'Wayne'
     #kit1 = 'Helen'
     #kit1 = 'Sally'
-    kit1 = 'Marg'
+   # kit1 = 'Marg'
+    kit1 = 'Elwyn'
     kit1_index_offset = 0
     #kit1a = 'Dad_B'
     #kit1a = 'Wayne_9cM'
     #kit1a = 'Sally_L'
     #kit1a = 'Dad_B'
     #kit1a = 'Una_6cM'
-    kit1a = "Marg_11cM"
+#    kit1a = "Anji_8cM"
+    kit1a = "Elwyn_9cM"
     kit1a_index_offset = 10000
 
     kit1_list = []
