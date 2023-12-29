@@ -6,25 +6,29 @@
 
 
 def load_profile(person):
-    Glyn_list = ["Glyn", "Glyn_15cM", "Glyn_14cM","Glyn_13cM", "Glyn_12cM", "Glyn_11cM", "Glyn_10cM",
+    shared_file = person + "_Shared.txt"
+
+    Glyn_list = ["Glyn", "Glyn_16cM", "Glyn_15cM", "Glyn_14cM","Glyn_13cM", "Glyn_12cM", "Glyn_11cM", "Glyn_10cM",
                  "Glyn_9cM", "Glyn_8cM", "Glyn_7cM", "Glyn_6cM", "Glyn_B"]
     Wayne_list = ["Wayne","Wayne_15cM", "Wayne_14cM","Wayne_13cM", "Wayne_12cM", "Wayne_11cM","Wayne_10cM",
                   "Wayne_9cM", "Wayne_8cM", "Wayne_7cM", "Wayne_6cM"]
     Helen_list = ["Helen", "Helen_B", "Helen_L"]
     Elwyn_list = ["Elwyn", "Elwyn_15cM", "Elwyn_14cM", "Elwyn_13cM", "Elwyn_12cM", "Elwyn_11cM",
-                  "Elwyn_10cM", "Elwyn_9cM"]
+                  "Elwyn_10cM", "Elwyn_9cM","Elwyn_8cM"]
     Anji_list = ["Anji", "Anji_15cM", "Anji_14cM", "Anji_13cM", "Anji_12cM", "Anji_11cM", "Anji_10cM",
                  "Anji_9cM", "Anji_8cM"]
     Marg_list = ["Marg", "Marg_15cM", "Marg_14cM", "Marg_13cM", "Marg_12cM", "Marg_11cM"]
-    Sally_list = ["Sally", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_L"]
+    Sally_list = ["Sally","Sally_11cM", "Sally_10cM", "Sally_9cM", "Sally_8cM", "Sally_7cM", "Sally_6cM", "Sally_L"]
     Una_list = ["Una", "Una_15cM", "Una_14cM", "Una_13cM", "Una_12cM", "Una_11cM", "Una_10cM", "Una_9cM", "Una_8cM",
                 "Una_7cM", "Una_6cM", "Una_L"]
     Gary_list = ["Gary", "Gary_15cM", "Gary_14cM", "Gary_13cM", "Gary_12cM", "Gary_11cM", "Gary_10cM",
                       "Gary_9cM", "Gary_8cM"]
 
     if person == "Glyn":
+        #shared_file = person + "_20230922a.txt"
+
         match_filter_list = ["aberlas", "UJonesManagedbySteamerpoint", "SallyAnneGale", "H.H.ManagedbyReesDinbych",
-                             "gethngethn",
+                             "gethngethn","AlanHughes","MaryCrawford",
                              "FrancesSandraKey",
                              "TecwynRawson",  # collides with Buckle
                              "ArthurMarkGaleManagedbySteamerpoint", "BarbaraParryManagedbyGwendaParfitt",
@@ -38,6 +42,9 @@ def load_profile(person):
             "nora_engelhard",
             "JudithBuckle",
         #    "patsobocienski",
+            "GeraldineSharman",
+            "JoshSando",     # cluster 3 , Colleen Toy
+            "DonaldCohn",   # cluster 3 , Colleen Toy
             "SimonGray"]
         match_filter_list3 = [
       #                        "G.R.Managedbygemmaroberts50",
@@ -52,18 +59,21 @@ def load_profile(person):
                               "DewiPugh", "ElwynDavies", "GlynParry",
                               "gwendahumphries", "InaBlancheParry"]
 
-        match_filter_list5 = ["JaredDeWittie"]
+        match_filter_list5 = ["JaredDeWittie","judio1343"]
 
         match_filter_list6 = ["PaulDay", "LKevinKelly11", "tchester200166", "ADavis0214", "JohnKelly",
 #                              "ErinWilson", "ColleenOLeary", "AnnStoddard", "RebeccaBailey", "arwelwjones51",
-                              "ErinWilson", "ColleenOLeary", "AnnStoddard", "arwelwjones51",
-                              "JuneMcLachlinManagedbyoschean"]
+                              "ErinWilson", "ColleenOLeary", "AnnStoddard", "arwelwjones51","RebeccaBailey","LouisaDavison","IforGlynLloyd",
+                              "JuneMcLachlinManagedbyoschean", "IforGlynLloyd"]
         match_filter_list7 = ["GillianandGlynEvans", "D.H.ManagedbySEANALLEN"]
-        match_filter_list8 = ["stevemcgarry189", "BrianLonghurst",
-                              "MalcolmSlade", "ClaireDayel-Baker", "judyrobinson"]
+       # match_filter_list8 = ["stevemcgarry189", "BrianLonghurst", "MalcolmSlade", "ClaireDayel-Baker", "judyrobinson"]
+        match_filter_list8 = ["stevemcgarry189", "MalcolmSlade", "ClaireDayel-Baker", "judyrobinson"]
         match_filter_list9 = ["ElenLewis"]
-#        match_filter_list10 = ["AmandaStanton", "JohnNolan573ManagedbySianShrewsbury", "RayRutland65"]
-        match_filter_bobcollins = ["InaBlancheParry","SionElganMetcalfe","GarethWilliams","LeonaCarter"]
+        match_filter_list10 = ["AmandaStanton", "JohnNolan573ManagedbySianShrewsbury", "RayRutland65"]
+        match_filter_list11 = [ "LadyDee","CarolynLucke","A.A.ManagedbyJasonLawson","SteveHarper","LauraTurner"]  # chromo 7 & 9 filter
+        match_filter_list12 = ["InaBlancheParry","SionElganMetcalfe","GarethWilliams","LeonaCarter"]
+        match_filter_list17 = ["MihiBell"]
+        match_filter_list18 = ["JoanCourtney","MaryConnell","MindyFrench","KarlaStoker","jojoblueberry","drmiller48","hhhas", "WalterArthurCooperIII" ,"Melekika46", "dsberger120" ]
         match_filter_list.extend(match_filter_list2)
         match_filter_list.extend(match_filter_list3)
         match_filter_list.extend(match_filter_list4)
@@ -72,8 +82,10 @@ def load_profile(person):
         match_filter_list.extend(match_filter_list7)
         match_filter_list.extend(match_filter_list8)
         match_filter_list.extend(match_filter_list9)
-#        match_filter_list.extend(match_filter_list10)
-        match_filter_list.extend(match_filter_bobcollins)
+        match_filter_list.extend(match_filter_list10)
+        match_filter_list.extend(match_filter_list11)
+        match_filter_list.extend(match_filter_list12)
+        match_filter_list.extend(match_filter_list17)
         kit1_file_list = Glyn_list
         kit2_file_list = Wayne_list
         kit3_file_list = Gary_list
@@ -89,7 +101,7 @@ def load_profile(person):
         kit5_file_list = Una_list
         kit6_file_list = Sally_list
         match_filter_list = [ "ag3754", "DavidLarsen", "sheilaroberts",
-                         "BarbaraParryManagedbyGwendaParfitt", "aberlas","UJonesManagedbySteamerpoint","H.H.ManagedbyReesDinbych"]
+                         "BarbaraParryManagedbyGwendaParfitt", "aberlas","UJonesManagedbySteamerpoint","H.H.ManagedbyReesDinbych","MaryCrawford"]
 #        match_filter_list2 = ["ThomasBennett","malcolmdavies656"]
         match_filter_list2 = ["ThomasBennett"]
         match_filter_list.extend(match_filter_list2)
@@ -236,4 +248,4 @@ def load_profile(person):
         match_filter_list.extend(match_filter_list5)
 
 
-    return kit1_file_list, kit2_file_list, kit3_file_list, kit4_file_list, kit5_file_list, kit6_file_list, match_filter_list
+    return kit1_file_list, kit2_file_list, kit3_file_list, kit4_file_list, kit5_file_list, kit6_file_list, match_filter_list, shared_file

@@ -45,34 +45,73 @@ def filter_list(list_to_filter, index_match_filter_list):
             new_filtered_list.append(entry)
     return new_filtered_list
 
-
-
-def get_shared_matches(person, match_filter_list, file_path, kit1_index_keystring_dict):
-    list_of_lists = []
-    new_list_of_lists = []
+def get_shared_indices(shared_file_path):
     homonym_to_primarykey_dict = {}
     check_all_entry_list = []  # check to find all shared matches are indexed too
     primary_entry_list = []
-   # print("here", match_filter_list)
 
-    for line in open(file_path + person + '_Shared.txt'):
+    for line in open(shared_file_path):  # first parse , only gets keys
         line = line.rstrip()
         orig_word_list = line.split()
      #   print(orig_word_list)  # debug only
-        homonym_to_primarykey_dict[orig_word_list[1]] = int(orig_word_list[0])  # will overwrite additonal lines
+        homonym_to_primarykey_dict[orig_word_list[1]] = int(orig_word_list[0])  # will overwrite additional lines
         del orig_word_list[0]
         check_all_entry_list.extend(orig_word_list)
         primary_entry_list.append(orig_word_list[0])
     for entry in check_all_entry_list:
         if entry not in primary_entry_list:
-            print(entry, " index is missing in file " + person + "_Shared")
+            print(entry, " index is missing in file " + shared_file_path)
             exit(1)
+    return homonym_to_primarykey_dict
+
+def get_shared_dict(shared_file_path):
+    shared_list_dict = {}
+    index_list_dict = {}
+    last_cousin = "wally"
+
+    key_to_numeric_dict = {}
+    for line in open(shared_file_path):  # first parse , only gets keys
+        line = line.rstrip()
+        orig_word_list = line.split()
+        key_to_numeric_dict[orig_word_list[1]] = int(orig_word_list[0])  # will overwrite additional lines
+
+    for line in open(shared_file_path):
+        line = line.rstrip()
+        orig_word_list = line.split()
+        numeric_index = orig_word_list[0]
+        this_cousin = orig_word_list[1]
+        del orig_word_list[0]  # remove numerical index
+        del orig_word_list[0]  # remove string index but saved above
+    
+        if (this_cousin != last_cousin):
+                new_list = []
+                new_list.extend(orig_word_list)
+                last_cousin = this_cousin
+        elif (this_cousin == last_cousin):
+                new_list.extend(orig_word_list)
+        shared_list_dict[this_cousin] = new_list  # keep overwriting until this cousin changes
+        numeric_list=[]
+        for string_index in new_list:
+            numeric_list.append(key_to_numeric_dict[string_index])
+        index_list_dict[numeric_index] = numeric_list  # ditto
+    #print("get shared dict", key_to_numeric_dict)
+    return shared_list_dict, index_list_dict, key_to_numeric_dict
+
+
+  # get_shared_matches(person, match_filter_list, file_path, kit1_index_keystring_dict)
+def get_shared_matches(match_filter_list, shared_file_path, kit1_index_keystring_dict):
+    list_of_lists = []
+    new_list_of_lists = []
+   # print("here", match_filter_list)
+
+    homonym_to_primarykey_dict = get_shared_indices(shared_file_path)
+    shared_list_dict, index_list_dict, key_to_numeric_dict = get_shared_dict(shared_file_path)
     index_match_filter_list = []
-    for entry in match_filter_list:
+    for entry in match_filter_list:  # convert to numeral indices not strings
             index_match_filter_list.append(homonym_to_primarykey_dict[entry])
     #print(index_match_filter_list)
     last_cousin = "wally"
-    for line in open(file_path + person + '_Shared.txt'):
+    for line in open(shared_file_path):
         line = line.rstrip()
         orig_word_list = line.split()
         this_cousin = orig_word_list[1]
@@ -90,7 +129,8 @@ def get_shared_matches(person, match_filter_list, file_path, kit1_index_keystrin
 # made a change was calling in for loop above
     new_list_of_lists = swap_in_index(list_of_lists, homonym_to_primarykey_dict, kit1_index_keystring_dict)
 
-    return list_of_lists, new_list_of_lists #, homonym_to_primarykey_dict
+    #print("get shared matches", key_to_numeric_dict )
+    return list_of_lists, new_list_of_lists , shared_list_dict, index_list_dict , key_to_numeric_dict
 
 
 def get_places(kit1_places, file_path, kit1_index_keystring_dict):
@@ -241,14 +281,14 @@ def main():
     duplicate_check_flag = False
 
 
-    kit1_file_list, kit2_file_list, kit3_file_list, kit4_file_list, kit5_file_list, kit6_file_list, match_filter_list = load_profile(
+    kit1_file_list, kit2_file_list, kit3_file_list, kit4_file_list, kit5_file_list, kit6_file_list, match_filter_list, share_file = load_profile(
         person)
 
-
+    shared_file_path = file_path + share_file
     punters_list = [kit2_file_list[0], kit3_file_list[0], kit4_file_list[0], kit5_file_list[0],kit6_file_list[0]]
 
     #kit1_Test_Result_Dict = load_matches(kit1_file_list, 1, duplicate_check_flag, file_path)
-    kit1_Test_Result_Dict = load_matches(kit1_file_list, 1, True, file_path)
+    kit1_Test_Result_Dict = load_matches(kit1_file_list, 1, duplicate_check_flag, file_path)
     kit1_key_dict = {}
     kit1_who_dict = {}
     kit1_index_dict = {}
@@ -258,6 +298,7 @@ def main():
     kit1_keystring_list = []
     kit1_who_to_index_dict = {}
     kit1_index_to_cM_dict = {}
+    kit1_index_to_seg_dict = {}
     for kit1_Test_Result in kit1_Test_Result_Dict:
         kit1_keystring_list.append(kit1_Test_Result_Dict[kit1_Test_Result].keystring)
 
@@ -272,11 +313,13 @@ def main():
         kit1_key_dict[kit1_Test_Result_Dict[kit1_Test_Result].keystring] = kit1_Test_Result_Dict[kit1_Test_Result].index
         kit1_cM_dict[kit1_Test_Result_Dict[kit1_Test_Result].keystring] = int(kit1_Test_Result_Dict[kit1_Test_Result].centimorgans)
         kit1_index_to_cM_dict[kit1_Test_Result_Dict[kit1_Test_Result].index] = int(kit1_Test_Result_Dict[kit1_Test_Result].centimorgans)
+        kit1_index_to_seg_dict[kit1_Test_Result_Dict[kit1_Test_Result].index] = int(kit1_Test_Result_Dict[kit1_Test_Result].segments)
         kit1_primary_index[str(kit1_Test_Result_Dict[kit1_Test_Result].index) + "." + kit1_Test_Result_Dict[kit1_Test_Result].who] = \
                 kit1_Test_Result_Dict[kit1_Test_Result].keystring
 
-#    print(kit1_index_dict)
-    list_of_lists, new_list_of_lists = get_shared_matches(person, match_filter_list, file_path, kit1_index_keystring_dict)
+#   print(kit1_index_dict)
+  #  shared_file_path = file_path + person + "_Shared.txt"
+    list_of_lists, new_list_of_lists, shared_list_dict, index_list_dict, key_to_numeric_dict = get_shared_matches(match_filter_list, shared_file_path, kit1_index_keystring_dict)
     even_newer_list_of_lists = swap_in_index(new_list_of_lists, kit1_index_dict,kit1_index_keystring_dict)
 
 
@@ -307,7 +350,7 @@ def main():
         kit6_keystring_list.append(kit6_Test_Result_Dict[kit6_Test_Result].keystring)
 
 
-    Test_Result_Dict = [kit1_Test_Result_Dict, kit2_Test_Result_Dict, kit3_Test_Result_Dict, kit4_Test_Result_Dict,
+    Test_Result_Dict_List = [kit1_Test_Result_Dict, kit2_Test_Result_Dict, kit3_Test_Result_Dict, kit4_Test_Result_Dict,
                         kit5_Test_Result_Dict, kit6_Test_Result_Dict]
     dict_of_places = []
     person_places = person + '_Places'
@@ -368,7 +411,7 @@ def main():
                           dict_of_places, dict_of_shared_matches, kit1_key_dict, kit2_keystring_list,
                           kit3_keystring_list,
                           kit4_keystring_list, kit5_keystring_list, kit6_keystring_list, punters_list,
-                          Test_Result_Dict,mode, CentiMorgan)
+                          Test_Result_Dict_List,mode, CentiMorgan)
 
             new_list.append(supergroup)
             new_dict[supergroup] = cousin
@@ -401,14 +444,14 @@ def main():
                             dict_of_places, dict_of_shared_matches, kit1_key_dict, kit2_keystring_list,
                             kit3_keystring_list, kit4_keystring_list, kit5_keystring_list, kit6_keystring_list,
                             punters_list,
-                            Test_Result_Dict, mode, CentiMorgan)
+                            Test_Result_Dict_List, mode, CentiMorgan)
             elif cluster_search == 's':  #  surnames mode
               mode = 2  # Surnames mode
               group_total = len(new_dict_of_lists[cluster_king])
               print(cluster_no, banner_string, cluster_king, group_total, banner_string)
               print_cluster2(cluster_king, new_dict_of_lists, kit1_cM_dict, kit1_keystring_list,
                              Surnames, kit1_key_dict,
-                             Test_Result_Dict, CentiMorgan)
+                             Test_Result_Dict_List, CentiMorgan)
             elif cluster_search == 'k':  # key search mode
               mode = 3  # Keys mode
             elif cluster_search == 'p':  # places mode
@@ -417,7 +460,7 @@ def main():
               print(cluster_no, banner_string, cluster_king, group_total, banner_string)
               print_cluster2(cluster_king, new_dict_of_lists, kit1_cM_dict, kit1_keystring_list,
                              CityTownVillage, kit1_key_dict,
-                             Test_Result_Dict, CentiMorgan)
+                             Test_Result_Dict_List, CentiMorgan)
             elif cluster_search[0:2] == 'cM' and len(cluster_search) > 2:  # change cM filter
               cM_string = cluster_search[2:]
               if cM_string.isdigit():
@@ -432,25 +475,28 @@ def main():
                 group_total = len(new_dict_of_lists[cluster_king])
                 print( cluster_search, banner_string, cluster_king, banner_string)
                 print_cluster2(cluster_king, new_dict_of_lists, kit1_cM_dict, kit1_keystring_list,
-                                Surnames, kit1_key_dict, Test_Result_Dict, CentiMorgan)
+                                Surnames, kit1_key_dict, Test_Result_Dict_List, CentiMorgan)
               elif int(cluster_search) in new_list and mode == 4:     # places mode
                 group_total = len(new_dict_of_lists[cluster_king])
                 print(cluster_no,  banner_string, cluster_king, group_total, banner_string)
                 print_cluster2(cluster_king, new_dict_of_lists, kit1_cM_dict, kit1_keystring_list,
                                  CityTownVillage, kit1_key_dict,
-                                 Test_Result_Dict, CentiMorgan)
+                                 Test_Result_Dict_List, CentiMorgan)
               elif int(cluster_search) in new_list and mode == 1:  # info mode
                 group_total = len(new_dict_of_lists[cluster_king])
                 print(cluster_search, banner_string, cluster_king, group_total, banner_string, CentiMorgan)
                 print_cluster(int(cluster_search),cluster_king, new_dict_of_lists, kit1_cM_dict, kit1_keystring_list,
                                 dict_of_places, dict_of_shared_matches, kit1_key_dict, kit2_keystring_list,
                                 kit3_keystring_list, kit4_keystring_list, kit5_keystring_list, kit6_keystring_list, punters_list,
-                                Test_Result_Dict,mode, CentiMorgan)
+                                Test_Result_Dict_List,mode, CentiMorgan)
             elif cluster_search in kit1_who_to_index_dict and mode == 3:  # keys mode
-                found_index = kit1_who_to_index_dict[cluster_search]
+              if cluster_search in shared_list_dict:
+                found_index = key_to_numeric_dict[cluster_search]
                 cluster_search_key = kit1_index_keystring_dict[found_index]
-                print("keystring = ", cluster_search_key, ", index = ", found_index, ", cM = ", kit1_index_to_cM_dict[found_index] )
+                print("keystring= ", cluster_search_key, ", index = ", found_index, ", cM=",
+                      kit1_index_to_cM_dict[found_index],kit1_index_to_seg_dict[found_index], "seg" )
                 supergroup = 1
+               # print("new_cousin_list", cluster_search_key , new_cousin_list)
                 for cousin in new_cousin_list:  # go back and find the original cluster again
                     if cluster_search_key in new_dict_of_lists[cousin]:  # found
                         cluster_king = cousin
@@ -461,9 +507,29 @@ def main():
                                       dict_of_places, dict_of_shared_matches, kit1_key_dict, kit2_keystring_list,
                                       kit3_keystring_list, kit4_keystring_list, kit5_keystring_list,
                                       kit6_keystring_list, punters_list,
-                                      Test_Result_Dict,mode,CentiMorgan)
-                        print("keystring = ", cluster_search_key, ", index = ", found_index, ", cM = ",
-                              kit1_index_to_cM_dict[found_index])
+                                      Test_Result_Dict_List,mode,CentiMorgan)
+                        print("keystring = ", cluster_search_key, ", index = ", found_index, ", cM=",
+                              kit1_index_to_cM_dict[found_index],kit1_index_to_seg_dict[found_index], "seg" , cousin )
+                        filtered= ""
+           #             print(match_filter_list)
+                        for shared_match in index_list_dict[str(found_index)]:
+                            who_string = kit1_Test_Result_Dict[kit1_index_keystring_dict[shared_match]].who
+                            if who_string in match_filter_list:
+                                filtered = "YES"
+                            cm_string=kit1_Test_Result_Dict[kit1_index_keystring_dict[shared_match]].centimorgans
+                            seg_string=kit1_Test_Result_Dict[kit1_index_keystring_dict[shared_match]].segments
+                            who_string=kit1_Test_Result_Dict[kit1_index_keystring_dict[shared_match]].who
+                            whos_side_string=kit1_Test_Result_Dict[kit1_index_keystring_dict[shared_match]].side
+                            if  kit1_index_keystring_dict[shared_match] in Surnames:
+                              printstring = ""
+                              for item in Surnames[kit1_index_keystring_dict[shared_match]]:
+                                  printstring = printstring + "," + item
+                              #print(shared_match, kit1_index_keystring_dict[shared_match], cm_string,"cM",seg_string, "seg", filtered, Surnames[kit1_index_keystring_dict[shared_match]])
+                              print(shared_match, kit1_index_keystring_dict[shared_match], cm_string,"cM",seg_string, "seg", filtered, whos_side_string, printstring)
+                            else:
+                              print(shared_match, kit1_index_keystring_dict[shared_match], cm_string,"cM",seg_string, "seg", filtered, whos_side_string, "No-info-yet")
+
+                            filtered = ""
                         break
                     supergroup += 1
 

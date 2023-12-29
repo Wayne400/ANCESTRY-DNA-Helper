@@ -4,7 +4,7 @@ import sys
 
 class DNA_Result(object):
 
-    def __init__(self, index=99999, offset = 0, who="", centimorgans=0, segments=0, people="", keystring="", tree="", kit_duplicate_check="", kit="wally", kit_number = 99, gedmatch = "", chromosomes=""):
+    def __init__(self, index=99999, offset = 0, who="", centimorgans=0, segments=0, people="", keystring="", tree="", kit_duplicate_check="", kit="wally", kit_number = 99, gedmatch = "", chromosomes="", side = "initialized" ):
 
 
         self.index = index
@@ -15,6 +15,7 @@ class DNA_Result(object):
         self.people = people
         self.keystring = keystring
         self.people = people
+        self.side = side
         self.tree = tree
         self.kit_duplicate_check = kit_duplicate_check
         self.kit = kit
@@ -30,6 +31,7 @@ def get_data(word_list,index_offset , line_no, kit, kit_number, duplicate_check_
     new_word_dict["Tree"] = ""
     new_word_dict["GEDMATCH"] = ""
     new_word_dict["CHROMOSOMES"] = ""
+    new_word_dict["parent_side"] = "un_assigned"
     i = 0
     new_index = 9999999
 
@@ -96,6 +98,12 @@ def get_data(word_list,index_offset , line_no, kit, kit_number, duplicate_check_
             # new_word_dict["who"] = new_word_dict["who"] + word_list[i-1] + "cM"
         if column == "segments":
             new_word_dict[column] = word_list[i-1]
+        if column == "side" and word_list[i-2] == "Parent":
+            new_word_dict["parent_side"] = word_list[i-2] + "." + word_list[i-1]
+           # print(new_word_dict[column], new_word_dict["who"])
+        if column == "side" and (word_list[i-1] == "Father's" or word_list[i-1] == "Mother's"):
+            new_word_dict["parent_side"] = word_list[i-1]
+            # print(new_word_dict[column] , new_word_dict["who"])
         if column == "People":
             try:
                 new_word_dict[column] = word_list[i-1]
@@ -127,7 +135,10 @@ def get_data(word_list,index_offset , line_no, kit, kit_number, duplicate_check_
       else:
           print ("Shared or DNA: is missing",word_list, line_no, kit)
           exit(1)
+    if "segments" not in new_word_dict:
+        print(kit, line_no, "missing segments info", new_word_dict["who"])
 
+        exit(1)
     #print(int(line_no) , new_word_dict["who"])  # debug iso format text
     kit_duplicate_check = "none"
     if duplicate_check_flag:
@@ -138,9 +149,10 @@ def get_data(word_list,index_offset , line_no, kit, kit_number, duplicate_check_
         test_result = DNA_Result(int(new_word_dict["index"]) , index_offset, new_word_dict["who"] , new_word_dict["cM"] ,
                              new_word_dict["segments"], new_word_dict["People"], new_word_dict["key_string"],
                              new_word_dict["Tree"], kit_duplicate_check , kit, kit_number,
-                             new_word_dict["GEDMATCH"], new_word_dict["CHROMOSOMES"])
+                             new_word_dict["GEDMATCH"], new_word_dict["CHROMOSOMES"] ,new_word_dict["parent_side"])
     except:
-        print(int(line_no), new_word_dict["who"])  # debug iso format text
+        print(int(line_no))  # debug iso format text
+        print( new_word_dict["who"])  # debug iso format text
 
     return new_word_dict, test_result, kit_duplicate_check
 
@@ -180,6 +192,9 @@ def get_cousin_dict(kit,kit_number, kit_key_list,duplicate_key_list, kit_who_lis
             index_offset = 80000
         if int(mobj.group(1)) == 15:
             index_offset = 90000
+        if int(mobj.group(1)) == 16:
+            index_offset = 92000
+
     if mobjA or mobjB:
         index_offset = 500000
     if mobjL:
@@ -292,7 +307,7 @@ def load_matches(file_list, kit_number, duplicate_check_flag, file_path):
     return Test_Result_Dict
 
 def main():
-    duplicate_check_flag = True
+    duplicate_check_flag = False
     # file_path = "/mnt/c/Users/Wayne/DNA/"
     file_path = "//wsl$/Ubuntu-20.04/home/waynew/git_environment/ANCESTRY-DNA-Helper/DNA/"
     if len(sys.argv) > 1:
@@ -311,7 +326,7 @@ def main():
  #   kit1_file_list = ["Glyn", "Glyn_15cM", "Glyn_14cM","Glyn_13cM", "Glyn_12cM", "Glyn_11cM", "Glyn_10cM", "Glyn_9cM", "Glyn_8cM", "Glyn_7cM", "Glyn_6cM", "Glyn_B"]
  #   kit1_file_list = ["Glyn"]
     #kit1_file_list = ["Sally"]
-    kit1_file_list = ["Wayne", "Wayne_11cM" , "Wayne_10cM" , "Wayne_9cM", "Wayne_8cM" , "Wayne_7cM","Wayne_6cM","Wayne_A"]
+    kit1_file_list = ["Wayne", "Wayne_15cM" , "Wayne_14cM" , "Wayne_13cM" , "Wayne_12cM", "Wayne_11cM" , "Wayne_10cM" , "Wayne_9cM", "Wayne_8cM" , "Wayne_7cM","Wayne_6cM"]
  #   kit1_file_list = ["Wayne",  "Wayne_A"]
 #  kit1_file_list = ["Wayne", "Wayne_15cM", "Wayne_14cM", "Wayne_13cM", "Wayne_12cM", "Wayne_11cM",
  #                     "Wayne_10cM", "Wayne_9cM", "Wayne_8cM", "Wayne_7cM", "Wayne_6cM"]
