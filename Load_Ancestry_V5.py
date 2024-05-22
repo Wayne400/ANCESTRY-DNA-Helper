@@ -14,7 +14,7 @@ class DNA_Result(object):
         self.segments = segments
         self.people = people
         self.keystring = keystring
-        self.people = people
+ #       self.people = people
         self.side = side
         self.tree = tree
         self.kit_duplicate_check = kit_duplicate_check
@@ -101,7 +101,7 @@ def get_data(word_list,index_offset , line_no, kit, kit_number, duplicate_check_
         if column == "side" and word_list[i-2] == "Parent":
             new_word_dict["parent_side"] = word_list[i-2] + "." + word_list[i-1]
            # print(new_word_dict[column], new_word_dict["who"])
-        if column == "side" and (word_list[i-1] == "Father's" or word_list[i-1] == "Mother's"):
+        if column == "side" and (word_list[i-1] == "Father's" or word_list[i-1] == "Mother's" or word_list[i-1] == "Paternal" or word_list[i-1] == "Maternal"):
             new_word_dict["parent_side"] = word_list[i-1]
             # print(new_word_dict[column] , new_word_dict["who"])
         if column == "People":

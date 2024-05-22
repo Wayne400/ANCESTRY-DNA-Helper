@@ -345,155 +345,18 @@ def main():
     shared_file_path = file_path + share_file
     punter_number = 0
     punters_list = []
+    Test_Result_Dict_List = []
+
     while punter_number < len(punters_file_list):
-       if punter_number != 0:
-           punters_list.append(punters_file_list[punter_number][0])
+       punters_list.append(punters_file_list[punter_number][0])
+       print(punters_file_list[punter_number])
+       kit_Test_Result_Dict = load_matches(punters_file_list[punter_number], 1, duplicate_check_flag, file_path)
+       Test_Result_Dict_List.append(kit_Test_Result_Dict)
        punter_number += 1
  #   punters_list = [punters_file_list[0][0], punters_file_list[1][0], punters_file_list[2][0], punters_file_list[4][0],punters_file_list[5][0]]
-
-    kit1_Test_Result_Dict = load_matches(punters_file_list[0], 1, duplicate_check_flag, file_path)
-    kit1_key_dict = {}
-    kit1_who_dict = {}
-    kit1_index_dict = {}
-    kit1_index_keystring_dict = {}
-    kit1_cM_dict = {}
-    kit1_primary_index = {}
-    kit1_keystring_list = []
-    kit1_who_to_index_dict = {}
-    kit1_index_to_cM_dict = {}
-    kit1_index_to_seg_dict = {}
-    for kit1_Test_Result in kit1_Test_Result_Dict:
-        kit1_keystring_list.append(kit1_Test_Result_Dict[kit1_Test_Result].keystring)
-
-    for kit1_Test_Result in kit1_Test_Result_Dict:
-        kit1_index_dict[kit1_Test_Result_Dict[kit1_Test_Result].index] = kit1_Test_Result_Dict[kit1_Test_Result].keystring
-        kit1_who_to_index_dict[kit1_Test_Result_Dict[kit1_Test_Result].who] = kit1_Test_Result_Dict[kit1_Test_Result].index
-        kit1_who_dict[kit1_Test_Result_Dict[kit1_Test_Result].who] = kit1_Test_Result_Dict[kit1_Test_Result].keystring
-        if kit1_Test_Result_Dict[kit1_Test_Result].index in kit1_index_keystring_dict:
-            print("gotcha duplicate index", kit1_Test_Result_Dict[kit1_Test_Result].index, kit1_Test_Result_Dict[kit1_Test_Result].keystring )
-
-        kit1_index_keystring_dict[kit1_Test_Result_Dict[kit1_Test_Result].index] = kit1_Test_Result_Dict[kit1_Test_Result].keystring
-        kit1_key_dict[kit1_Test_Result_Dict[kit1_Test_Result].keystring] = kit1_Test_Result_Dict[kit1_Test_Result].index
-        kit1_cM_dict[kit1_Test_Result_Dict[kit1_Test_Result].keystring] = int(kit1_Test_Result_Dict[kit1_Test_Result].centimorgans)
-        kit1_index_to_cM_dict[kit1_Test_Result_Dict[kit1_Test_Result].index] = int(kit1_Test_Result_Dict[kit1_Test_Result].centimorgans)
-        kit1_index_to_seg_dict[kit1_Test_Result_Dict[kit1_Test_Result].index] = int(kit1_Test_Result_Dict[kit1_Test_Result].segments)
-        kit1_primary_index[str(kit1_Test_Result_Dict[kit1_Test_Result].index) + "." + kit1_Test_Result_Dict[kit1_Test_Result].who] = \
-                kit1_Test_Result_Dict[kit1_Test_Result].keystring
-
-#   print(kit1_index_dict)
-  #  shared_file_path = file_path + person + "_Shared.txt"
-    list_of_lists, new_list_of_lists, shared_list_dict, index_list_dict, key_to_numeric_dict, homonym_to_primarykey_dict = get_shared_matches(match_filter_list, shared_file_path, kit1_index_keystring_dict)
-    even_newer_list_of_lists = swap_in_index(new_list_of_lists, kit1_index_dict,kit1_index_keystring_dict)
-
-    common_dict = get_common_ancestor(file_path + common_ancestor_file)
-
-
-    kit2_Test_Result_Dict = load_matches(punters_file_list[1], 2, duplicate_check_flag, file_path)
-    kit2_keystring_list = []
-    for kit2_Test_Result in kit2_Test_Result_Dict:
-        kit2_keystring_list.append(kit2_Test_Result_Dict[kit2_Test_Result].keystring)
-
-    kit3_Test_Result_Dict = load_matches(punters_file_list[2], 4, duplicate_check_flag, file_path)
-    kit3_keystring_list = []
-    for kit3_Test_Result in kit3_Test_Result_Dict:
-        kit3_keystring_list.append(kit3_Test_Result_Dict[kit3_Test_Result].keystring)
-
-    kit4_Test_Result_Dict = load_matches(punters_file_list[3], 5, duplicate_check_flag, file_path)
-    kit4_keystring_list = []
-    for kit4_Test_Result in kit4_Test_Result_Dict:
-        kit4_keystring_list.append(kit4_Test_Result_Dict[kit4_Test_Result].keystring)
-
-    kit5_Test_Result_Dict = load_matches(punters_file_list[4], 7, duplicate_check_flag, file_path)
-    kit5_keystring_list = []
-    for kit5_Test_Result in kit5_Test_Result_Dict:
-        kit5_keystring_list.append(kit5_Test_Result_Dict[kit5_Test_Result].keystring)
-
-    kit6_Test_Result_Dict = load_matches(punters_file_list[5], 8, duplicate_check_flag, file_path)
-    kit6_keystring_list = []
-    for kit6_Test_Result in kit6_Test_Result_Dict:
-        kit6_keystring_list.append(kit6_Test_Result_Dict[kit6_Test_Result].keystring)
-
-
-    Test_Result_Dict_List = [kit1_Test_Result_Dict, kit2_Test_Result_Dict, kit3_Test_Result_Dict, kit4_Test_Result_Dict,
-                        kit5_Test_Result_Dict, kit6_Test_Result_Dict]
-    dict_of_places = []
-    person_places = person + '_Places'
-    dict_of_places = get_places(person_places, file_path, kit1_index_keystring_dict)
-
-
-    dict_of_sets = {}
-    dict_of_shared_matches = {}
-    for cousin_set in even_newer_list_of_lists:
-      #  print(cousin_set)  #debug file not saved eg Wayne_A.txt
-        try:
-            index = cousin_set[0]
-            dict_of_sets[index] = set(cousin_set)
-            del cousin_set[0]  # dont include key index for shared matches
-            dict_of_shared_matches[index] = cousin_set   # used by print_cluster
-        except:
-            print(person," blank line at end of file ", cousin_set,index)
-            exit(1)
-
-    print("*********************** Combining now *****************************")
-    print("***************************************************************")
-    new_cousin_list=[]
-    new_dict_of_lists = {}
-    for cousin1 in dict_of_sets:
-        for cousin2 in dict_of_sets:
-            if cousin1 != cousin2: # ignore the first entry other entries not in any particular order
-                if len(list(dict_of_sets[cousin1].intersection(dict_of_sets[cousin2]))) > 0:
-                    dict_of_sets[cousin1] = dict_of_sets[cousin1].union(dict_of_sets[cousin2])
-                    dict_of_sets[cousin2] = dict_of_sets[cousin1].union(dict_of_sets[cousin2])
-
-    print("***********************All done *****************************")
-    print("****************************************************")
-    print("*********************** cousin filters = ", match_filter_list, "*****************************")
-
-    super_set = set()
-    for cousin1 in dict_of_sets:
-            if len(list(dict_of_sets[cousin1].intersection(super_set))) == 0:
-                super_set = super_set.union(dict_of_sets[cousin1])
-                new_dict_of_lists[cousin1] = list(dict_of_sets[cousin1])
-                new_cousin_list.append(cousin1)
-    banner_string = " >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "
-    print("****************************************************")
-    print("****************************************************")
-    supertotal = 0
-    supergroup = 1
-    new_list = []
-    new_dict = {}
-    mode = 0
-    CentiMorgan = 0
-    no_of_clusters = 0
-    for cousin in new_cousin_list:
-            print("****************************************************")
-            group_total = len(new_dict_of_lists[cousin])
-            if group_total > 1:
-                no_of_clusters += 1
-            print(supergroup, banner_string,  cousin, group_total,  banner_string, CentiMorgan)
-            print_cluster(supergroup, cousin, new_dict_of_lists, kit1_cM_dict, kit1_keystring_list,
-                          dict_of_places, dict_of_shared_matches, kit1_key_dict, kit2_keystring_list,
-                          kit3_keystring_list,
-                          kit4_keystring_list, kit5_keystring_list, kit6_keystring_list, punters_list,
-                          Test_Result_Dict_List,mode, CentiMorgan)
-
-            new_list.append(supergroup)
-            new_dict[supergroup] = cousin
-
-            supergroup += 1
-            supertotal = supertotal + group_total
-    print("************************************************************************************************")
-    print("supertotal is ", supertotal, "no of cluster is", no_of_clusters)
-
-    Surnames = load_surnames(file_path,"Surnames")
-    CityTownVillage = load_surnames(file_path,"Places")
-    print(new_list)
     go_again = 'y'
     toggle = False   # start in surnames mode
-    mode = 1  # info mode
-    cluster_no = 1
-    cluster_king = new_dict[1]
-    group_total = len(new_dict_of_lists[cluster_king])
+    mode = 3
     mode_list = [" default", "info", "Surnames", " keystring", " Places", "common_ancestor"]
     while go_again != 'n':
         while True:
@@ -501,108 +364,9 @@ def main():
             if cluster_search == 'q':
               go_again = 'n'
               break
-            elif cluster_search == 'i':  #  info mode
-              mode = 1  # Info mode
-              group_total = len(new_dict_of_lists[cluster_king])
-              print(cluster_no, banner_string, cluster_king, group_total, banner_string, CentiMorgan)
-              print_cluster(cluster_no, cluster_king, new_dict_of_lists, kit1_cM_dict, kit1_keystring_list,
-                            dict_of_places, dict_of_shared_matches, kit1_key_dict, kit2_keystring_list,
-                            kit3_keystring_list, kit4_keystring_list, kit5_keystring_list, kit6_keystring_list,
-                            punters_list,
-                            Test_Result_Dict_List, mode, CentiMorgan)
-            elif cluster_search == 's':  #  surnames mode
-              mode = 2  # Surnames mode
-              group_total = len(new_dict_of_lists[cluster_king])
-              print(cluster_no, banner_string, cluster_king, group_total, banner_string)
-              print_cluster2(cluster_king, new_dict_of_lists, kit1_cM_dict, kit1_keystring_list,
-                             Surnames, kit1_key_dict,
-                             Test_Result_Dict_List, CentiMorgan)
             elif cluster_search == 'k':  # key search mode
               mode = 3  # Keys mode
-            elif cluster_search == 'p':  # places mode
-              mode = 4  # Places mode
-              group_total = len(new_dict_of_lists[cluster_king])
-              print(cluster_no, banner_string, cluster_king, group_total, banner_string)
-              print_cluster2(cluster_king, new_dict_of_lists, kit1_cM_dict, kit1_keystring_list,
-                             CityTownVillage, kit1_key_dict,
-                             Test_Result_Dict_List, CentiMorgan)
-            elif cluster_search == 'c':  # key search mode
-              mode = 5 # common ancestor mode
-              print_cluster_commons(cluster_no, banner_string, cluster_king, group_total, common_dict,kit1_key_dict, new_dict_of_lists )
-
-            elif cluster_search[0:2] == 'cM' and len(cluster_search) > 2:  # change cM filter
-              cM_string = cluster_search[2:]
-              if cM_string.isdigit():
-                  CentiMorgan = int(cM_string)
-              else:
-                  print("try again")
-                  CentiMorgan = 0
-            if cluster_search.isdigit():
-              cluster_no = int(cluster_search)
-              cluster_king = new_dict[cluster_no]
-              group_total = len(new_dict_of_lists[cluster_king])
-              if (int(cluster_search) in new_list) and (mode == 2):  # Surnames mode
-                group_total = len(new_dict_of_lists[cluster_king])
-                print( cluster_search, banner_string, cluster_king, banner_string)
-                print_cluster2(cluster_king, new_dict_of_lists, kit1_cM_dict, kit1_keystring_list,
-                                Surnames, kit1_key_dict, Test_Result_Dict_List, CentiMorgan)
-              elif int(cluster_search) in new_list and mode == 4:     # places mode
-                group_total = len(new_dict_of_lists[cluster_king])
-                print(cluster_no,  banner_string, cluster_king, group_total, banner_string)
-                print_cluster2(cluster_king, new_dict_of_lists, kit1_cM_dict, kit1_keystring_list,
-                                 CityTownVillage, kit1_key_dict,
-                                 Test_Result_Dict_List, CentiMorgan)
-              elif int(cluster_search) in new_list and mode == 5:     # common ancestors mode
-                  print_cluster_commons(cluster_no, banner_string, cluster_king, group_total, common_dict,
-                                        kit1_key_dict, new_dict_of_lists)
-              elif int(cluster_search) in new_list and mode == 1:  # info mode
-                group_total = len(new_dict_of_lists[cluster_king])
-                print(cluster_search, banner_string, cluster_king, group_total, banner_string, CentiMorgan)
-                print_cluster(int(cluster_search),cluster_king, new_dict_of_lists, kit1_cM_dict, kit1_keystring_list,
-                                dict_of_places, dict_of_shared_matches, kit1_key_dict, kit2_keystring_list,
-                                kit3_keystring_list, kit4_keystring_list, kit5_keystring_list, kit6_keystring_list, punters_list,
-                                Test_Result_Dict_List,mode, CentiMorgan)
             elif  mode == 3:  # keys mode
-             if cluster_search in homonym_to_primarykey_dict:
-                found_index = key_to_numeric_dict[cluster_search]
-                cluster_search_key = kit1_index_keystring_dict[found_index]
-                supergroup = 0
-                for cousin in new_cousin_list:  # go back and find the original cluster again
-                    #print(new_dict_of_lists[cousin])
-                    if cluster_search_key in new_dict_of_lists[cousin]:  # found
-                        cluster_king = cousin
-                        cluster_no = supergroup
-                        group_total = len(new_dict_of_lists[cousin])
-                        save_supergroup = supergroup
-                        break
-                    supergroup += 1
-                filtered = ""
-                print(banner_string, cluster_search_key, banner_string)
-                who_string = kit1_Test_Result_Dict[cluster_search_key].who
-                if who_string in match_filter_list:
-                   print("keystring = ", cluster_search_key, ", index = ", found_index, ", cM=", kit1_index_to_cM_dict[found_index], kit1_index_to_seg_dict[found_index], "seg", "Filtered Match!")
-                else:
-                   print("keystring = ", cluster_search_key, ", index = ", found_index, ", cM=", kit1_index_to_cM_dict[found_index], kit1_index_to_seg_dict[found_index], "seg", cluster_king, "supergroup", new_list[supergroup])
-
-                for shared_match in index_list_dict[str(found_index)]:
-                            who_string = kit1_Test_Result_Dict[kit1_index_keystring_dict[shared_match]].who
-                            if who_string in match_filter_list:
-                                filtered = "YES"
-                            cm_string=kit1_Test_Result_Dict[kit1_index_keystring_dict[shared_match]].centimorgans
-                            seg_string=kit1_Test_Result_Dict[kit1_index_keystring_dict[shared_match]].segments
-                            who_string=kit1_Test_Result_Dict[kit1_index_keystring_dict[shared_match]].who
-                            whos_side_string=kit1_Test_Result_Dict[kit1_index_keystring_dict[shared_match]].side
-                            if  kit1_index_keystring_dict[shared_match] in Surnames:
-                              printstring = ""
-                              for item in Surnames[kit1_index_keystring_dict[shared_match]]:
-                                  printstring = printstring + "," + item
-                              #print(shared_match, kit1_index_keystring_dict[shared_match], cm_string,"cM",seg_string, "seg", filtered, Surnames[kit1_index_keystring_dict[shared_match]])
-                              print(shared_match, kit1_index_keystring_dict[shared_match], cm_string,"cM",seg_string, "seg", filtered, whos_side_string, printstring)
-                            else:
-                              print(shared_match, kit1_index_keystring_dict[shared_match], cm_string,"cM",seg_string, "seg", filtered, whos_side_string, "No-info-yet")
-
-                            filtered = ""
-                print(banner_string, cluster_search_key, banner_string)
                 print_shared_cluster(found_index, index_list_dict,kit1_Test_Result_Dict,
                                      kit2_Test_Result_Dict, kit3_Test_Result_Dict,
                                      kit4_Test_Result_Dict, kit5_Test_Result_Dict, kit6_Test_Result_Dict, kit1_index_keystring_dict, punters_list)
