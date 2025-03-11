@@ -91,7 +91,7 @@ def load_profile(person):
         match_filter_list.extend(match_filter_list3)
         match_filter_list4 = ["nogoodboyoManagedbyRhiannonWilliams", "craftyhen"]
         match_filter_list.extend(match_filter_list4)
-        match_filter_list6 = ["GaryWilliams", "ElwynWilliams","SandraDavis","LauraStupple", "C.H.Managedbykeiralynch99"]
+        match_filter_list6 = ["GaryWilliams", "ElwynWilliams","SandraDavis","LauraStupple", "C.H.Managedbykeiralynch99","PaulRoberts"]
         match_filter_list.extend(match_filter_list6)
 
 
@@ -193,6 +193,7 @@ def load_punters(person):
     Wayne_list = ["Wayne","Wayne_15cM", "Wayne_14cM","Wayne_13cM", "Wayne_12cM", "Wayne_11cM","Wayne_10cM",
                   "Wayne_9cM", "Wayne_8cM", "Wayne_7cM", "Wayne_6cM"]
     Helen_list = ["Helen", "Helen_B", "Helen_L"]
+    Paul_list = ["Paul", "Paul_16cM", "Paul_15cM", "Paul_14cM", "Paul_13cM", "Paul_12cM"]
     Elwyn_list = ["Elwyn", "Elwyn_15cM", "Elwyn_14cM", "Elwyn_13cM", "Elwyn_12cM", "Elwyn_11cM",
                   "Elwyn_10cM", "Elwyn_9cM","Elwyn_8cM"]
     Anji_list = ["Anji", "Anji_15cM", "Anji_14cM", "Anji_13cM", "Anji_12cM", "Anji_11cM", "Anji_10cM",
@@ -210,7 +211,7 @@ def load_punters(person):
         punters_file_list = [Glyn_list,Wayne_list,Gary_list,Elwyn_list,Sally_list,Una_list, Helen_list, Anji_list]
 
     if person == "Wayne":
-        punters_file_list = [Wayne_list, Glyn_list, Gary_list, Elwyn_list, Sally_list, Marg_list]
+        punters_file_list = [Wayne_list, Glyn_list, Gary_list, Elwyn_list, Paul_list, Marg_list]
 
     if person == "Gary":
         punters_file_list = [Gary_list, Wayne_list, Elwyn_list, Glyn_list, Marg_list, Helen_list]

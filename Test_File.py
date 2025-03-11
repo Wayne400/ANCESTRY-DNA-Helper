@@ -108,7 +108,8 @@ def get_data(word_list,index_offset):
 
 def get_cousin_dict(kit1, index_offset):
 
-    file_path = "//wsl$/Ubuntu-20.04/home/waynew/git_environment/ANCESTRY-DNA-Helper/DNA/"
+  #  file_path = "//wsl$/Ubuntu-20.04/home/waynew/git_environment/ANCESTRY-DNA-Helper/DNA/"
+    file_path = "/home/waynew/git_environment/ANCESTRY-DNA-Helper/DNA/"
     dict_of_lists = {}
     list_of_lists = []
     line_no = 1
@@ -138,7 +139,7 @@ def main():
     #kit1 = 'Helen'
     #kit1 = 'Sally'
    # kit1 = 'Marg'
-    kit1 = 'Elwyn'
+    kit1 = 'Paul'
     kit1_index_offset = 0
     #kit1a = 'Dad_B'
     #kit1a = 'Wayne_9cM'
@@ -146,7 +147,7 @@ def main():
     #kit1a = 'Dad_B'
     #kit1a = 'Una_6cM'
 #    kit1a = "Anji_8cM"
-    kit1a = "Elwyn_9cM"
+    kit1a = "Paul_12cM"
     kit1a_index_offset = 10000
 
     kit1_list = []

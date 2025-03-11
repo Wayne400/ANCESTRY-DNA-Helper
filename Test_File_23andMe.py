@@ -1,5 +1,8 @@
 
-import re
+import re, sys
+from Test_File_MyHeritage import get_chromo_list, triangulate
+from Test_File_MyHeritage import print_cluster23
+from Test_File_MyHeritage import get_surnames_in_trees
 
 class DNA_Result(object):
 
@@ -17,6 +20,7 @@ class DNA_Result(object):
         self.surnames = surname_string
 
 
+
 def filter_list(list_to_filter, index_match_filter_list):
 
     new_filtered_list = []
@@ -25,9 +29,8 @@ def filter_list(list_to_filter, index_match_filter_list):
             new_filtered_list.append(entry)
     return new_filtered_list
 
-def get_cousin_dict(kit1):
+def get_cousin_dict23(kit1, file_path):
 
-    file_path = "/home/waynew/git_environment/ANCESTRY-DNA-Helper/23andMe/"
     list_of_dna = []
     dict_of_dna = {}
     kit1_who_to_index_dict = {}
@@ -61,10 +64,9 @@ def get_cousin_dict(kit1):
 
     return list_of_dna, kit1_who_to_index_dict, dict_of_dna
 
-def get_cousin_filtered(kit1):
+def get_cousin_dictFT(kit1, file_path):
 
-    file_path = "/home/waynew/git_environment/ANCESTRY-DNA-Helper/23andMe/"
-    list_of_filtered = []
+    list_of_dna = []
     dict_of_dna = {}
     kit1_who_to_index_dict = {}
     line_no = 1
@@ -76,33 +78,49 @@ def get_cousin_filtered(kit1):
         index = first_column_list[0]
         who = first_column.strip(index + ' ')
         who=who.replace(" ", "")
-       # print(index, who)
-        third_column = word_list[2].strip()
-        third_column_list = third_column.split(' ')
-        dna_per_cent=third_column_list[0]
-        no_per_cent=dna_per_cent[:-1]
-        CMs="_"+ str(int(float(no_per_cent)*68))
+ #       print(index, who)
+        second_column = word_list[1].strip()
+        second_column_list = second_column.split(' ')
+        cM_total=second_column_list[2]
+        CMs="_"+ cM_total
         keystring = who + CMs
-        kit1_who_to_index_dict[keystring] = index
-        cMs=int(float(no_per_cent)*68)
-        fourth_column = word_list[3].strip()
-        fourth_column_list = fourth_column.split(' ')
-        segments=int(fourth_column_list[0])
+        kit1_who_to_index_dict[keystring] = int(index)
+        segments = 1
+        cMs=int(cM_total)
+
+        DNA_Relative = DNA_Result(index,keystring, cMs, cM_total, segments, word_list[1].rstrip())
+        list_of_dna.append(DNA_Relative)
+        dict_of_dna[int(index)] = DNA_Relative
+ #       print(kit_word_dict["index"], kit_word_dict["segments"],kit_word_dict["cM"])
+        line_no = line_no + 1
+
+    return list_of_dna, kit1_who_to_index_dict, dict_of_dna
+
+def get_cousin_filtered(kit1, file_path):
+
+    list_of_filtered = []
+    line_no = 1
+    for line in open(file_path + kit1 + '.txt', encoding='latin-1'):
+        line = line.rstrip()
+        word_list = line.split(',')
+        first_column = word_list[0].rstrip()
+        first_column_list = first_column.split(' ')
+        index = first_column_list[0]
 
         list_of_filtered.append(int(index))
         line_no = line_no + 1
 
     return list_of_filtered
 
-def get_surnames_in_trees(kit4, dict_of_dna, kit1_who_to_index_reverse_dict):
+def get_surnames_in_trees(kit4, dict_of_dna, kit1_who_to_index_reverse_dict, file_path):
 
-    file_path = "/home/waynew/git_environment/ANCESTRY-DNA-Helper/23andMe/"
     line_no = 1
     for line in open(file_path + kit4 + '.txt', encoding='latin-1'):
         line = line.rstrip()
         word_list = line.split(', ')
         first_column = word_list[0].rstrip()
         first_column_list = first_column.split(' ')
+     #   print(first_column_list)
         index = int(first_column_list[0]) # dont care about the name, the index is sufficient
         if "Cousin" not in word_list[1]:
             dna_result=dict_of_dna[index].add_surnames(word_list[1])
@@ -110,19 +128,21 @@ def get_surnames_in_trees(kit4, dict_of_dna, kit1_who_to_index_reverse_dict):
     return True
 
 
-def get_shared_list(kit1, kit1_who_to_index_dict, list_of_filtered):
+def get_shared_list23(kit1, kit1_who_to_index_dict, list_of_filtered, file_path, chromo_tuple_list, kit1_who_to_index_reverse_dict):
 
-    file_path = "/home/waynew/git_environment/ANCESTRY-DNA-Helper/23andMe/"
     list_of_shares = []
     line_no = 1
     last_cousin_index = 99999
     temp_list = []
     for line in open(file_path + kit1 + '.txt', encoding='latin-1'):
         line = line.rstrip()
+     #   print(line)
         columns = line.split(',')
         first_column = columns[0].rstrip()
         first_column_list = first_column.split(' ')
         this_cousin_index = int(first_column_list[0])
+   #     if this_cousin_index in chromo_tuple_list and last_cousin_index != 99999:
+      #  print(this_cousin_index , kit1_who_to_index_reverse_dict[this_cousin_index], chromo_tuple_list[this_cousin_index])
         fourth_column = columns[3].rstrip()   # (0.43)
         fourth_column = fourth_column.replace('(','')
         no_per_cent = fourth_column.replace(')','') # just the 0.43
@@ -131,10 +151,17 @@ def get_shared_list(kit1, kit1_who_to_index_dict, list_of_filtered):
         key_string=key_string.replace(' ','')
         key_string=key_string + CMs
         shares_with_index=kit1_who_to_index_dict[key_string]
+        overlap = False
+        if shares_with_index in chromo_tuple_list and this_cousin_index in chromo_tuple_list:
+       #     print(this_cousin_index ,kit1_who_to_index_reverse_dict[this_cousin_index], chromo_tuple_list[this_cousin_index], shares_with_index, kit1_who_to_index_reverse_dict[shares_with_index], chromo_tuple_list[shares_with_index])
+        #    print(kit1_who_to_index_reverse_dict[this_cousin_index],  kit1_who_to_index_reverse_dict[shares_with_index])
+            overlap, triang_chromo_list = triangulate( chromo_tuple_list[this_cousin_index], chromo_tuple_list[shares_with_index])
+            if overlap:
+                print( this_cousin_index,  kit1_who_to_index_reverse_dict[this_cousin_index], kit1_who_to_index_reverse_dict[shares_with_index], "triangulate", triang_chromo_list)
 
        # print(key_string)
        # print("checkin" , this_cousin_index)
-        if this_cousin_index not in list_of_filtered:
+        if this_cousin_index not in list_of_filtered and overlap:
        #   print(this_cousin_index, "not in list of filtered")
           if this_cousin_index != last_cousin_index and shares_with_index not in list_of_filtered: # reset or set list
             if last_cousin_index != 99999: # a reset do stash old temp_list
@@ -150,54 +177,97 @@ def get_shared_list(kit1, kit1_who_to_index_dict, list_of_filtered):
    # print(list_of_shares)
     return list_of_shares
 
-def print_cluster(supergroup, cousin, new_dict_of_lists, kit1_who_to_index_dict, kit1_who_to_index_reverse_dict,  dict_of_dna):
-    punter = 0
-    banner_string = " >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "
-    group_total1 = len(new_dict_of_lists[cousin])
-    print(group_total1, banner_string, kit1_who_to_index_reverse_dict[int(cousin)], banner_string)
+def get_shared_listFT(kit1, kit1_who_to_index_dict, list_of_filtered, file_path, chromo_tuple_list, kit1_who_to_index_reverse_dict):
 
-    print(cousin, new_dict_of_lists[cousin])
-    my_list = new_dict_of_lists[cousin]
-    my_new_list=[]
-    for i in my_list:
-        my_new_list.append(i)
-    my_new_list.sort()
-   # print(kit1_who_to_index_reverse_dict)
-    for kit1_index in my_new_list:
-        cousin_name=kit1_who_to_index_reverse_dict[kit1_index]
-        kit1_shared=dict_of_dna[kit1_index].sharedDNA
-        kit1_cM=dict_of_dna[kit1_index].centimorgans
-        kit1_seg=dict_of_dna[kit1_index].segments
-        kit1_surnames=dict_of_dna[kit1_index].surnames
-        if kit1_surnames=="Empty":
-            kit1_surnames=""
-    #     print(kit1_index, kit1_who_to_index_reverse_dict[kit1_index],cousin,dict_of_dna[kit1_index].centimorgans,"cM")
-        print('{0:6} {1:30} {2:3} cM {3:2} seg {4:6} {5:20}'.format(kit1_index, cousin_name, kit1_cM, kit1_seg, kit1_shared , kit1_surnames))
+    list_of_shares = []
+    line_no = 1
+    last_cousin_index = 99999
+    temp_list = []
+    for line in open(file_path + kit1 + '.txt', encoding='latin-1'):
+        line = line.rstrip()
+     #   print(line)
+        columns = line.split(',')
+        first_column = columns[0].rstrip()
+        first_column_list = first_column.split(' ')
+        this_cousin_index = int(first_column_list[0])
+        second_column = columns[1].rstrip()   # second person
+        third_column = columns[2].strip()   # cm second person
+        third_column_data = third_column.split(' ')
+        key_string=columns[1].strip()
+        key_string=key_string.replace(' ','')
+        key_string=key_string + "_" + third_column_data[0]
+        shares_with_index=kit1_who_to_index_dict[key_string]
+   #     print(key_string, shares_with_index)
+        overlap = False
+        if shares_with_index in chromo_tuple_list and this_cousin_index in chromo_tuple_list:
+            overlap, triang_chromo_list = triangulate( chromo_tuple_list[this_cousin_index], chromo_tuple_list[shares_with_index])
+            if overlap:
+                print( this_cousin_index,  kit1_who_to_index_reverse_dict[this_cousin_index], kit1_who_to_index_reverse_dict[shares_with_index], "triangulate", triang_chromo_list)
 
-    return True
+       # print(key_string)
+       # print("checkin" , this_cousin_index)
+        if this_cousin_index not in list_of_filtered and overlap:
+       #   print(this_cousin_index, "not in list of filtered")
+          if this_cousin_index != last_cousin_index and shares_with_index not in list_of_filtered: # reset or set list
+            if last_cousin_index != 99999: # a reset do stash old temp_list
+                list_of_shares.append(temp_list)
+            temp_list = [this_cousin_index, shares_with_index]
+            last_cousin_index = this_cousin_index
+          elif this_cousin_index == last_cousin_index and shares_with_index not in list_of_filtered:
+                  temp_list.append(shares_with_index)
+        #else:
+        #          print(this_cousin_index , " is filtered")
+  #      print(kit1_who_to_index_dict[columns[1].strip()])
+    list_of_shares.append(temp_list) # dont forget the last line of file
+   # print(list_of_shares)
+    return list_of_shares
+
 
 
 def main():
-    kit1 = '23_And_Me_Relatives'
-    kit2 = '23_And_Me_Shared2'
-    kit2 = '23_And_Me_InCommon'
-    kit3 = '23_And_Me_Filtered'
-    kit4 = '23_And_Me_Relatives_Surnames'
-    DNA_relatives_list, kit1_who_to_index_dict, dict_of_dna = get_cousin_dict(kit1)
+    if sys.argv[1] == "23_Wayne":
+        kit1 = '23_And_Me_Relatives'
+        kit2 = '23_And_Me_InCommon'
+        kit3 = '23_And_Me_Filtered'
+        kit4 = '23_And_Me_Chromosomes'
+        kit5 = '23_And_Me_Relatives_Surnames'
+        file_path = "/home/waynew/git_environment/ANCESTRY-DNA-Helper/23andMe/"
+    elif sys.argv[1] == "FT_Wayne":
+        kit1 = 'FTDNA_Wayne_IN93403'
+        kit2 = 'FTDNA_Wayne_InCommon'
+        kit3 = 'FTDNA_Wayne_Filtered'
+        kit4 = 'FTDNA_Wayne_Chromosomes'
+        kit5 = 'FTDNA_Wayne_Tree_Surnames'
+        file_path = "/home/waynew/git_environment/ANCESTRY-DNA-Helper/FTDNA/"
+    elif sys.argv[1] == "FT_Glyn":
+        kit1 = 'FTDNA_Glyn_B585143'
+        kit2 = 'FTDNA_Glyn_InCommon'
+        kit3 = 'FTDNA_Glyn_Filtered'
+        kit4 = 'FTDNA_Glyn_Chromosomes'
+        kit5 = 'FTDNA_Glyn_Tree_Surnames'
+        file_path = "/home/waynew/git_environment/ANCESTRY-DNA-Helper/FTDNA/"
+
+    if file_path == "/home/waynew/git_environment/ANCESTRY-DNA-Helper/23andMe/":
+        dna_relatives_list, kit1_who_to_index_dict, dict_of_dna = get_cousin_dict23(kit1, file_path)
+    else:
+        dna_relatives_list, kit1_who_to_index_dict, dict_of_dna = get_cousin_dictFT(kit1, file_path)
     kit1_who_to_index_reverse_dict = dict((v, k) for k, v in kit1_who_to_index_dict.items())
-
-    dontcare = get_surnames_in_trees(kit4, dict_of_dna, kit1_who_to_index_reverse_dict)
-    list_of_filtered = get_cousin_filtered(kit3)
+    dontcare = get_surnames_in_trees(kit5, dict_of_dna, kit1_who_to_index_reverse_dict, file_path)
+    list_of_filtered = get_cousin_filtered(kit3, file_path)
     print(list_of_filtered)
+    chromo_tuple_dict = get_chromo_list(kit4, kit1_who_to_index_dict, file_path)
+    if file_path == "/home/waynew/git_environment/ANCESTRY-DNA-Helper/23andMe/":
 
-    list_of_shares = get_shared_list(kit2, kit1_who_to_index_dict, list_of_filtered)
+        list_of_shares = get_shared_list23(kit2, kit1_who_to_index_dict, list_of_filtered, file_path, chromo_tuple_dict, kit1_who_to_index_reverse_dict)
+    else:
+        list_of_shares = get_shared_listFT(kit2, kit1_who_to_index_dict, list_of_filtered, file_path, chromo_tuple_dict, kit1_who_to_index_reverse_dict)
    # for cousin in list_of_shares:
    #     print(kit1_who_to_index_reverse_dict[cousin[0]],cousin)
-
     dict_of_sets = {}
     dict_of_shared_matches = {}
+    print("list_of_shares",list_of_shares)
     for cousin_set in list_of_shares:
-      #  print(cousin_set)  #debug file not saved eg Wayne_A.txt
+   #     print(cousin_set)  #debug file not saved eg Wayne_A.txt
         try:
             index = cousin_set[0]
             dict_of_sets[index] = set(cousin_set)
@@ -241,11 +311,9 @@ def main():
             group_total = len(new_dict_of_lists[cousin])
             if group_total > 1:
                 no_of_clusters += 1
-            print(supergroup, banner_string,  cousin, group_total,  banner_string, CentiMorgan)
+       #     print(supergroup, banner_string,  cousin, group_total,  banner_string, CentiMorgan)
       #      print(cousin, new_dict_of_lists)
-            print_cluster(supergroup, cousin, new_dict_of_lists, kit1_who_to_index_dict, kit1_who_to_index_reverse_dict, dict_of_dna)
-
-
+            print_cluster23(supergroup, cousin, new_dict_of_lists, kit1_who_to_index_dict, kit1_who_to_index_reverse_dict, dict_of_dna, chromo_tuple_dict)
             new_list.append(supergroup)
             new_dict[supergroup] = cousin
 
