@@ -1,8 +1,9 @@
 
 import re, sys
-from Test_File_MyHeritage import get_chromo_list, triangulate
-from Test_File_MyHeritage import print_cluster23
-from Test_File_MyHeritage import get_surnames_in_trees
+from collections import defaultdict
+from MyHeritage import get_chromo_list, triangulate
+from MyHeritage import print_cluster23
+from MyHeritage import get_surnames_in_trees
 
 class DNA_Result(object):
 
@@ -129,7 +130,8 @@ def get_surnames_in_trees(kit4, dict_of_dna, kit1_who_to_index_reverse_dict, fil
 
 
 def get_shared_list23(kit1, kit1_who_to_index_dict, list_of_filtered, file_path, chromo_tuple_list, kit1_who_to_index_reverse_dict):
-
+    # Initialize a defaultdict with list as the default type
+    my_silly_string = defaultdict(list)
     list_of_shares = []
     line_no = 1
     last_cousin_index = 99999
@@ -141,8 +143,6 @@ def get_shared_list23(kit1, kit1_who_to_index_dict, list_of_filtered, file_path,
         first_column = columns[0].rstrip()
         first_column_list = first_column.split(' ')
         this_cousin_index = int(first_column_list[0])
-   #     if this_cousin_index in chromo_tuple_list and last_cousin_index != 99999:
-      #  print(this_cousin_index , kit1_who_to_index_reverse_dict[this_cousin_index], chromo_tuple_list[this_cousin_index])
         fourth_column = columns[3].rstrip()   # (0.43)
         fourth_column = fourth_column.replace('(','')
         no_per_cent = fourth_column.replace(')','') # just the 0.43
@@ -153,12 +153,11 @@ def get_shared_list23(kit1, kit1_who_to_index_dict, list_of_filtered, file_path,
         shares_with_index=kit1_who_to_index_dict[key_string]
         overlap = False
         if shares_with_index in chromo_tuple_list and this_cousin_index in chromo_tuple_list:
-       #     print(this_cousin_index ,kit1_who_to_index_reverse_dict[this_cousin_index], chromo_tuple_list[this_cousin_index], shares_with_index, kit1_who_to_index_reverse_dict[shares_with_index], chromo_tuple_list[shares_with_index])
-        #    print(kit1_who_to_index_reverse_dict[this_cousin_index],  kit1_who_to_index_reverse_dict[shares_with_index])
             overlap, triang_chromo_list = triangulate( chromo_tuple_list[this_cousin_index], chromo_tuple_list[shares_with_index])
             if overlap:
-                print( this_cousin_index,  kit1_who_to_index_reverse_dict[this_cousin_index], kit1_who_to_index_reverse_dict[shares_with_index], "triangulate", triang_chromo_list)
+                print(this_cousin_index, kit1_who_to_index_reverse_dict[this_cousin_index],shares_with_index, kit1_who_to_index_reverse_dict[shares_with_index], "triangulate=>", triang_chromo_list)
 
+                my_silly_string[this_cousin_index].append(shares_with_index)
        # print(key_string)
        # print("checkin" , this_cousin_index)
         if this_cousin_index not in list_of_filtered and overlap:
@@ -175,10 +174,10 @@ def get_shared_list23(kit1, kit1_who_to_index_dict, list_of_filtered, file_path,
   #      print(kit1_who_to_index_dict[columns[1].strip()])
     list_of_shares.append(temp_list) # dont forget the last line of file
    # print(list_of_shares)
-    return list_of_shares
+    return list_of_shares, my_silly_string
 
 def get_shared_listFT(kit1, kit1_who_to_index_dict, list_of_filtered, file_path, chromo_tuple_list, kit1_who_to_index_reverse_dict):
-
+    my_silly_string = defaultdict(list)
     list_of_shares = []
     line_no = 1
     last_cousin_index = 99999
@@ -220,7 +219,7 @@ def get_shared_listFT(kit1, kit1_who_to_index_dict, list_of_filtered, file_path,
   #      print(kit1_who_to_index_dict[columns[1].strip()])
     list_of_shares.append(temp_list) # dont forget the last line of file
    # print(list_of_shares)
-    return list_of_shares
+    return list_of_shares, my_silly_string
 
 
 
@@ -254,13 +253,14 @@ def main():
     kit1_who_to_index_reverse_dict = dict((v, k) for k, v in kit1_who_to_index_dict.items())
     dontcare = get_surnames_in_trees(kit5, dict_of_dna, kit1_who_to_index_reverse_dict, file_path)
     list_of_filtered = get_cousin_filtered(kit3, file_path)
-    print(list_of_filtered)
+    print("list of filtered", list_of_filtered)
     chromo_tuple_dict = get_chromo_list(kit4, kit1_who_to_index_dict, file_path)
+    my_silly_dict = {}
     if file_path == "/home/waynew/git_environment/ANCESTRY-DNA-Helper/23andMe/":
 
-        list_of_shares = get_shared_list23(kit2, kit1_who_to_index_dict, list_of_filtered, file_path, chromo_tuple_dict, kit1_who_to_index_reverse_dict)
+        list_of_shares, my_silly_dict = get_shared_list23(kit2, kit1_who_to_index_dict, list_of_filtered, file_path, chromo_tuple_dict, kit1_who_to_index_reverse_dict)
     else:
-        list_of_shares = get_shared_listFT(kit2, kit1_who_to_index_dict, list_of_filtered, file_path, chromo_tuple_dict, kit1_who_to_index_reverse_dict)
+        list_of_shares, my_silly_dict = get_shared_listFT(kit2, kit1_who_to_index_dict, list_of_filtered, file_path, chromo_tuple_dict, kit1_who_to_index_reverse_dict)
    # for cousin in list_of_shares:
    #     print(kit1_who_to_index_reverse_dict[cousin[0]],cousin)
     dict_of_sets = {}
@@ -313,7 +313,7 @@ def main():
                 no_of_clusters += 1
        #     print(supergroup, banner_string,  cousin, group_total,  banner_string, CentiMorgan)
       #      print(cousin, new_dict_of_lists)
-            print_cluster23(supergroup, cousin, new_dict_of_lists, kit1_who_to_index_dict, kit1_who_to_index_reverse_dict, dict_of_dna, chromo_tuple_dict)
+            print_cluster23(supergroup, cousin, new_dict_of_lists, kit1_who_to_index_dict, kit1_who_to_index_reverse_dict, dict_of_dna, chromo_tuple_dict, my_silly_dict)
             new_list.append(supergroup)
             new_dict[supergroup] = cousin
 

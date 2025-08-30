@@ -31,7 +31,7 @@ def get_data(word_list,index_offset , line_no, kit, kit_number, duplicate_check_
     new_word_dict["Tree"] = ""
     new_word_dict["GEDMATCH"] = ""
     new_word_dict["CHROMOSOMES"] = ""
-    new_word_dict["parent_side"] = "un_assigned"
+    new_word_dict["parent_side"] = "U"
     i = 0
     new_index = 9999999
 
@@ -101,8 +101,15 @@ def get_data(word_list,index_offset , line_no, kit, kit_number, duplicate_check_
         if column == "side" and word_list[i-2] == "Parent":
             new_word_dict["parent_side"] = word_list[i-2] + "." + word_list[i-1]
            # print(new_word_dict[column], new_word_dict["who"])
-        if column == "side" and (word_list[i-1] == "Father's" or word_list[i-1] == "Mother's" or word_list[i-1] == "Paternal" or word_list[i-1] == "Maternal"):
-            new_word_dict["parent_side"] = word_list[i-1]
+        if column == "side" and (word_list[i - 1] == "Mother's"  or word_list[i - 1] == "Maternal"):
+            new_word_dict["parent_side"] = "M"
+        if column == "side" and (word_list[i - 1] == "Father's"  or word_list[i - 1] == "Paternal"):
+            new_word_dict["parent_side"] = "P"
+        if column == "side" and (word_list[i - 1]) == "1's" :
+            new_word_dict["parent_side"] = "1's"
+        if column == "side" and (word_list[i - 1]) == "2's" :
+            new_word_dict["parent_side"] = "2's"
+
             # print(new_word_dict[column] , new_word_dict["who"])
         if column == "People":
             try:

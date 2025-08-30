@@ -1,7 +1,7 @@
 
 import re
 import sys
-
+from collections import defaultdict
 class DNA_Result(object):
 
     def __init__(self, index=99999, who='wally', centimorgans=2, sharedDNA=".11%", segments=999, cousin="6th Cousin", surnames="Empty" ):
@@ -199,7 +199,8 @@ def get_ancestryDNA_trees(file_path):
 
 
 def get_shared_list(kit1, kit1_who_to_index_dict, list_of_filtered, file_path,  chromo_tuple_list, kit1_who_to_index_reverse_dict, dict_of_dna):
-
+    # Initialize a defaultdict with list as the default type
+    my_silly_string = defaultdict(list)
     list_of_shares = []
     line_no = 1
     last_cousin_index = 99999
@@ -224,17 +225,10 @@ def get_shared_list(kit1, kit1_who_to_index_dict, list_of_filtered, file_path,  
             #    print(kit1_who_to_index_reverse_dict[this_cousin_index],  kit1_who_to_index_reverse_dict[shares_with_index])
             overlap, triang_chromo_list = triangulate(chromo_tuple_list[this_cousin_index],
                                                       chromo_tuple_list[shares_with_index])
-            if overlap:
-                print(this_cousin_index, kit1_who_to_index_reverse_dict[this_cousin_index],
-                      kit1_who_to_index_reverse_dict[shares_with_index], "triangulate", triang_chromo_list)
-
-        # print(key_string)
-       # print("checkin" , this_cousin_index)
-        kit1_seg = dict_of_dna[this_cousin_index].segments
-  #      print(kit1_seg)
-    #    if this_cousin_index not in list_of_filtered and kit1_seg > 1:
-    #        list_of_filtered.append(this_cousin_index)
-
+            if overlap and  sys.argv[2] == "triangulate":
+                print(this_cousin_index, kit1_who_to_index_reverse_dict[this_cousin_index],shares_with_index,
+                      kit1_who_to_index_reverse_dict[shares_with_index], "triangulate=>", triang_chromo_list)
+                my_silly_string[this_cousin_index].append(shares_with_index)
         if this_cousin_index not in list_of_filtered:
        #   print(this_cousin_index, "not in list of filtered")
           if this_cousin_index != last_cousin_index and shares_with_index not in list_of_filtered: # reset or set list
@@ -249,7 +243,7 @@ def get_shared_list(kit1, kit1_who_to_index_dict, list_of_filtered, file_path,  
   #      print(kit1_who_to_index_dict[columns[1].strip()])
     list_of_shares.append(temp_list) # dont forget the last line of file
    # print(list_of_shares)
-    return list_of_shares
+    return list_of_shares,my_silly_string
 
 def print_clusterMH(supergroup, cousin, new_dict_of_lists, kit1_who_to_index_dict, kit1_who_to_index_reverse_dict,  dict_of_dna, dict_of_lists):
     punter = 0
@@ -285,7 +279,7 @@ def print_clusterMH(supergroup, cousin, new_dict_of_lists, kit1_who_to_index_dic
 
     return True
 
-def print_cluster23(supergroup, cousin, new_dict_of_lists, kit1_who_to_index_dict, kit1_who_to_index_reverse_dict,  dict_of_dna, chromo_tuple_dict):
+def print_cluster23(supergroup, cousin, new_dict_of_lists, kit1_who_to_index_dict, kit1_who_to_index_reverse_dict,  dict_of_dna, chromo_tuple_dict, my_silly_dict):
     punter = 0
     banner_string = " >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
     group_total1 = len(new_dict_of_lists[cousin])
@@ -297,6 +291,7 @@ def print_cluster23(supergroup, cousin, new_dict_of_lists, kit1_who_to_index_dic
 #    my_new_list=[]
     my_very_new_list=[]
     my_new_dict={}
+    silly_string = ""
     for i in my_list:
         my_new_dict[i] = dict_of_dna[i].centimorgans
     data_sorted = {k: v for k, v in sorted(my_new_dict.items(), key=lambda x: x[1], reverse=True)}
@@ -309,14 +304,23 @@ def print_cluster23(supergroup, cousin, new_dict_of_lists, kit1_who_to_index_dic
         kit1_surnames=dict_of_dna[kit1_index].surnames
         if kit1_surnames=="Empty":
             kit1_surnames=""
+        silly_string = ""
         if kit1_index in chromo_tuple_dict:
             my_very_new_list = chromo_tuple_dict[kit1_index]
+            my_really_silly_list = my_silly_dict[kit1_index]
             seg_string = ""
+            silly_string = ""
             for tuple in my_very_new_list:
                 seg_string = seg_string + "-" + str(tuple[0])
+            for silly in my_really_silly_list:
+                silly_string = silly_string + "-" + str(silly)
+
               #  print(tuple[0])
     #     print(kit1_index, kit1_who_to_index_reverse_dict[kit1_index],cousin,dict_of_dna[kit1_index].centimorgans,"cM")
-        print('{0:6} {1:30} {2:3} cM {3:2} seg {4:6} {5:20} {6:30}'.format(kit1_index, cousin_name, kit1_cM, kit1_seg, kit1_shared ,seg_string, kit1_surnames))
+        if sys.argv[2]  == "tree":
+            print('{0:6} {1:30} {2:3} cM {3:2} seg {4:6} {5:20} {6:30}'.format(kit1_index, cousin_name, kit1_cM, kit1_seg, kit1_shared ,seg_string, kit1_surnames))
+        elif sys.argv[2]  == "triangulate":
+            print('{0:6} {1:30} {2:3} cM {3:2} seg {4:6} {5:20} {6:30}'.format(kit1_index, cousin_name, kit1_cM, kit1_seg, kit1_shared ,seg_string, silly_string))
 
     return True
 
@@ -396,6 +400,8 @@ def main():
         kit5 = 'MyHeritage_Trees_Glyn'
 
 
+
+
     file_path = "/home/waynew/git_environment/ANCESTRY-DNA-Helper/MyHeritage/"
 
     DNA_relatives_list, kit1_who_to_index_dict, dict_of_dna = get_cousin_dict(kit1, file_path)
@@ -407,7 +413,8 @@ def main():
  #   print(list_of_filtered)
     chromo_tuple_dict = get_chromo_list(kit4, kit1_who_to_index_dict, file_path)
  #   print(len(list_of_filtered))
-    list_of_shares = get_shared_list(kit2, kit1_who_to_index_dict, list_of_filtered, file_path,  chromo_tuple_dict, kit1_who_to_index_reverse_dict, dict_of_dna)
+    my_silly_dict={}
+    list_of_shares, my_silly_dict = get_shared_list(kit2, kit1_who_to_index_dict, list_of_filtered, file_path,  chromo_tuple_dict, kit1_who_to_index_reverse_dict, dict_of_dna)
  #   print(len(list_of_filtered))
     chromo_list = get_chromo_list(kit4, kit1_who_to_index_dict, file_path)
   #  print(dont_care)
@@ -463,7 +470,7 @@ def main():
                 no_of_clusters += 1
        #     print(supergroup, banner_string,  cousin, group_total,  banner_string, CentiMorgan)
       #      print(cousin, new_dict_of_lists)
-            print_cluster23(supergroup, cousin, new_dict_of_lists, kit1_who_to_index_dict, kit1_who_to_index_reverse_dict, dict_of_dna, chromo_list)
+            print_cluster23(supergroup, cousin, new_dict_of_lists, kit1_who_to_index_dict, kit1_who_to_index_reverse_dict, dict_of_dna, chromo_list, my_silly_dict)
         #    print_clusterMH(supergroup, cousin, new_dict_of_lists, kit1_who_to_index_dict, kit1_who_to_index_reverse_dict, dict_of_dna, chromo_list)
 
 

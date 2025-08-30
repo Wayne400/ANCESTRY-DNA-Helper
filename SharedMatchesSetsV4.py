@@ -283,12 +283,14 @@ def print_cluster2(cousin, new_dict_of_lists, kit1_cM_dict, kit1_keystring_list,
 
 def print_shared_cluster(found_index, index_list_dict , kit1_Test_Result_Dict,
                                      kit2_Test_Result_Dict, kit3_Test_Result_Dict,
-                                     kit4_Test_Result_Dict, kit5_Test_Result_Dict, kit6_Test_Result_Dict, kit1_index_keystring_dict, punters_list):
+                                     kit4_Test_Result_Dict, kit5_Test_Result_Dict, kit6_Test_Result_Dict, kit1_index_keystring_dict, punters_list, Surnames, match_filter_list):
     new_list = []
     index_list=index_list_dict[str(found_index)]
     new_list.extend(index_list)
     new_list.insert(0, found_index)
     for index in new_list:
+        filtered = ""
+        print_string = ""
         cousin_key_string = kit1_index_keystring_dict[index]
         match_kit2 = ""
         match_kit3 = ""
@@ -299,6 +301,13 @@ def print_shared_cluster(found_index, index_list_dict , kit1_Test_Result_Dict,
         seg_string = kit1_Test_Result_Dict[cousin_key_string].segments
         who_string = kit1_Test_Result_Dict[cousin_key_string].who
         whos_side_string = kit1_Test_Result_Dict[cousin_key_string].side
+        if who_string in match_filter_list:
+            filtered = "YES"
+
+        if kit1_index_keystring_dict[index] in Surnames:
+            print_string = ""
+            for item in Surnames[kit1_index_keystring_dict[index]]:
+                print_string = print_string + "," + item
 
         if cousin_key_string in kit2_Test_Result_Dict:
             match_kit2 = punters_list[0] + "=" + kit2_Test_Result_Dict[cousin_key_string].centimorgans + "cM"
@@ -312,9 +321,9 @@ def print_shared_cluster(found_index, index_list_dict , kit1_Test_Result_Dict,
             match_kit6 = punters_list[4] + "=" + kit6_Test_Result_Dict[cousin_key_string].centimorgans + "cM"
 
       #  print( index, cousin_key_string, cm_string, seg_string, match_kit2, match_kit3, match_kit4, match_kit5, match_kit6)
-        print('{0:6} {1:40} {2:3}cM {3:2}seg   {4:11} {5:11} {6:11} {7:11} {8:11}' \
-          .format(index, cousin_key_string, cm_string, seg_string,
-                  match_kit2, match_kit3, match_kit4, match_kit5, match_kit6)),
+        print('{0:6} {1:40} {2:3} {3:3} {4:3}cM {5:2}seg {6:11} {7:11} {8:11} {9:11} {10:11} {11:16}' \
+          .format(index, cousin_key_string, whos_side_string, filtered, cm_string, seg_string,
+                  match_kit2, match_kit3, match_kit4, match_kit5, match_kit6, print_string)),
 
     return True
 
@@ -494,14 +503,14 @@ def main():
     cluster_no = 1
     cluster_king = new_dict[1]
     group_total = len(new_dict_of_lists[cluster_king])
-    mode_list = [" default", "info", "Surnames", " keystring", " Places", "common_ancestor"]
+    mode_list = [" default", "info", "Surnames", " keystring", " Places", "common_ancestor"," index"]
     while go_again != 'n':
         while True:
             cluster_search = input(person + mode_list[mode] + " : Enter cluster number or q for quit: ")
             if cluster_search == 'q':
               go_again = 'n'
               break
-            elif cluster_search == 'i':  #  info mode
+            elif cluster_search == 'info':  #  info mode
               mode = 1  # Info mode
               group_total = len(new_dict_of_lists[cluster_king])
               print(cluster_no, banner_string, cluster_king, group_total, banner_string, CentiMorgan)
@@ -519,6 +528,8 @@ def main():
                              Test_Result_Dict_List, CentiMorgan)
             elif cluster_search == 'k':  # key search mode
               mode = 3  # Keys mode
+            elif cluster_search == 'index':  # key search mode
+              mode = 6  # Keys mode
             elif cluster_search == 'p':  # places mode
               mode = 4  # Places mode
               group_total = len(new_dict_of_lists[cluster_king])
@@ -537,7 +548,7 @@ def main():
               else:
                   print("try again")
                   CentiMorgan = 0
-            if cluster_search.isdigit():
+            if cluster_search.isdigit() and mode != 6:
               cluster_no = int(cluster_search)
               cluster_king = new_dict[cluster_no]
               group_total = len(new_dict_of_lists[cluster_king])
@@ -562,6 +573,11 @@ def main():
                                 dict_of_places, dict_of_shared_matches, kit1_key_dict, kit2_keystring_list,
                                 kit3_keystring_list, kit4_keystring_list, kit5_keystring_list, kit6_keystring_list, punters_list,
                                 Test_Result_Dict_List,mode, CentiMorgan)
+
+            elif  mode == 6:  # keys mode
+             if cluster_search.isdigit():
+                print(kit1_index_keystring_dict[int(cluster_search)])
+                mode = 3
             elif  mode == 3:  # keys mode
              if cluster_search in homonym_to_primarykey_dict:
                 found_index = key_to_numeric_dict[cluster_search]
@@ -576,36 +592,16 @@ def main():
                         save_supergroup = supergroup
                         break
                     supergroup += 1
-                filtered = ""
-                print(banner_string, cluster_search_key, banner_string)
                 who_string = kit1_Test_Result_Dict[cluster_search_key].who
                 if who_string in match_filter_list:
                    print("keystring = ", cluster_search_key, ", index = ", found_index, ", cM=", kit1_index_to_cM_dict[found_index], kit1_index_to_seg_dict[found_index], "seg", "Filtered Match!")
                 else:
                    print("keystring = ", cluster_search_key, ", index = ", found_index, ", cM=", kit1_index_to_cM_dict[found_index], kit1_index_to_seg_dict[found_index], "seg", cluster_king, "supergroup", new_list[supergroup])
 
-                for shared_match in index_list_dict[str(found_index)]:
-                            who_string = kit1_Test_Result_Dict[kit1_index_keystring_dict[shared_match]].who
-                            if who_string in match_filter_list:
-                                filtered = "YES"
-                            cm_string=kit1_Test_Result_Dict[kit1_index_keystring_dict[shared_match]].centimorgans
-                            seg_string=kit1_Test_Result_Dict[kit1_index_keystring_dict[shared_match]].segments
-                            who_string=kit1_Test_Result_Dict[kit1_index_keystring_dict[shared_match]].who
-                            whos_side_string=kit1_Test_Result_Dict[kit1_index_keystring_dict[shared_match]].side
-                            if  kit1_index_keystring_dict[shared_match] in Surnames:
-                              printstring = ""
-                              for item in Surnames[kit1_index_keystring_dict[shared_match]]:
-                                  printstring = printstring + "," + item
-                              #print(shared_match, kit1_index_keystring_dict[shared_match], cm_string,"cM",seg_string, "seg", filtered, Surnames[kit1_index_keystring_dict[shared_match]])
-                              print(shared_match, kit1_index_keystring_dict[shared_match], cm_string,"cM",seg_string, "seg", filtered, whos_side_string, printstring)
-                            else:
-                              print(shared_match, kit1_index_keystring_dict[shared_match], cm_string,"cM",seg_string, "seg", filtered, whos_side_string, "No-info-yet")
-
-                            filtered = ""
                 print(banner_string, cluster_search_key, banner_string)
                 print_shared_cluster(found_index, index_list_dict,kit1_Test_Result_Dict,
                                      kit2_Test_Result_Dict, kit3_Test_Result_Dict,
-                                     kit4_Test_Result_Dict, kit5_Test_Result_Dict, kit6_Test_Result_Dict, kit1_index_keystring_dict, punters_list)
+                                     kit4_Test_Result_Dict, kit5_Test_Result_Dict, kit6_Test_Result_Dict, kit1_index_keystring_dict, punters_list, Surnames, match_filter_list)
 
 
 if __name__ == '__main__':
